@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- =========================================================
@@ -6,7 +6,7 @@
     ========================================================== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>C2C Rides</title>
+    <title>Cycle Escapes</title>
 
     <!-- =========================================================
       FAVICON
@@ -18,7 +18,7 @@
     ========================================================== -->
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/common.css" />
-    
+
     <!-- =========================================================
       PWA MANIFEST
     ========================================================== -->
@@ -39,13 +39,14 @@
     ========================================================== -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="C2C Rides" />
-    <link rel="apple-touch-icon" href="/graphics/icon-512.png" />
+    <meta name="apple-mobile-web-app-title" content="Cycle Escapes" />
+    <link rel="apple-touch-icon" href="/graphics/favicon-512x512.png" />
 
     <!-- iOS Splash Screen Image -->
-    <link rel="apple-touch-startup-image" href="/graphics/icon-512.png" />
-
-  
+    <link
+      rel="apple-touch-startup-image"
+      href="/graphics/favicon-512x512.png"
+    />
   </head>
 
   <body data-theme="light">
@@ -53,8 +54,11 @@
       SPLASH SCREEN (shows briefly on load)
     ========================================================== -->
     <div id="splash-screen">
-      <img src="/graphics/icon-192.png" alt="C2C Rides Logo" />
-      <h1>Welcome to the 2026 C2C Information Hub</h1>
+      <img
+        src="/graphics/Cycle_Escapes_Logo_White_-_ transparent.png"
+        alt="Cycle Escapes Logo"
+      />
+      <h1>Welcome to the Cycle Escapes Information Hub</h1>
     </div>
 
     <!-- =========================================================
@@ -63,8 +67,8 @@
     <header>
       <div class="indexlogo-container">
         <img
-          src="/graphics/c2cRIDESlogoblack.png"
-          alt="C2C Ride Logo"
+          src="/graphics/Cycle_Escapes_Logo_White_on_Blue.png"
+          alt="Cycel Escapes Ride Logo"
           class="indexlogo"
         />
       </div>
@@ -74,17 +78,15 @@
       <div id="navindex-placeholder"></div>
     </header>
 
-    <h1>Llyn Peninsula and Anglessey 2026</h1>
-      <p class="centered-header">4th June - 7th June 2026</p>
-    
+    <h1>Cycle Escapes Information Hub</h1>
+    <p class="centered-header">Cycling adventures in UK and Europe</p>
+
     <!-- =========================================================
       INTRO TEXT
     ========================================================== -->
     <p class="centered-summary">
-      Welcome to the C2C Ride 2026 information hub! Here you'll find all the
-      essential details about our upcoming cycling adventure across the stunning
-      Llyn Peninsula and Anglesey. Whether you're looking for route maps,
-      accommodation, meal plans, or safety guidelines. Click on the buttons
+      Welcome to the Cycling Escapes information hub! Here you'll find all the
+      essential details about our upcoming cycling tours. Click on the buttons
       below to explore each section.
     </p>
 
@@ -92,9 +94,9 @@
       MAIN BUTTON GRID
     ========================================================== -->
     <div class="button-grid">
-      <a href="Accommodation.html" class="btn">Accommodation</a>
-      <a href="Meals.html" class="btn">Meals</a>
-      <a href="Routes.html" class="btn">Routes</a>
+      <a href="Accommodation.html" class="btn">About Us</a>
+      <a href="Tours.html" class="btn">Tours</a>
+      <a href="Routes.html" class="btn">FAQs</a>
 
       <!-- Risk Assessment PDF -->
       <a href="files/RiskAssessment.pdf" target="_blank" class="btn">
@@ -114,7 +116,7 @@
         Risk Assess.
       </a>
 
-      <a href="RideHistory.html" class="btn">Previous Rides</a>
+      <a href="RideHistory.html" class="btn">Contact Us</a>
 
       <!-- YouTube Trailer -->
       <a href="https://youtu.be/jZ0TfVVlbv8" target="_blank" class="btn">
@@ -173,8 +175,6 @@
           .then(() => console.log("Service Worker registered"));
       }
 
-      
-
       /* =========================================================
         THEME TOGGLE FUNCTION
         (Not currently used in this page, but kept for future)
@@ -184,7 +184,6 @@
         const current = body.getAttribute("data-theme");
         body.setAttribute("data-theme", current === "light" ? "dark" : "light");
       }
-
 
       /* =========================================================
         MOBILE MENU TOGGLE
@@ -203,9 +202,6 @@
 
       // Close when overlay is clicked
       overlay.addEventListener("click", toggleMenu);*/
-
-      
-      
     </script>
 
     <!-- =========================================================
@@ -213,6 +209,5 @@
       (defer = loads after HTML parsing, safer for DOM elements)
     ========================================================== -->
     <script src="js/site.js" defer></script>
-
   </body>
 </html>
