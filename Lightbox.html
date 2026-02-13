@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lightbox Example</title>
+  </head>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f4f4f4;
+    }
+
+    button {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    /* Lightbox styles and overlay fade-in*/
+   .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .lightbox-content {
+      background-color: #0078d4; /* Match button color */
+      color: white;   
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 90vw;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+      animation: popIn 0.3s ease forwards;
+    }
+
+    .lightbox-content img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+       
+    .lightbox-overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+      backdrop-filter: blur(6px);
+    }
+
+    /* Modal content scale-up animation */
+    @keyframes popIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+      /* Modal content animation */
+      .lightbox-content.animate {
+        animation: popIn 0.3s ease forwards;
+      }
+
+    /* Optional: constrain height on small screens */
+    @media (max-height: 500px) {
+      .lightbox-content {
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+    }
+    
+     /* === Responsive === */
+    @media (max-width: 600px) {
+      .lightbox-content {
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+    }
+
+  </style>
+
+  <body>
+
+    <!-- Trigger buttons -->
+    <button class="lightbox-trigger"
+            data-img="/graphics/c2cRIDESlogoblack.png"
+            data-text="You will be re-directed to a Google Form to make your meal selections. Menus are not yet available but please feel free to try out an example of what the form will look like.<br><br>When menus are available we will let you know and ask you to come here to make your meal selections."
+            data-target="https://forms.gle/aJ5iLYMDShPKzC4p8">
+      Input Meal Choice
+    </button>
+
+    <button class="lightbox-trigger"
+            data-img="/graphics/c2cRIDESlogoblack.png"
+            data-text="Menus are not yet available, but you will be directed to an example menu for the first night.<br><br>When menus are available we will let you know and ask you to come here to review them so you can make your selection."
+            data-target="files/Menu-TheManor.pdf">
+      View Menus (PDF)
+    </button>
+
+    <!-- Lightbox container -->
+    <div class="lightbox-overlay" id="lightbox">
+      <div class="lightbox-content">
+        <button class="lightbox-close" onclick="closeLightbox()">✖</button>
+        <img id="lightbox-img" src="" alt="Lightbox Image" />
+        <p id="lightbox-text"></p>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let redirectTarget = null;
+
+    function openLightbox(imgSrc, text, targetUrl) {
+      const overlay = document.getElementById('lightbox');
+      const content = overlay.querySelector('.lightbox-content');
+
+      // Inject content
+      document.getElementById('lightbox-img').src = imgSrc;
+      document.getElementById('lightbox-text').innerHTML = text;
+      redirectTarget = targetUrl;
+
+      // Show overlay with animation
+      overlay.classList.add('show');
+
+      // Restart animation on content
+      content.classList.remove('animate');
+      void content.offsetWidth; // trigger reflow
+      content.classList.add('animate');
+    }
+
+    function closeLightbox() {
+      const overlay = document.getElementById('lightbox');
+      overlay.classList.remove('show');
+
+      // Redirect if target is set
+      if (redirectTarget) {
+        window.open(redirectTarget, '_blank');
+        redirectTarget = null;
+      }
+    }
+
+    // Attach event listeners to all trigger buttons
+    document.querySelectorAll('.lightbox-trigger').forEach(button => {
+      button.addEventListener('click', () => {
+        const img = button.getAttribute('data-img');
+        const text = button.getAttribute('data-text');
+        const target = button.getAttribute('data-target');
+        openLightbox(img, text, target);
+      });
+    });
+  </script>
+
+
+</html>

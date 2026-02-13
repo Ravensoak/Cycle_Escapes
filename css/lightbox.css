@@ -1,0 +1,69 @@
+/* lightbox.css */
+ /* === Lightbox ===*/
+      /* Lightbox styles and overlay fade-in*/
+   .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .lightbox-content {
+      background-color: #0078d4; /* Match button color */
+      color: white;   
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 90vw;
+      width: clamp(300px, 80%, 600px);
+      box-sizing: border-box;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+      animation: popIn 0.3s ease forwards;
+    }
+
+    .lightbox-content img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+       
+    .lightbox-overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+      backdrop-filter: blur(6px);
+    }
+
+    /* Modal content scale-up animation */
+    @keyframes popIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+      /* Modal content animation */
+      .lightbox-content.animate {
+        animation: popIn 0.3s ease forwards;
+      }
