@@ -142,7 +142,7 @@ h1 {
 
 /* Unified card container */
 .info-card-single {
-  background: #FDF5E6;
+  background: #FFF8E1; /* light cream */
   border-radius: 12px;
   padding: 24px;
   max-width: 600px;
