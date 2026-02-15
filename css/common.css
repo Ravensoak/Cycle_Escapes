@@ -364,3 +364,58 @@ footer {
   background: #0055aa;
   transform: scale(1.1);
 }
+
+/* additional styles for help icon and modal */
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Blue question mark */
+.help-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #2a7de1;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Modal background */
+.help-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Modal box */
+.help-modal-content {
+  background: #fff;
+  margin: 12% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Close button */
+.close-help {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 24px;
+  cursor: pointer;
+}
