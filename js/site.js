@@ -172,11 +172,13 @@ const isTouchDevice = window.matchMedia("(hover: none)").matches;
 
 if (isTouchDevice) {
   const modal = document.getElementById("helpModal");
+  const modalTitle = document.getElementById("helpModalTitle");
   const modalText = document.getElementById("helpModalText");
   const closeBtn = document.querySelector(".close-help");
 
   document.querySelectorAll(".help-icon").forEach((icon) => {
     icon.addEventListener("click", () => {
+      modalTitle.textContent = icon.getAttribute("data-title");
       modalText.textContent = icon.getAttribute("data-help");
       modal.style.display = "block";
     });

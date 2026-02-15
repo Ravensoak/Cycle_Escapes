@@ -395,28 +395,39 @@ footer {
   cursor: pointer;
 }
 
-/* Tooltip (desktop only) */
+/* Tooltip */
 .help-icon::after {
   content: attr(data-help);
   position: absolute;
   bottom: 130%;
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%;
+  transform: translateX(-50%);*/
+  left: 0;
+  transform: none;
+
   background: #333;
   color: #fff;
-  padding: 6px 10px;
+  padding: 8px 10px;
   border-radius: 6px;
   font-size: 12px;
-  white-space: nowrap;
+  line-height: 1.4;
+
+  max-width: 280px; /* controls width */
+  width: max-content;
+  white-space: normal; /* allow wrapping */
+  word-wrap: break-word;
+
   opacity: 0;
-  pointer-events: none;
+  visibility: hidden;
   transition: opacity 0.2s;
+  z-index: 1000;
 }
 
-/* Show tooltip on hover (only devices that support hover) */
-@media (hover: hover) {
+/* Show on hover (desktop) */
+@media (hover: hover) and (pointer: fine) {
   .help-icon:hover::after {
     opacity: 1;
+    visibility: visible;
   }
 }
 
