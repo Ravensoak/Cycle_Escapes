@@ -409,7 +409,8 @@ footer {
   color: #fff;
   padding: 8px 10px;
   border-radius: 6px;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 400;
   line-height: 1.4;
 
   max-width: 280px; /* controls width */
