@@ -379,8 +379,9 @@ footer {
   gap: 8px;
 }
 
-/* Blue question mark */
+/* Help icon */
 .help-icon {
+  position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -392,10 +393,34 @@ footer {
   background-color: #2a7de1;
   border-radius: 50%;
   cursor: pointer;
-  user-select: none;
 }
 
-/* Modal background */
+/* Tooltip (desktop only) */
+.help-icon::after {
+  content: attr(data-help);
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+/* Show tooltip on hover (only devices that support hover) */
+@media (hover: hover) {
+  .help-icon:hover::after {
+    opacity: 1;
+  }
+}
+
+/* Modal */
 .help-modal {
   display: none;
   position: fixed;
@@ -407,18 +432,17 @@ footer {
   background: rgba(0, 0, 0, 0.6);
 }
 
-/* Modal box */
 .help-modal-content {
-  background: #faf8f2;
-  margin: 12% auto;
+  background: #fff;
+  margin: 20% auto;
   padding: 20px;
   width: 90%;
   max-width: 420px;
   border-radius: 8px;
   position: relative;
+  font-size: 16px;
 }
 
-/* Close button */
 .close-help {
   position: absolute;
   right: 12px;

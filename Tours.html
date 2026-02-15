@@ -118,7 +118,17 @@
             <span class="help-icon" data-help="help-routes">?</span> -->
             <h3 class="page-title">
               Route Info
-              <span class="help-icon" data-help="help-routes">?</span>
+              <span
+                class="help-icon"
+                data-help="Each day has a set route, but there are options to take detours to
+          shorten or lengthen the ride if desired. The route information
+          includes an overview of the day's ride, key points of interest, and
+          any notable climbs or descents. Riders can choose to follow the main
+          route or take detours to explore additional sights or avoid
+          challenging sections, making it a flexible and enjoyable experience
+          for all levels of cyclists on the tour."
+                >?</span
+              >
             </h3>
             <ul>
               <li>
@@ -1006,29 +1016,10 @@
     <!-- =========================================================
       Help Icons      (placed outside of accordion for better accessibility)
     ========================================================== -->
-    <!-- Routes Help -->
-    <div class="help-modal" id="help-routes">
+    <div id="helpModal" class="help-modal">
       <div class="help-modal-content">
         <span class="close-help">&times;</span>
-        <h3>Route Info</h3>
-        <p>
-          Each day has a set route, but there are options to take detours to
-          shorten or lengthen the ride if desired. The route information
-          includes an overview of the day's ride, key points of interest, and
-          any notable climbs or descents. Riders can choose to follow the main
-          route or take detours to explore additional sights or avoid
-          challenging sections, making it a flexible and enjoyable experience
-          for all levels of cyclists on the tour.
-        </p>
-      </div>
-    </div>
-
-    <!-- Elevation Help -->
-    <div class="help-modal" id="help-elevation">
-      <div class="help-modal-content">
-        <span class="close-help">&times;</span>
-        <h3>Elevation</h3>
-        <p>Elevation shows total climbing across the route.</p>
+        <div id="helpModalText"></div>
       </div>
     </div>
 
