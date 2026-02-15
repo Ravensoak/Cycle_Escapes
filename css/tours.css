@@ -207,3 +207,30 @@ h1 {
 .route1-card h4 {
   margin-top: 0;
 }
+.logistics {
+  background: #f7f7f7;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.logistics-intro {
+  background: #ffffff;
+  padding: 0.9rem 1rem;
+  border-left: 4px solid #2c7a4b; /* cycling green */
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.logistics h3 {
+  margin-top: 1.2rem;
+  color: #2c3e50;
+}
+
+.logistics ul {
+  padding-left: 1.2rem;
+}
+
+.logistics li {
+  margin-bottom: 0.4rem;
+}
