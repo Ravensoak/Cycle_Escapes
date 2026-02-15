@@ -275,7 +275,8 @@ h1 {
 
 .event-hero {
   position: relative;
-  background: url("images/wales-hero.jpg") center/cover no-repeat;
+  background: url("pictures/Wales-South_to_North/Dam.jpg") center/cover
+    no-repeat;
   min-height: 520px;
   display: flex;
   align-items: center;
