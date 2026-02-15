@@ -3,6 +3,18 @@ h1 {
   margin-bottom: 2rem;
 }
 
+.tourpage {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
 .accordion {
   max-width: 700px;
   margin: 0 auto;
