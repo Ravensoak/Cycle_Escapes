@@ -318,6 +318,13 @@ footer {
   .footer-text {
     font-size: 0.9rem;
   }
+
+  /* === Help icon - Responsive === */
+  .help-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+  }
 }
 
 /* =========================================================
@@ -402,7 +409,7 @@ footer {
 
 /* Modal box */
 .help-modal-content {
-  background: #fff;
+  background: #faf8f2;
   margin: 12% auto;
   padding: 20px;
   width: 90%;
