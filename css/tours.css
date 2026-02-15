@@ -89,7 +89,7 @@ h1 {
 
 /* Card container */
 .ride-stats-card {
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 12px;
   padding: 20px 24px;
   max-width: 520px;
@@ -142,7 +142,7 @@ h1 {
 
 /* Unified card container */
 .info-card-single {
-  background: #FFFFFF; /* light cream */
+  background: #ffffff; /* light cream */
   border-radius: 12px;
   padding: 24px;
   max-width: 600px;
@@ -183,4 +183,27 @@ h1 {
 
 .info-card-btn:hover {
   background-color: #0f2a21; /* deep forest */
+}
+
+.route1-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  max-width: 350px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.route1-card img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 12px 0;
+}
+
+.route1-card h4 {
+  margin-top: 0;
 }
