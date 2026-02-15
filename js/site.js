@@ -167,3 +167,28 @@ window.addEventListener("click", (e) => {
     e.target.style.display = "none";
   }
 });
+
+const isTouchDevice = window.matchMedia("(hover: none)").matches;
+
+if (isTouchDevice) {
+  const modal = document.getElementById("helpModal");
+  const modalText = document.getElementById("helpModalText");
+  const closeBtn = document.querySelector(".close-help");
+
+  document.querySelectorAll(".help-icon").forEach((icon) => {
+    icon.addEventListener("click", () => {
+      modalText.textContent = icon.getAttribute("data-help");
+      modal.style.display = "block";
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+}
