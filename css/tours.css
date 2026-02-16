@@ -285,17 +285,26 @@ h1 {
   color: #444;
 }
 
+/* Hero fills the container width */
 .event-hero {
   position: relative;
+  width: 100%;
+  min-height: 420px;
   background: url("/pictures/Wales-South_to_North/Dam.jpg") center/cover
     no-repeat;
-  min-height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #ffffff;
-  padding: 3rem 1rem 5rem;
+  color: #fff;
+
+  /* Optional: match card style */
+  border-radius: 4px;
+  overflow: hidden; /* ensures overlay respects radius */
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  width: calc(100% + 3rem);
 }
 
 /* Subtle dark gradient for readability */
@@ -309,6 +318,13 @@ h1 {
 /* Remove any curve */
 .event-hero::after {
   display: none;
+}
+
+/* Keep text above overlay */
+.event-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem;
 }
 
 .hero-content {
