@@ -433,7 +433,7 @@ h1 {
     margin-top: -40px;
   }
 }
-/* Mobile – keep all 4 in a row */
+/* Mobile – keep all 4 stats in a row and countdown in a row*/
 @media (max-width: 600px) {
   .hero-stats {
     grid-template-columns: repeat(4, 1fr);
@@ -462,5 +462,24 @@ h1 {
 
   .hero-stats-section {
     margin-top: -40px;
+  }
+
+  .countdown {
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+  }
+
+  .countdown-box {
+    padding: 0.5rem 0.6rem;
+    min-width: 60px;
+    border-radius: 6px;
+  }
+
+  .countdown-box span {
+    font-size: 1.1rem;
+  }
+
+  .countdown-box small {
+    font-size: 0.65rem;
   }
 }
