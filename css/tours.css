@@ -215,6 +215,11 @@ h1 {
   max-width: 270px; /* keeps nice card width */
   margin-bottom: 20px;
 }
+@media (max-width: 600px) {
+  .route1-card {
+    max-width: 100%; /* full width on mobile */
+  }
+}
 
 .route1-card img {
   display: block;
