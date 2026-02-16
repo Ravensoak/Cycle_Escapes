@@ -331,6 +331,14 @@ h1 {
   font-style: italic;
   opacity: 0.9;
 }
+.hero-description {
+  max-width: 750px;
+  margin: 1.2rem auto 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ffffff;
+  opacity: 0.95;
+}
 
 /* Countdown */
 .countdown {
@@ -435,6 +443,10 @@ h1 {
 }
 /* Mobile – keep all 4 stats in a row and countdown in a row*/
 @media (max-width: 600px) {
+  .hero-description {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
   .hero-stats {
     grid-template-columns: repeat(4, 1fr);
     gap: 0.4rem;
