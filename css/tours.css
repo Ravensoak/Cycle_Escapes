@@ -17,6 +17,7 @@ body {
   padding: 1rem;
   box-sizing: border-box;
   background: #fff;
+  z-index: index 1;
 }
 
 @media (min-width: 768px) {
