@@ -158,6 +158,7 @@ h1,
   z-index: 1050;
   visibility: hidden;
   opacity: 0;
+  text-align: left;
 }
 
 .mobile-menu ul {
@@ -168,12 +169,15 @@ h1,
 
 .mobile-menu li {
   margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 .mobile-menu a {
   text-decoration: none;
   font-size: 1.2rem;
   color: var(--menu-link-color, #333);
+  display: block; /* makes links fill the line */
+  text-align: left;
 }
 
 /* FIXED: Active state for mobile menu */
