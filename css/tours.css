@@ -108,6 +108,8 @@ h1 {
   max-width: 520px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   border: 1px solid #e6ecea;
+  position: static;
+  z-index: auto;
 }
 
 /* Title */
@@ -125,7 +127,6 @@ h1 {
   font-family: "Segoe UI", sans-serif;
   font-size: 15px;
   color: #1a1a1a;
-  z-index: 500;
 }
 
 .ride-stats thead th {
