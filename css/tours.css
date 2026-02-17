@@ -15,6 +15,21 @@ h1 {
   padding: 1.5rem;
   z-index: 1;
 }
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .tourpage {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+}
 
 .accordion {
   max-width: 700px;
@@ -108,8 +123,6 @@ h1 {
   max-width: 520px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   border: 1px solid #e6ecea;
-  position: static;
-  z-index: auto;
 }
 
 /* Title */
