@@ -125,6 +125,7 @@ h1 {
   font-family: "Segoe UI", sans-serif;
   font-size: 15px;
   color: #1a1a1a;
+  z-index: 500;
 }
 
 .ride-stats thead th {
