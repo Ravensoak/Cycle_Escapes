@@ -198,7 +198,7 @@ if (isTouchDevice) {
 //Event Hero - Add to calendar functionality
 
 function updateCountdown() {
-  const eventDate = new Date("June 4, 2026 09:00:00").getTime();
+  const eventDate = new Date("June 4, 2027 09:00:00").getTime();
   const now = new Date().getTime();
   const diff = eventDate - now;
 
