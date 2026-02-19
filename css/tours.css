@@ -332,7 +332,7 @@ body {
   border-radius: 4px;
   overflow: hidden; /* ensures overlay respects radius */
   margin-top: -1.5rem;
-  margin-left: -1.5rem;
+  margin-left: 0rem;
   margin-right: 0rem;
   width: calc(100% + 3rem);
 }
