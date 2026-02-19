@@ -250,14 +250,14 @@ body {
 }
 .logistics {
   background: #f7f7f7;
-  padding: 1.5rem;
+  padding: 0.6rem;
   border-radius: 10px;
-  margin: 2rem 0;
+  margin: 0.9rem 0;
 }
 
 .logistics-intro {
   background: #ffffff;
-  padding: 0.9rem 1rem;
+  padding: 0.8rem 1rem;
   border-left: 4px solid #2c7a4b; /* cycling green */
   border-radius: 6px;
   margin-bottom: 1rem;
@@ -291,6 +291,7 @@ body {
 .timeline-item {
   margin-bottom: 1.2rem;
   position: relative;
+  padding-left: 0.6rem; /* new gap between bullet and text */
 }
 
 .timeline-item::before {
