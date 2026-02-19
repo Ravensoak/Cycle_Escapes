@@ -445,38 +445,21 @@ body {
 }
 
 /* Equal spacing */
-/*.hero-stats {
+.hero-stats {
   max-width: 1100px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.2rem;
-}*/
-
-/* Cards */
-/*.stat-card {
-  background: #ffffff;
-  text-align: center;
-  padding: 1.4rem 1rem;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}*/
-
-.stat-card {
-  background: #ffffff;
-  width: 120px; /* or whatever fits your design */
-  text-align: center;
-  padding: 1.4rem 1rem;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-.hero-stats {
-  display: flex;
-  gap: 2rem; /* space between cards */
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap; /* allows wrapping on small screens */
+/* Cards */
+.stat-card {
+  background: #ffffff;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 /* Icon */
@@ -521,7 +504,7 @@ body {
     padding: 0 0.5rem;
   }
   .hero-stats {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.4rem;
   }
 
