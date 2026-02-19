@@ -333,7 +333,7 @@ body {
   overflow: hidden; /* ensures overlay respects radius */
   margin-top: -1.5rem;
   margin-left: -1.5rem;
-  margin-right: -1.5rem;
+  margin-right: 0rem;
   width: calc(100% + 3rem);
 }
 @media (max-width: 768px) {
