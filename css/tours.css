@@ -548,7 +548,7 @@ body {
     position: absolute;
     top: 12px;
     right: 12px;
-    z-index: 10001; /* above hero overlay and content */
+    z-index: 2000; /* above hero overlay and content */
   }
 }
 @media (max-width: 768px) {

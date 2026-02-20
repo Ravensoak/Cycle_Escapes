@@ -122,7 +122,7 @@ h1,
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  z-index: 10002;
+  z-index: 3000;
   color: var(--menu-icon-color, #fff);
 }
 
