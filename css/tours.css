@@ -50,8 +50,8 @@ body {
     max-width: 900px;
     margin: 0 auto; /* centers horizontally */
     /*padding: 1.5rem; /* add breathing room on mobile */
-    padding-left: 0.5rem; /* no internal padding */
-    padding-right: 0.5rem;
+    padding-left: 0rem; /* no internal padding */
+    padding-right: 0rem;
     border-radius: 6px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
@@ -358,6 +358,13 @@ body {
   color: #fff;
   overflow: hidden;
   border-radius: 0; /* edge-to-edge looks better on mobile */
+}
+@media (min-width: 768px) {
+  .event-hero {
+    width: 100%; /* match .tourpage width */
+    margin-left: 0; /* stop breaking out */
+    border-radius: 6px; /* optional: match card style */
+  }
 }
 
 * {
