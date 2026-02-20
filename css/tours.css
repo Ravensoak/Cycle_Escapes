@@ -280,8 +280,15 @@ body {
   padding: 0.6rem;
   border-radius: 10px;
   margin: 0.9rem 0;
-  margin-left: 0.8rem;
-  margin-right: 0.8rem;
+  margin-top: 0rem;
+}
+/* Desktop*/
+@media (min-width: 768px) {
+  .logistics {
+    margin-left: 0.9rem;
+    margin-right: 0.9rem;
+    margin-top: 0rem;
+  }
 }
 
 .logistics-intro {
