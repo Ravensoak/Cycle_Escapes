@@ -517,7 +517,7 @@ body {
 /* Responsive */
 @media (max-width: 900px) {
   .hero-stats {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
