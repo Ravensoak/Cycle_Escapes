@@ -41,7 +41,7 @@
 
 body {
   margin: 0;
-  padding-top: 0rem;
+  padding-top: 0;
   font-family: "Segoe UI", Roboto, sans-serif;
   /*background: url('Morfa-Nefyn.png') no-repeat center center fixed;*/
   background: url("../pictures/Cyclists1.jpg") no-repeat center center;
@@ -114,16 +114,17 @@ h1,
 
 /* === Navigation Defaults === */
 .menu-toggle {
-  display: none; /* hidden on desktop */
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  display: none; /* desktop hidden */
+  position: fixed; /* key change */
+  top: 12px;
+  right: 14px;
   background: transparent;
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  z-index: 3000;
+  z-index: 10000;
   color: var(--menu-icon-color, #fff);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 /* Overlay (hidden by default) */

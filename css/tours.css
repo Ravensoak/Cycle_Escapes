@@ -541,18 +541,3 @@ body {
     font-size: 0.65rem;
   }
 }
-
-/* Mobile only */
-@media (max-width: 768px) {
-  #nav-placeholder {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    z-index: 2000; /* above hero overlay and content */
-  }
-}
-@media (max-width: 768px) {
-  .hero-content {
-    padding-top: 60px; /* adjust to match nav height */
-  }
-}
