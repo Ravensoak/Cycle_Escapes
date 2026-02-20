@@ -241,8 +241,8 @@ body {
 
 .route1-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 10px;
   justify-items: center; /* centers cards when fewer per row */
   /*padding: 0 10px; /* adds space left + right */
   max-width: 1200px; /* or 1100, 1300, etc. */
