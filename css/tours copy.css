@@ -318,8 +318,7 @@ body {
 /* Hero fills the container width */
 .event-hero {
   position: relative;
-  width: 100vw; /* full viewport width */
-  margin-left: calc(50% - 50vw); /* break out of centered container */
+  width: 100%;
   min-height: 420px;
   background: url("/pictures/Wales-South_to_North/Dam.jpg") center/cover
     no-repeat;
@@ -328,10 +327,22 @@ body {
   justify-content: center;
   text-align: center;
   color: #fff;
-  overflow: hidden;
-  border-radius: 0; /* edge-to-edge looks better on mobile */
-}
+  z-index: auto;
 
+  /* Optional: match card style */
+  border-radius: 4px;
+  overflow: hidden; /* ensures overlay respects radius */
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+  margin-right: 0rem;
+  width: calc(100% + 3rem);
+}
+@media (max-width: 768px) {
+  .event-hero {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
 * {
   box-sizing: border-box;
 }
