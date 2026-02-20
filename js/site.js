@@ -219,3 +219,17 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 60000);
+
+//menu button with toggle list
+function toggleMenu() {
+  const menu = document.getElementById("menuList");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+/* Optional: close menu when clicking outside */
+window.onclick = function (event) {
+  if (!event.target.matches(".menu-button")) {
+    const menu = document.getElementById("menuList");
+    if (menu) menu.style.display = "none";
+  }
+};
