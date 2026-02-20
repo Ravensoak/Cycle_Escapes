@@ -602,11 +602,3 @@ body {
     padding-top: 50px; /* space so title doesn't sit under nav */
   }
 }
-@media (max-width: 768px) {
-  #nav-placeholder {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    z-index: 10001; /* above hero overlay and content */
-  }
-}
