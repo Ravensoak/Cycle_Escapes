@@ -30,21 +30,21 @@ body {
   }
 }*/
 
-/* Mobile (default) */
+/* desktop (default) */
 .tourpage {
   width: 100%;
   margin: 0;
-  padding: 0; /* no internal padding */
+  padding: 0.5rem; /* no internal padding */
   box-sizing: border-box;
   background: #fff;
 }
 
-/* Desktop */
+/* Mobile */
 @media (min-width: 768px) {
   .tourpage {
     max-width: 900px;
     margin: 2rem auto; /* centers horizontally */
-    padding: 1.5rem; /* add breathing room on desktop */
+    padding: 1.5rem; /* add breathing room on mobile */
     border-radius: 6px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
@@ -561,7 +561,7 @@ body {
     font-size: 0.65rem;
   }
 }
-/* Desktop nav inside hero */
+/* Mobile nav inside hero */
 @media (min-width: 768px) {
   #nav-placeholder {
     position: absolute;
@@ -572,6 +572,6 @@ body {
   }
 
   .hero-content {
-    padding-top: 60px; /* space so title doesn't sit under nav */
+    padding-top: 50px; /* space so title doesn't sit under nav */
   }
 }
