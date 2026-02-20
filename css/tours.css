@@ -44,12 +44,14 @@ body {
   background: #fff;
 }
 
-/* Mobile */
+/* Desktop*/
 @media (min-width: 768px) {
   .tourpage {
     max-width: 900px;
     margin: 0 auto; /* centers horizontally */
-    padding: 1.5rem; /* add breathing room on mobile */
+    /*padding: 1.5rem; /* add breathing room on mobile */
+    padding-left: 0.5rem; /* no internal padding */
+    padding-right: 0.5rem;
     border-radius: 6px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
