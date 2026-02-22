@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- =========================================================
+      BASIC META / PAGE INFO
+    ========================================================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cycle Escapes - Information</title>
+
+    <!-- =========================================================
+      ICON + THEME COLOUR
+    ========================================================== -->
+    <link rel="icon" href="graphics/favicon-32x32.png" type="image/png" />
+    <meta name="theme-color" content="#1f2a36" />
+
+    <!-- =========================================================
+      STYLESHEETS
+    ========================================================== -->
+    <link rel="stylesheet" href="css/common.css" />
+   
+     <link rel="stylesheet" href="css/tours.css" />
+      <link rel="stylesheet" href="css/information.css" />
+  </head>
+
+  <body>
+    <!-- =========================================================
+      HEADER (Logo) + NAV (Loaded dynamically)
+    ========================================================== -->
+    <header>
+      <!--<div class="pagelogo-container">
+        <img
+          src="/graphics/favicon-512x512.png"
+          alt="C2C Ride Logo"
+          class="pagelogo"
+        />
+      </div>-->
+      
+    </header>
+
+    <div class="tourpage">
+      <!-- HERO IMAGE + COUNTDOWN -->
+      <section class="event-hero">
+           <div id="nav-placeholder"></div>
+        <div class="hero-content">
+       
+          <h1>Information</h1>
+
+          <p class="hero-subtitle">
+            Find out all you need to know here<br />
+            <span class="hero-tagline"
+              >Select an item to see more detail</span
+            >
+          </p>
+
+          
+        </div>
+      </section>
+
+      <div class="tabs-container">
+  <!-- Tab buttons -->
+  <div class="tabs">
+    <button class="tab active" data-tab="tours">
+      <span class="tab-icon">
+        <!-- Overview icon -->
+        <svg viewBox="0 0 24 24">
+          <path d="M3 13h8V3H3v10zm10 8h8V3h-8v18zM3 21h8v-6H3v6z"/>
+        </svg>
+      </span>
+      <span class="tab-label">Tours</span>
+    </button>
+
+    <button class="tab" data-tab="rider_support">
+      <span class="tab-icon">
+        <!-- Route icon -->
+        <svg viewBox="0 0 24 24">
+          <path d="M6 19a3 3 0 110-6 3 3 0 010 6zm12-8a3 3 0 110-6 3 3 0 010 6zM7.5 14l7-4"/>
+        </svg>
+      </span>
+      <span class="tab-label">Rider Support</span>
+    </button>
+
+    <button class="tab" data-tab="rides">
+      <span class="tab-icon">
+        <!-- Info icon -->
+        <svg viewBox="0 0 24 24">
+          <path d="M11 9h2V7h-2v2zm0 8h2v-6h-2v6zm1-16C6.48 1 2 5.48 2 11s4.48 10 10 10 10-4.48 10-10S17.52 1 12 1z"/>
+        </svg>
+      </span>
+      <span class="tab-label">Rides</span>
+    </button>
+
+    <button class="tab" data-tab="travel">
+      <span class="tab-icon">
+        <!-- Image icon -->
+        <svg viewBox="0 0 24 24">
+          <path d="M21 19V5H3v14h18zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/>
+        </svg>
+      </span>
+      <span class="tab-label">Travel</span>
+    </button>
+  </div>
+
+  <!-- Tab content -->
+  <div class="tab-content active" id="tours">
+    <h3>Tour Overview</h3>
+    <p>Summary of the event, highlights, and key information.</p>
+  </div>
+
+  <div class="tab-content" id="rider_support">
+    <h3>Routes</h3>
+    <p>Details of each day's cycling routes.</p>
+  </div>
+
+  <div class="tab-content" id="rides">
+    <h3>Logistics</h3>
+    <p>Accommodation, transport, and support information.</p>
+  </div>
+
+  <div class="tab-content" id="travel">
+    <h3>Gallery</h3>
+    <p>Photos from previous tours.</p>
+  </div>
+</div>
+      
+    
+    
+
+    <!-- =========================================================
+      FOOTER PLACEHOLDER (Loaded dynamically)
+    ========================================================== -->
+    <div id="footer-placeholder"></div>
+
+    <!-- =========================================================
+      FLOATING REFRESH BUTTON (PWA only)
+    ========================================================== -->
+    <button id="refreshButton" title="Refresh">🔄</button>
+
+    <!-- =========================================================
+      PAGE SCRIPTS
+      (defer = loads after HTML parsing, safer for DOM elements)
+    ========================================================== -->
+    <script src="js/information.js" defer></script>
+    <script src="js/site.js" defer></script>
+  </body>
+</html>
+<!-- End of Accommodation.html -->
