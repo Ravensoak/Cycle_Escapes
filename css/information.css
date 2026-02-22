@@ -194,61 +194,84 @@
     height: 200px;
   }
 }
-/* Container */
+/* ================================
+   Tabs Container
+================================ */
 .tabs-container {
   max-width: 900px;
   margin: 40px auto;
   font-family: inherit;
 }
 
-/* Tab bar */
+/* ================================
+   Tab Bar (Centered)
+================================ */
 .tabs {
   display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;
   gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  margin-bottom: 24px;
 }
 
-/* Pill buttons */
+/* ================================
+   Tab Buttons (Less rounded)
+================================ */
 .tab {
   display: flex;
   align-items: center;
   gap: 8px;
+
   padding: 10px 18px;
-  border-radius: 50px;
-  border: 1px solid #ddd;
+  border-radius: 10px; /* less rounded than pill */
+  border: 1px solid #dcdcdc;
   background: #f5f5f5;
+
   cursor: pointer;
   transition: all 0.25s ease;
   font-weight: 500;
+  color: #333;
+  white-space: nowrap;
 }
 
+/* Hover */
 .tab:hover {
   background: #eaeaea;
   transform: translateY(-2px);
 }
 
-/* Active pill */
+/* Active tab */
 .tab.active {
   background: #1f6fdc;
   color: #fff;
   border-color: #1f6fdc;
-  box-shadow: 0 4px 14px rgba(31, 111, 220, 0.3);
+  box-shadow: 0 4px 12px rgba(31, 111, 220, 0.25);
 }
 
-/* Icon styling */
+/* ================================
+   Icon
+================================ */
 .tab-icon svg {
   width: 18px;
   height: 18px;
   fill: currentColor;
+  display: block;
 }
 
-/* Tab content */
+/* Label */
+.tab-label {
+  font-size: 14px;
+}
+
+/* ================================
+   Content Panel
+================================ */
 .tab-content {
   display: none;
   padding: 24px;
   background: #ffffff;
-  border-radius: 14px;
+  border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -256,14 +279,21 @@
   display: block;
 }
 
-/* Mobile */
+/* ================================
+   Mobile
+================================ */
 @media (max-width: 600px) {
   .tabs {
-    flex-direction: column;
+    gap: 8px;
   }
 
   .tab {
-    width: 100%;
-    justify-content: center;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .tab-icon svg {
+    width: 16px;
+    height: 16px;
   }
 }
