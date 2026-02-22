@@ -194,61 +194,66 @@
     height: 200px;
   }
 }
-/* ==================================
+/* =========================================
    Container
-================================== */
+========================================= */
 .tabs-container {
   max-width: 900px;
-  margin: 30px auto;
+  margin: 40px auto;
   font-family: inherit;
 }
 
-/* ==================================
-   Tab Bar
-================================== */
+/* =========================================
+   Tab Bar (Full Width Segmented Control)
+========================================= */
 .tabs {
   display: flex;
-  justify-content: center;
-  border-bottom: 2px solid #e5e5e5;
-  gap: 6px;
+  width: 100%;
+  background: #f2f4f7;
+  border-radius: 10px;
+  padding: 4px;
+  gap: 4px;
 }
 
-/* ==================================
-   Tabs (default state)
-================================== */
+/* =========================================
+   Individual Tabs
+========================================= */
 .tab {
-  flex: 0 0 auto;
+  flex: 1; /* evenly span width */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 4px;
 
-  padding: 12px 18px;
-  background: transparent;
+  padding: 12px 10px;
   border: none;
-  border-radius: 8px 8px 0 0;
+  background: transparent;
+  border-radius: 8px;
 
   cursor: pointer;
-  color: #555;
   font-weight: 500;
-  transition: all 0.2s ease;
+  color: #555;
+  transition: all 0.25s ease;
 }
 
 /* Hover */
 .tab:hover {
-  background: #f3f3f3;
+  background: rgba(0, 0, 0, 0.04);
 }
 
-/* ==================================
-   Active Tab (FULL COLOUR)
-================================== */
+/* =========================================
+   Active Tab (Solid Modern Look)
+========================================= */
 .tab.active {
-  background: #1f6fdc; /* change to your brand colour */
+  background: #1f6fdc; /* change to brand colour */
   color: #ffffff;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(31, 111, 220, 0.25);
 }
 
-/* Icon */
+/* =========================================
+   Icons
+========================================= */
 .tab-icon svg {
   width: 20px;
   height: 20px;
@@ -260,33 +265,28 @@
   font-size: 13px;
 }
 
-/* ==================================
+/* =========================================
    Content Area
-================================== */
+========================================= */
 .tab-content {
   display: none;
-  padding: 24px;
+  margin-top: 25px;
+  padding: 28px;
   background: #ffffff;
-  border-radius: 0 10px 10px 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
 }
 
 .tab-content.active {
   display: block;
 }
 
-/* ==================================
+/* =========================================
    Mobile
-================================== */
+========================================= */
 @media (max-width: 600px) {
-  .tabs {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .tab {
-    flex: 1 1 45%;
-    padding: 10px;
+    padding: 10px 6px;
   }
 
   .tab-label {
