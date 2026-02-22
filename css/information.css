@@ -194,74 +194,99 @@
     height: 200px;
   }
 }
-/* Container */
+/* ==================================
+   Container
+================================== */
 .tabs-container {
   max-width: 900px;
-  margin: 0 auto;
-  font-family: Arial, sans-serif;
+  margin: 30px auto;
+  font-family: inherit;
 }
 
-/* Tab bar */
+/* ==================================
+   Tab Bar
+================================== */
 .tabs {
   display: flex;
+  justify-content: center;
   border-bottom: 2px solid #e5e5e5;
+  gap: 6px;
 }
 
-/* Tab button */
+/* ==================================
+   Tabs (default state)
+================================== */
 .tab {
-  flex: 1;
-  background: #f7f7f7;
-  border: none;
-  padding: 12px 8px;
-  cursor: pointer;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  transition: background 0.2s;
+
+  padding: 12px 18px;
+  background: transparent;
+  border: none;
+  border-radius: 8px 8px 0 0;
+
+  cursor: pointer;
+  color: #555;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
+/* Hover */
 .tab:hover {
-  background: #ececec;
+  background: #f3f3f3;
 }
 
+/* ==================================
+   Active Tab (FULL COLOUR)
+================================== */
 .tab.active {
-  background: #ffffff;
-  border-bottom: 3px solid #2a7ae2;
+  background: #1f6fdc; /* change to your brand colour */
+  color: #ffffff;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* Icon */
 .tab-icon svg {
-  width: 22px;
-  height: 22px;
-  fill: #555;
-}
-
-.tab.active .tab-icon svg {
-  fill: #2a7ae2;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 /* Label */
 .tab-label {
   font-size: 13px;
-  color: #333;
 }
 
-/* Content */
+/* ==================================
+   Content Area
+================================== */
 .tab-content {
   display: none;
-  padding: 20px 10px;
-  background: #fff;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 0 10px 10px 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
 }
 
 .tab-content.active {
   display: block;
 }
 
-/* Mobile adjustments */
+/* ==================================
+   Mobile
+================================== */
 @media (max-width: 600px) {
+  .tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .tab {
-    padding: 10px 4px;
+    flex: 1 1 45%;
+    padding: 10px;
   }
 
   .tab-label {
@@ -269,7 +294,7 @@
   }
 
   .tab-icon svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 }
