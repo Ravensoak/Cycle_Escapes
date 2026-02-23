@@ -18,205 +18,163 @@
       STYLESHEETS
     ========================================================== -->
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/tours.css" />
-    <link rel="stylesheet" href="css/information.css" />
+   
+     <link rel="stylesheet" href="css/tours.css" />
+      <link rel="stylesheet" href="css/information.css" />
   </head>
 
   <body>
     <!-- =========================================================
-      HEADER + NAV (loaded dynamically)
+      HEADER (Logo) + NAV (Loaded dynamically)
     ========================================================== -->
-    <header class="site-header">
-      <div id="nav-placeholder"></div>
+    <header>
+      <!--<div class="pagelogo-container">
+        <img
+          src="/graphics/favicon-512x512.png"
+          alt="C2C Ride Logo"
+          class="pagelogo"
+        />
+      </div>-->
+      
     </header>
 
-    <!-- =========================================================
-      MAIN CONTENT
-    ========================================================== -->
-    <main>
-      <div class="tourpage">
-        <!-- HERO -->
-        <section class="event-hero">
-          <div class="hero-content">
-            <h1>Information</h1>
-            <p class="hero-subtitle">
-              Find out all you need to know here<br />
-              <span class="hero-tagline">
-                Select a section below for more detailed information
-              </span>
-            </p>
-          </div>
-        </section>
+    <div class="tourpage">
+      <!-- HERO IMAGE + COUNTDOWN -->
+      <section class="event-hero">
+           <div id="nav-placeholder"></div>
+        <div class="hero-content">
+       
+          <h1>Information</h1>
 
-        <!-- =====================================================
-          TABS
-        ====================================================== -->
-        <section class="tabs-container">
-          <!-- Tab buttons -->
-          <div class="tabs">
-            <button class="tab active" data-tab="tours">
-              <span class="tab-label">Tours</span>
-            </button>
+          <p class="hero-subtitle">
+            Find out all you need to know here<br />
+            <span class="hero-tagline"
+              >Select a section below for more detailed information</span
+            >
+          </p>
 
-            <button class="tab" data-tab="rider_support">
-              <span class="tab-label">Rider Support</span>
-            </button>
+          
+        </div>
+      </section>
 
-            <button class="tab" data-tab="rides">
-              <span class="tab-label">Rides</span>
-            </button>
+      <div class="tabs-container">
+        <!-- Tab buttons -->
+        <div class="tabs">
+          <button class="tab active" data-tab="tours">
+            <span class="tab-icon">
+              <!-- Overview icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 2l6 2 6-2v18l-6 2-6-2-6 2V4l6-2z"/>
+                <path d="M12 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                <path d="M12 10v4"/>
+              </svg>
+            </span>
+            <span class="tab-label">Tours</span>
+          </button>
 
-            <button class="tab" data-tab="travel">
-              <span class="tab-label">Travel</span>
-            </button>
-          </div>
+    <button class="tab" data-tab="rider_support">
+      <span class="tab-icon">
+        <!-- Route icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M10 2l2 2-2 3 3 3 3-2 2 2-2 3 3 3-2 2-3-2-3 2-2-2 2-3-3-3-3 2-2-2 2-3-2-2 2-2 3 2z"/>
+</svg>
+      </span>
+      <span class="tab-label">Rider Support</span>
+    </button>
 
-          <!-- =====================================================
-            TOURS CONTENT
-          ====================================================== -->
-          <div class="tab-content active" id="tours">
-            <h2>Tours</h2>
+    <button class="tab" data-tab="rides">
+      <span class="tab-icon">
+        <!-- Info icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M5 17a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+  <path d="M19 17a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+  <path d="M5 13h4l3-6h4"/>
+  <path d="M12 7l2 6"/>
+</svg>
+      </span>
+      <span class="tab-label">Rides</span>
+    </button>
 
-            <h3>Non-Profit Operation Policy</h3>
-            <p>
-              Cycle Escapes operates all tours on a non-profit basis in
-              accordance with our founding ethos. Participant contributions are
-              used exclusively to cover essential tour costs, including
-              transportation and accommodation. Any surplus funds remaining
-              after all expenses have been settled will be donated to a
-              nominated charity. This model ensures transparency, delivers
-              strong value for participants, and supports positive community
-              impact.
-            </p>
+    <button class="tab" data-tab="travel">
+      <span class="tab-icon">
+        <!-- Image icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M2 16l20-6-20-6 6 6-6 6z"/>
+  <path d="M14 10l6 6"/>
+</svg>
+      </span>
+      <span class="tab-label">Travel</span>
+    </button>
+  </div>
 
-            <h3>Safety and Group Management Policy</h3>
-            <p>
-              Cycle Escapes is committed to maintaining a safe and supportive
-              riding environment for all participants. Ride leaders are
-              responsible for assessing conditions, managing group dynamics, and
-              making decisions that prioritise rider safety at all times.
-              Participants are expected to follow the instructions of ride
-              leaders, adhere to designated routes, and ride in a manner that
-              supports the safety and wellbeing of the group.
-            </p>
+  <!-- Tab content -->
+  <div class="tab-content active" id="tours">
+    <h2>Tours</h2>
+    <h3>Non‑Profit Operation Policy</h3>
+<p>Cycle Escapes operates all tours on a non‑profit basis in accordance with our founding ethos. Participant contributions are used exclusively to cover essential tour costs, including transportation and accommodation. Any surplus funds remaining after all expenses have been settled will be donated to a nominated charity. This model ensures transparency, delivers strong value for participants, and supports positive community impact.</p>
+<h3>Safety and Group Management Policy</h3>
+<p>Cycle Escapes is committed to maintaining a safe and supportive riding environment for all participants. Ride leaders are responsible for assessing conditions, managing group dynamics, and making decisions that prioritise rider safety at all times. Participants are expected to follow the instructions of ride leaders, adhere to designated routes, and ride in a manner that supports the safety and wellbeing of the group. Any behaviour that compromises safety may result in a rider being asked to modify their conduct or, in exceptional circumstances, leave the ride.</p>
+<h3>Booking and Participation Policy</h3>
+<p>Participation in Cycle Escapes tours requires advance booking and timely payment of all associated costs. Bookings are confirmed only once payment has been received in full. Participants are responsible for ensuring they are physically prepared for the planned route and that their bicycle and equipment are in safe, roadworthy condition. Cycle Escapes reserves the right to decline participation if safety, fitness, or equipment concerns are identified.</p>
+<h3>Governance and Decision‑Making Policy</h3>
+<p>Cycle Escapes operates under a collaborative governance model in which key decisions regarding routes, safety measures, charitable donations, and operational practices are made by the organising team. Ride leaders are empowered to make real‑time decisions during tours to ensure safety and smooth operation. All policies are reviewed periodically to ensure they remain aligned with our ethos, legal requirements, and the best interests of participants.</p>
+<h3>Cancellation Terms Policy</h3>
+<p>Cancellations must be communicated to Cycle Escapes as early as possible to allow for appropriate adjustments to tour arrangements. Participant payments are used to secure accommodation, transportation, and other non‑refundable services; therefore, refunds cannot be guaranteed. Where costs have not yet been incurred, Cycle Escapes will make every reasonable effort to return the corresponding portion of the participant’s payment. If a participant withdraws after non‑refundable expenses have been committed, their payment may be retained to cover those costs. In the event that Cycle Escapes must cancel a tour, all participants will receive a full refund of any payments made. Any surplus funds arising from cancellations will be donated to the nominated charity in line with our non‑profit operating model.
+</p>
+<h3>Equipment Standards Policy</h3>
+<p>All participants are responsible for ensuring that their bicycle and associated equipment are safe, roadworthy, and suitable for the planned route. This includes, but is not limited to, functioning brakes, appropriate gearing, correctly inflated tyres, and adequate lighting where required. Riders must carry essential spares such as inner tubes and basic tools to address minor mechanical issues during the tour. Cycle Escapes reserves the right to decline participation if a rider’s equipment is deemed unsafe or unsuitable, in order to protect the safety and wellbeing of the wider group.
+</p>
+<h3>Data Protection Policy</h3>
+<p>Cycle Escapes is committed to safeguarding the personal information of all participants. Only the minimum data necessary for tour administration, safety management, and essential communication will be collected. Personal information will be stored securely, accessed only by authorised organisers, and retained only for as long as required to fulfil operational and legal obligations. Data will never be shared with third parties except where required for accommodation, transportation, or other essential tour logistics. Participants may request access to, or deletion of, their personal information in accordance with applicable data protection regulations.
+</p>
+<h3>Code of Conduct Policy</h3>
+<p>Participants are expected to uphold respectful, considerate, and cooperative behaviour throughout all Cycle Escapes activities. This includes following the instructions of ride leaders, maintaining group cohesion, and treating fellow riders, local communities, and the environment with courtesy. Behaviour that endangers others, disrupts the group, or undermines the ethos of Cycle Escapes will not be tolerated. Ride leaders reserve the right to intervene, including asking a participant to modify their behaviour or, in exceptional cases, withdraw from the tour.
+</p>
+  </div>
 
-            <h3>Booking and Participation Policy</h3>
-            <p>
-              Participation requires advance booking and full payment. Riders
-              are responsible for ensuring they are physically prepared and that
-              their bicycle and equipment are safe and roadworthy. Cycle Escapes
-              reserves the right to decline participation where safety, fitness,
-              or equipment concerns exist.
-            </p>
+  <div class="tab-content" id="rider_support">
+    <h2>Rider Support</h2>
+    <h3>Support Vehicle and Transport Policy</h3>
+<p>Cycle Escapes provides a designated support vehicle to assist with the safe and efficient transport of bicycles, luggage, and rider needs throughout the tour. Participants must ensure that their bicycles and luggage are delivered to the specified loading point to allow sufficient time for secure loading and transport to the first overnight location. At the conclusion of the tour, participants must be present at the designated loading point for return transport. Exact loading locations will be confirmed closer to the tour date.
+The support vehicle will transport all luggage between overnight stops, enabling participants to ride without carrying additional weight. The vehicle will also remain on‑call to provide mechanical assistance or rider pick‑up if required. This system ensures that all participants have access to timely support and can complete each day’s route safely and comfortably.
 
-            <h3>Governance and Decision-Making Policy</h3>
-            <p>
-              Cycle Escapes operates under a collaborative governance model.
-              Ride leaders may make real-time decisions during tours to ensure
-              safety and smooth operation. Policies are reviewed periodically to
-              ensure alignment with our ethos and legal requirements.
-            </p>
+</p>
+  </div>
 
-            <h3>Cancellation Terms Policy</h3>
-            <p>
-              Cancellations must be communicated as early as possible.
-              Participant payments are used to secure non-refundable services,
-              therefore refunds cannot be guaranteed. Where costs have not yet
-              been incurred, reasonable efforts will be made to return the
-              corresponding portion. If Cycle Escapes cancels a tour, a full
-              refund will be provided.
-            </p>
+  <div class="tab-content" id="rides">
+    <h2>Rides</h2>
+    <h3>Group Riding Policy</h3>
+<p>Wherever practical, all participants will ride together as a single group. In circumstances where differing abilities or safety considerations require it, the ride leaders may divide participants into smaller ability‑based groups at their discretion. A buddy system will be implemented for all rides: each rider will be paired with another rider and will remain responsible for maintaining awareness of their buddy’s location and wellbeing throughout the route. This system ensures that no rider is left isolated in the event of a mechanical issue, delay, or other unforeseen incident.
+</p>
+  </div>
 
-            <h3>Equipment Standards Policy</h3>
-            <p>
-              Riders must ensure their bicycle and equipment are safe and
-              suitable for the route, including functioning brakes, appropriate
-              tyres, and essential spares and tools. Participation may be
-              declined if equipment is deemed unsafe.
-            </p>
-
-            <h3>Data Protection Policy</h3>
-            <p>
-              Only necessary personal data will be collected for administration,
-              safety, and communication. Information will be stored securely,
-              accessed only by organisers, and retained only as long as
-              required. Data will not be shared except where essential for tour
-              logistics.
-            </p>
-
-            <h3>Code of Conduct Policy</h3>
-            <p>
-              Participants are expected to behave respectfully and
-              cooperatively, follow ride leader instructions, and support group
-              cohesion. Behaviour that compromises safety or the ethos of Cycle
-              Escapes may result in intervention or withdrawal from the tour.
-            </p>
-          </div>
-
-          <!-- =====================================================
-            RIDER SUPPORT
-          ====================================================== -->
-          <div class="tab-content" id="rider_support">
-            <h2>Rider Support</h2>
-
-            <h3>Support Vehicle and Transport Policy</h3>
-            <p>
-              A designated support vehicle will transport luggage between
-              overnight stops and provide mechanical assistance or rider pick-up
-              if required. Participants must deliver bicycles and luggage to the
-              specified loading point and be present for return transport at the
-              end of the tour.
-            </p>
-          </div>
-
-          <!-- =====================================================
-            RIDES
-          ====================================================== -->
-          <div class="tab-content" id="rides">
-            <h2>Rides</h2>
-
-            <h3>Group Riding Policy</h3>
-            <p>
-              Where practical, riders will travel as a single group. Ride
-              leaders may divide participants into smaller ability-based groups
-              if required. A buddy system ensures no rider is left isolated in
-              the event of a delay or mechanical issue.
-            </p>
-          </div>
-
-          <!-- =====================================================
-            TRAVEL
-          ====================================================== -->
-          <div class="tab-content" id="travel">
-            <h2>Travel</h2>
-
-            <h3>Travel Arrangements Policy</h3>
-            <p>
-              Participants are responsible for arranging their own travel to and
-              from the start and finish points. Suggested options may be
-              provided, and shared travel coordination will be supported where
-              feasible.
-            </p>
-          </div>
-        </section>
-      </div>
-    </main>
+  <div class="tab-content" id="travel">
+    <h2>Travel</h2>
+    <h3>Travel Arrangements Policy</h3>
+<p>Participants are responsible for organising and funding their own travel to and from the designated start and finish points of the tour. Cycle Escapes will provide suggested travel options in advance and will assist with coordinating shared travel arrangements where feasible. All riders are expected to arrive at the start and finish locations at the agreed times to ensure smooth tour operations.
+</p>
+  </div>
+</div>
+      
+    
+    
 
     <!-- =========================================================
-      FOOTER
+      FOOTER PLACEHOLDER (Loaded dynamically)
     ========================================================== -->
-    <footer>
-      <div id="footer-placeholder"></div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
-    <!-- Refresh button -->
+    <!-- =========================================================
+      FLOATING REFRESH BUTTON (PWA only)
+    ========================================================== -->
     <button id="refreshButton" title="Refresh">🔄</button>
 
     <!-- =========================================================
-      SCRIPTS
+      PAGE SCRIPTS
+      (defer = loads after HTML parsing, safer for DOM elements)
     ========================================================== -->
     <script src="js/information.js" defer></script>
     <script src="js/site.js" defer></script>
   </body>
 </html>
-<!-- End of Information.html -->
+<!-- End of Accommodation.html -->
