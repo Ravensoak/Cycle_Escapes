@@ -236,9 +236,12 @@ body {
 }
 
 .tab-icon i {
-  font-size: 1.25rem; /* balanced for UI tabs */
-  width: 1.5rem; /* forces equal horizontal footprint */
-  text-align: center; /* centers icons inside the span */
+  font-size: 1.25rem;
+  width: 1.5rem;
+  line-height: 1;
+  text-align: center;
+  display: inline-block;
+  color: #444; /* or your brand grey */
 }
 
 .heading-underline {
