@@ -235,6 +235,12 @@ body {
   }
 }
 
+.tab-icon i {
+  font-size: 1.25rem; /* balanced for UI tabs */
+  width: 1.5rem; /* forces equal horizontal footprint */
+  text-align: center; /* centers icons inside the span */
+}
+
 .heading-underline {
   position: relative;
   padding-bottom: 0.6rem;
