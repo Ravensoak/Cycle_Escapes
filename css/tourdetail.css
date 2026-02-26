@@ -611,15 +611,61 @@ body {
 }
 
 .reserve-btn {
-  padding: 00.5rem 0.5rem;
+  position: relative;
+  padding: 0.5rem 0.5rem;
   background: #0077cc;
   color: #fff;
   text-decoration: none;
   border-radius: 10px;
   font-size: 0.95rem;
   white-space: nowrap;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); /* drop shadow */
+
 }
 
+/* Hover colour (your existing rule) */
 .reserve-btn:hover {
   background: #005fa3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35); /* slightly stronger on hover */
+}
+
+
+}
+
+/* Tooltip bubble 
+.reserve-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%; /* places tooltip above the button */
+/*left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}*/
+
+/* Tooltip arrow */
+.reserve-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Show tooltip on hover */
+.reserve-btn:hover::after,
+.reserve-btn:hover::before {
+  opacity: 1;
 }
