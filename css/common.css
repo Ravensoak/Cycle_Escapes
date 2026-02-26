@@ -218,6 +218,13 @@ h1,
   color: var(--hover);
 }
 
+/* Increase font size on desktop */
+@media (min-width: 1024px) {
+  .main-nav a {
+    font-size: 1.1rem; /* adjust to taste */
+  }
+}
+
 /* === Footer === */
 
 /* =========================================================
