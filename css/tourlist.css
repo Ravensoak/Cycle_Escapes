@@ -232,3 +232,15 @@ body {
     height: 200px;
   }
 }
+
+.hero-icon {
+  text-align: center;
+  margin-bottom: 1rem; /* spacing between icon and title */
+}
+
+.hero-icon img {
+  width: 80px; /* adjust to match your hero scale */
+  height: auto; /* keeps proportions correct */
+  opacity: 0.9; /* optional: softens the image */
+  display: inline-block;
+}
