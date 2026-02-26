@@ -81,6 +81,7 @@ body {
   position: relative;
   z-index: 2;
   max-width: 900px;
+  margin-top: -60px;
 }
 
 /* Hero title */
@@ -239,8 +240,11 @@ body {
 }
 
 .hero-icon img {
-  width: 80px; /* adjust to match your hero scale */
-  height: auto; /* keeps proportions correct */
+  width: 80px;
+  height: auto;
   opacity: 0.9; /* optional: softens the image */
   display: inline-block;
+
+  /* Drop shadow */
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.35));
 }
