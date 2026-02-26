@@ -602,3 +602,24 @@ body {
     padding-top: 50px; /* space so title doesn't sit under nav */
   }
 }
+
+.logistics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reserve-btn {
+  padding: 00.5rem 0.5rem;
+  background: #0077cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.reserve-btn:hover {
+  background: #005fa3;
+}
