@@ -234,3 +234,19 @@ body {
     height: 18px;
   }
 }
+
+.heading-underline {
+  position: relative;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+
+.heading-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #d0d0d0; /* professional grey */
+}
