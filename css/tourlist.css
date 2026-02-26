@@ -49,8 +49,7 @@ body {
   margin-left: calc(50% - 50vw); /* break out of centered container */
   margin-top: 0;
   min-height: 420px;
-  background: url("/pictures/Cyclists1.jpg") center/cover;
-
+  background: url("/pictures/Cyclists1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

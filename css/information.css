@@ -1,12 +1,125 @@
-/* CSS for Information sheet */
-
-/* =========================================================
-   HERO SECTION
-========================================================= */
-
-.event-hero {
-  background: url("/pictures/Cyclists1.jpg") center/cover;
+/* Reset basic spacing */
+header {
+  margin: 0;
+  padding: 0;
 }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #f5f7f6; /* page background behind the card */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Page container */
+.tourpage {
+  width: 100%;
+  margin: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+/* Desktop layout for tourpage */
+@media (min-width: 768px) {
+  .tourpage {
+    max-width: 900px;
+    margin: 0 auto; /* center horizontally */
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+
+/* Hero fills full viewport width */
+.event-hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw); /* break out of centered container */
+  margin-top: 0;
+  min-height: 420px;
+  background: url("/pictures/Cyclists1.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+/* On desktop, match container width */
+@media (min-width: 768px) {
+  .event-hero {
+    width: 100%;
+    margin-left: 0;
+    border-radius: 6px;
+  }
+}
+
+/* Dark gradient overlay */
+.event-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15));
+}
+
+/* Hero text container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+/* Hero title */
+.hero-content h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Subtitle text */
+.hero-subtitle {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Tagline */
+.hero-tagline {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* ===============================
+   NAV POSITIONING
+================================= */
+
+@media (min-width: 768px) {
+  #nav-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .hero-content {
+    padding-top: 50px; /* prevent overlap with nav */
+  }
+}
+
+/* CSS for Information sheet */
 
 /* =========================================================
    TABS CONTAINER
