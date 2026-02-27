@@ -1,11 +1,12 @@
 /* =========================================================
   Run on tab click
 ========================================================== */
-
+/* Wait for the html page to be fully loaded */
 document.addEventListener("DOMContentLoaded", function () {
+  /* Collect all tab and content panels */
   const tabs = document.querySelectorAll(".tab");
   const contents = document.querySelectorAll(".tab-content");
-
+  /* Attach click handlers for each tab */
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       // Remove active states
