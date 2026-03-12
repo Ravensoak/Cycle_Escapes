@@ -186,11 +186,14 @@ body {
 .ride-stats tbody td {
   padding: 10px;
   border-bottom: 1px solid #e0e0e0;
-  font-size: 15px;
 }
 
 .ride-stats tbody tr:last-child td {
   border-bottom: none;
+}
+.ride-stats th,
+.ride-stats td {
+  padding: 8px 12px;
 }
 
 /* Title outside the card */
