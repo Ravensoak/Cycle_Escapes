@@ -160,18 +160,12 @@ body {
 }
 
 /* Table */
-.table-scroll {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
-}
-
 .ride-stats {
   width: 100%;
   border-collapse: collapse;
   font-family: "Segoe UI", sans-serif;
   font-size: 15px;
   color: #1a1a1a;
-  min-width: 700px; /* ensures scrolling instead of squishing */
 }
 
 .ride-stats thead th {
