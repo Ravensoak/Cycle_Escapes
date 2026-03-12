@@ -171,6 +171,7 @@ body {
   border-collapse: collapse;
   font-family: "Segoe UI", sans-serif;
   font-size: 15px;
+  -webkit-text-size-adjust: 100%;
   color: #1a1a1a;
   min-width: 700px; /* ensures scrolling instead of squishing */
 }
