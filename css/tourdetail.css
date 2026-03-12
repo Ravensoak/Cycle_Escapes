@@ -194,6 +194,7 @@ body {
 .ride-stats th,
 .ride-stats td {
   padding: 8px 12px;
+  white-space: nowrap;
 }
 
 /* Title outside the card */
