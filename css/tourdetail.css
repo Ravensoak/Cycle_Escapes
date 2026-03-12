@@ -165,16 +165,6 @@ body {
   -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
   position: relative;
 }
-.table-scroll::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 100%;
-  pointer-events: none;
-  background: linear-gradient(to right, transparent, white);
-}
 
 .ride-stats {
   width: 100%;
