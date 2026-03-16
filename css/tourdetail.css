@@ -91,6 +91,8 @@ body {
   align-items: center;
   transition: background 0.2s ease;
   border-radius: 4px 4px 0 0;
+  margin-right: 0.88rem;
+  margin-left: 0.88rem;
 }
 
 .accordion-header:hover {
@@ -295,7 +297,7 @@ body {
 .logistics {
   background: #eaeaea;
   padding: 0.6rem;
-  border-radius: 10px;
+  border-radius: 0px 0px 6px 6px;
   margin: 0.9rem 0;
   margin-top: 0rem;
 }
@@ -687,16 +689,6 @@ summary::-webkit-details-marker {
   cursor: pointer;
   list-style: none;
 }
-
-/* expand icon 
-.accordion-header::after {
-  content: "➕";
-  margin-left: auto;
-}
-
-details[open] .accordion-header::after {
-  content: "➖";
-}*/
 
 /* ===============================
    ACCORDION STYLING
