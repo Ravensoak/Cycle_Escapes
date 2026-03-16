@@ -1,0 +1,466 @@
+/* =====================================================
+   GLOBAL RESET & BASE PAGE STYLING
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #f5f7f6; /* page background behind cards */
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* =====================================================
+   PAGE CONTAINER
+   Main centered content wrapper
+===================================================== */
+
+.tourpage {
+  width: 100%;
+  margin: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background: #fff;
+}
+
+/* Desktop layout */
+
+@media (min-width: 768px) {
+  .tourpage {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.event-hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: 0;
+  min-height: 420px;
+
+  background: url("/pictures/Cyclists1.jpg") center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #fff;
+  overflow: hidden;
+}
+
+.event-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* readability overlay */
+
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.hero-content h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-tagline {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.hero-description {
+  max-width: 750px;
+  margin: 1.2rem auto 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+  opacity: 0.95;
+}
+
+/* Desktop hero */
+
+@media (min-width: 768px) {
+  .event-hero {
+    width: 100%;
+    margin-left: 0;
+    border-radius: 6px;
+  }
+}
+
+/* =====================================================
+   COUNTDOWN TIMER
+===================================================== */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.countdown-box {
+  padding: 0.9rem 1.3rem;
+  border-radius: 8px;
+  min-width: 90px;
+
+  color: #fff;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-box span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: block;
+}
+
+.countdown-box small {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* colour variations */
+
+.countdown-box.green {
+  background: #4a8f4f;
+}
+.countdown-box.blue {
+  background: #2c4f7c;
+}
+.countdown-box.orange {
+  background: #d96a2b;
+}
+
+/* =====================================================
+   HERO STATS CARDS
+===================================================== */
+
+.hero-stats-section {
+  margin-top: -60px;
+  padding: 0 1rem 2rem;
+  position: relative;
+  z-index: 3;
+}
+
+.hero-stats {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.stat-card {
+  background: #fff;
+  text-align: center;
+
+  padding: 1.4rem 1rem;
+  border-radius: 10px;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  color: #2c7a4b;
+  margin-bottom: 0.4rem;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c7a4b;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* =====================================================
+   ROUTE CARDS GRID
+===================================================== */
+
+.route1-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  justify-items: center;
+}
+
+.route1-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  padding: 12px;
+  background: #fff;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  width: 100%;
+  max-width: 280px;
+}
+
+.route1-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border-radius: 6px;
+  margin: 12px 0;
+}
+
+/* =====================================================
+   LOGISTICS / INFORMATION BLOCKS
+===================================================== */
+
+.logistics {
+  background: #eaeaea;
+
+  padding: 0.6rem;
+  border-radius: 10px;
+
+  margin: 0.9rem 0;
+}
+
+.logistics-intro {
+  background: #fff;
+
+  padding: 0.8rem 1rem;
+
+  border-left: 4px solid #2c7a4b;
+
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.logistics h3 {
+  margin-top: 1.2rem;
+  color: #2c3e50;
+}
+
+.logistics ul {
+  padding-left: 1.2rem;
+}
+
+.logistics li {
+  margin-bottom: 0.4rem;
+}
+
+/* =====================================================
+   TABLES
+===================================================== */
+
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ride-stats {
+  width: 100%;
+  border-collapse: collapse;
+
+  font-family: "Segoe UI", sans-serif;
+  font-size: 15px;
+
+  min-width: 700px;
+}
+
+.ride-stats thead th {
+  background-color: #f2f5f4;
+  color: #1a4d3c;
+
+  text-align: left;
+
+  padding: 10px;
+
+  border-bottom: 2px solid #c9d3cf;
+}
+
+.ride-stats td,
+.ride-stats th {
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline {
+  position: relative;
+
+  margin-top: 1rem;
+
+  padding-left: 1.5rem;
+
+  border-left: 3px solid #2c7a4b;
+}
+
+.timeline-item {
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: -9px;
+  top: 4px;
+
+  width: 10px;
+  height: 10px;
+
+  background: #2c7a4b;
+  border-radius: 50%;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.timeline-content {
+  color: #444;
+}
+
+/* =====================================================
+   RESERVE BUTTON
+===================================================== */
+
+.reserve-btn {
+  padding: 0.5rem 0.7rem;
+
+  background: #0077cc;
+  color: #fff;
+
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  font-size: 0.95rem;
+
+  white-space: nowrap;
+
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.reserve-btn:hover {
+  background: #005fa3;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* =====================================================
+   ACCORDION
+===================================================== */
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e3e6ea;
+  padding: 2px 0;
+}
+
+.accordion-header {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  list-style: none;
+
+  user-select: none;
+}
+
+.accordion-header::after {
+  content: "›";
+
+  font-size: 26px;
+
+  margin-left: auto;
+
+  transition: transform 0.3s ease;
+}
+
+details[open] .accordion-header::after {
+  transform: rotate(90deg);
+}
+
+.accordion-item .logistics {
+  overflow: hidden;
+
+  transition: max-height 0.4s ease;
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE ADJUSTMENTS
+===================================================== */
+
+@media (max-width: 600px) {
+  .hero-description {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.4rem;
+  }
+
+  .stat-card {
+    padding: 0.6rem 0.4rem;
+  }
+
+  .countdown {
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+  }
+}

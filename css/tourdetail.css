@@ -688,7 +688,7 @@ summary::-webkit-details-marker {
   list-style: none;
 }
 
-/* expand icon */
+/* expand icon 
 .accordion-header::after {
   content: "➕";
   margin-left: auto;
@@ -696,7 +696,7 @@ summary::-webkit-details-marker {
 
 details[open] .accordion-header::after {
   content: "➖";
-}
+}*/
 
 /* ===============================
    ACCORDION STYLING
