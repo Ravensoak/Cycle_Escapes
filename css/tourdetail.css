@@ -677,3 +677,141 @@ body {
 .reserve-btn:hover::before {
   opacity: 1;
 }
+/* remove default triangle */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* make header clickable */
+.accordion-header {
+  cursor: pointer;
+  list-style: none;
+}
+
+/* expand icon */
+.accordion-header::after {
+  content: "➕";
+  margin-left: auto;
+}
+
+details[open] .accordion-header::after {
+  content: "➖";
+}
+
+/* ===============================
+   ACCORDION STYLING
+================================ */
+
+.accordion-item {
+  border-bottom: 1px solid #e3e6ea;
+  padding: 8px 0;
+}
+
+/* header */
+
+.accordion-header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  user-select: none;
+}
+
+/* remove default triangle */
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* arrow icon */
+
+.accordion-header::after {
+  content: "›";
+  font-size: 26px;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+/* rotate arrow when open */
+
+details[open] .accordion-header::after {
+  transform: rotate(90deg);
+}
+
+/* animation container */
+
+.accordion-item .logistics {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+/* ==========================================
+   TOUR PAGE ACCORDION (Professional Style)
+========================================== */
+
+.accordion-item {
+  background: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid #e6e9ed;
+}
+
+/* header */
+
+.accordion-header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 18px 22px;
+  list-style: none;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+/* hover */
+
+.accordion-header:hover {
+  background: #f7f9fb;
+}
+
+/* remove default triangle */
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* title spacing */
+
+.accordion-header h2 {
+  margin: 0;
+}
+
+/* arrow icon */
+
+.accordion-header::after {
+  content: "›";
+  font-size: 28px;
+  margin-left: auto;
+  color: #5c6a75;
+  transition: transform 0.35s ease;
+}
+
+/* rotate arrow when open */
+
+details[open] .accordion-header::after {
+  transform: rotate(90deg);
+}
+
+/* content spacing */
+
+.accordion-item .logistics {
+  padding: 0 22px 22px 22px;
+}
+
+/* subtle divider line when open */
+
+details[open] .accordion-header {
+  border-bottom: 1px solid #edf1f4;
+}

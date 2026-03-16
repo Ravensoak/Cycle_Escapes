@@ -160,12 +160,20 @@ body {
 }
 
 /* Table */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  position: relative;
+}
+
 .ride-stats {
   width: 100%;
   border-collapse: collapse;
   font-family: "Segoe UI", sans-serif;
   font-size: 15px;
+  -webkit-text-size-adjust: 100%;
   color: #1a1a1a;
+  min-width: 700px; /* ensures scrolling instead of squishing */
 }
 
 .ride-stats thead th {
@@ -184,6 +192,11 @@ body {
 
 .ride-stats tbody tr:last-child td {
   border-bottom: none;
+}
+.ride-stats th,
+.ride-stats td {
+  padding: 8px 12px;
+  white-space: nowrap;
 }
 
 /* Title outside the card */

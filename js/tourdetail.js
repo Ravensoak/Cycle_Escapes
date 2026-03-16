@@ -38,3 +38,15 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 60000);
+
+document.querySelectorAll(".accordion-item").forEach((item) => {
+  item.addEventListener("toggle", function () {
+    if (this.open) {
+      document.querySelectorAll(".accordion-item").forEach((other) => {
+        if (other !== this) {
+          other.open = false;
+        }
+      });
+    }
+  });
+});
