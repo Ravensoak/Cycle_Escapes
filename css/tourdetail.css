@@ -13,6 +13,10 @@ body {
   overflow-x: hidden;
   background: #f5f7f6; /* page background */
 }
+
+html {
+  overflow-y: scroll;
+}
 /********/
 /* Hero */
 /********/
@@ -599,7 +603,7 @@ summary::-webkit-details-marker {
 
 .accordion-item {
   /*border-bottom: 1px solid #e3e6ea; */
-  padding: 1px 12px 5px 12px;
+  padding: 0px 12px 5px 12px;
 }
 
 /* header */
@@ -610,7 +614,7 @@ summary::-webkit-details-marker {
   align-items: center;
   list-style: none;
   user-select: none;
-  font-size: 16px;
+  font-size: 12px;
   background-color: lightblue;
   color: black;
 }
@@ -625,7 +629,7 @@ summary::-webkit-details-marker {
 
 .accordion-header::after {
   content: "›";
-  font-size: 26px;
+  font-size: 28px;
   margin-left: auto;
   transition: transform 0.3s ease;
 }
