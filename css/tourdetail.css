@@ -286,75 +286,6 @@ html {
   }
 }
 
-.accordion {
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.accordion-item {
-  background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.accordion-item.active {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.accordion-header {
-  background: #3498db;
-  color: #fff;
-  cursor: pointer;
-  padding: 0.2rem 0.4rem;
-  font-weight: 600;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background 0.2s ease;
-  border-radius: 4px 4px 0 0;
-}
-
-.accordion-header:hover {
-  background: #005fa3;
-}
-
-/* Smooth expand/collapse animation */
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition:
-    max-height 0.4s ease,
-    padding 0.3s ease;
-  padding: 0 1.5rem;
-  background: #fff;
-  border-radius: 0 0 4px 4px;
-}
-
-.accordion-content.open {
-  padding: 1rem 1.5rem;
-}
-
-.accordion-content h3 {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  color: #333;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 0.3rem;
-}
-
-.accordion-content p {
-  margin: 0.5rem 0 1rem;
-  color: #555;
-}
-
 /*********************************************************************/
 /* Table                                                             */
 /********************************************************************/
@@ -600,6 +531,70 @@ summary::-webkit-details-marker {
 /* ===============================
    ACCORDION STYLING
 ================================ */
+.accordion {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.accordion-item {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.accordion-item.active {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.accordion-header {
+  background: #3498db;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease;
+  border-radius: 4px 4px 4px 4px;
+}
+
+/* Smooth expand/collapse animation */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    padding 0.3s ease;
+  padding: 0 1.5rem;
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+}
+
+.accordion-content.open {
+  padding: 1rem 1.5rem;
+}
+
+.accordion-content h3 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+.accordion-content p {
+  margin: 0.5rem 0 1rem;
+  color: #555;
+}
 
 .accordion-item {
   /*border-bottom: 1px solid #e3e6ea; */
@@ -623,7 +618,7 @@ summary::-webkit-details-marker {
 }
 
 .accordion-header:hover {
-  background-color: darkslateblue;
+  background-color: #005fa3;
   color: white;
 }
 
@@ -650,7 +645,8 @@ details[open] .accordion-header::after {
 
 details[open] .accordion-header {
   color: white;
-  background-color: darkslateblue;
+  background-color: #005fa3;
+  border-radius: 4px 4px 0px 0px;
 }
 
 /* animation container */
@@ -658,4 +654,8 @@ details[open] .accordion-header {
 .accordion-item .logistics {
   overflow: hidden;
   transition: max-height 0.4s ease;
+}
+
+.accordion-item:last-of-type {
+  padding-bottom: 30px; /* or whatever size you want */
 }
