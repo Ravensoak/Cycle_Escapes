@@ -617,6 +617,14 @@ summary::-webkit-details-marker {
   font-size: 12px;
   background-color: lightblue;
   color: black;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.accordion-header:hover {
+  background-color: darkslateblue;
+  color: white;
 }
 
 /* remove default triangle */
@@ -638,6 +646,11 @@ summary::-webkit-details-marker {
 
 details[open] .accordion-header::after {
   transform: rotate(90deg);
+}
+
+details[open] .accordion-header {
+  color: white;
+  background-color: darkslateblue;
 }
 
 /* animation container */
