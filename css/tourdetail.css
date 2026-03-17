@@ -611,6 +611,8 @@ summary::-webkit-details-marker {
   list-style: none;
   user-select: none;
   font-size: 12px;
+  background-color: lightblue;
+  color: #1a1a1a;
 }
 
 /* remove default triangle */
