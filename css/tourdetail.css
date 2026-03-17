@@ -13,6 +13,248 @@ body {
   overflow-x: hidden;
   background: #f5f7f6; /* page background behind the card */
 }
+/********/
+/* Hero */
+/********/
+.event-hero {
+  position: relative;
+  width: 100vw; /* full viewport width */
+  margin-left: calc(50% - 50vw); /* break out of centered container */
+  margin-top: 0;
+  min-height: 420px;
+  background: url("/pictures/Cyclists1.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 0; /* edge-to-edge looks better on mobile */
+}
+@media (min-width: 768px) {
+  .event-hero {
+    width: 100%; /* match .tourpage width */
+    margin-left: 0; /* stop breaking out */
+    border-radius: 6px 6px 0px 0px; /* optional: match card style */
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Subtle dark gradient for readability */
+.event-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15));
+}
+
+/* Remove any curve */
+.event-hero::after {
+  display: none;
+}
+
+/* Keep text above overlay */
+.event-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.hero-content h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-tagline {
+  font-style: italic;
+  opacity: 0.9;
+}
+.hero-description {
+  max-width: 750px;
+  margin: 1.2rem auto 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ffffff;
+  opacity: 0.95;
+}
+
+/**************************/
+/* Countdown              */
+/**************************/
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.countdown-box {
+  padding: 0.9rem 1.3rem;
+  border-radius: 8px;
+  min-width: 90px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-box span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: block;
+}
+
+.countdown-box small {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* Countdown colours */
+.countdown-box.green {
+  background: #4a8f4f;
+}
+.countdown-box.blue {
+  background: #2c4f7c;
+}
+.countdown-box.orange {
+  background: #d96a2b;
+}
+
+/***********************/
+/* Stats               */
+/***********************/
+
+/* Stats section sits slightly over the hero */
+.hero-stats-section {
+  margin-top: -60px;
+  padding: 0 1rem 2rem;
+  position: relative;
+  z-index: 3;
+}
+
+/* Equal spacing */
+.hero-stats {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+/***********************/
+/* Stat Cards         */
+/***********************/
+
+.stat-card {
+  background: #ffffff;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon */
+.icon {
+  width: 36px;
+  height: 36px;
+  color: #2c7a4b;
+  margin-bottom: 0.4rem;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c7a4b;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats-section {
+    margin-top: -40px;
+  }
+}
+/* Mobile – keep all 4 stats in a row and countdown in a row*/
+@media (max-width: 600px) {
+  .hero-description {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+  .hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.4rem;
+  }
+
+  .stat-card {
+    padding: 0.6rem 0.4rem;
+    border-radius: 8px;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .stat-value {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    line-height: 1.1;
+  }
+
+  .hero-stats-section {
+    margin-top: -40px;
+  }
+
+  .countdown {
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+  }
+
+  .countdown-box {
+    padding: 0.5rem 0.6rem;
+    min-width: 60px;
+    border-radius: 6px;
+  }
+
+  .countdown-box span {
+    font-size: 1.1rem;
+  }
+
+  .countdown-box small {
+    font-size: 0.65rem;
+  }
+}
 
 /*.tourpage {
   width: 100%;
@@ -142,7 +384,7 @@ body {
 }
 
 /* Card container */
-.ride-stats-card {
+.info-table-card {
   background: #ffffff;
   border-radius: 12px;
   padding: 20px 24px;
@@ -152,7 +394,7 @@ body {
 }
 
 /* Title */
-.ride-stats-title {
+.info-table-title {
   font-family: "Segoe UI", sans-serif;
   font-weight: 600;
   margin-bottom: 1em;
@@ -166,7 +408,7 @@ body {
   position: relative;
 }
 
-.ride-stats {
+.info-table {
   width: 100%;
   border-collapse: collapse;
   font-family: "Segoe UI", sans-serif;
@@ -176,7 +418,7 @@ body {
   min-width: 700px; /* ensures scrolling instead of squishing */
 }
 
-.ride-stats thead th {
+.info-table thead th {
   background-color: #f2f5f4; /* mist-grey */
   color: #1a4d3c; /* alpine green */
   text-align: left;
@@ -185,16 +427,16 @@ body {
   font-weight: 600;
 }
 
-.ride-stats tbody td {
+.info-table tbody td {
   padding: 10px;
   border-bottom: 1px solid #e0e0e0;
 }
 
-.ride-stats tbody tr:last-child td {
+.info-table tbody tr:last-child td {
   border-bottom: none;
 }
-.ride-stats th,
-.ride-stats td {
+.info-table th,
+.info-table td {
   padding: 8px 12px;
   white-space: nowrap;
 }
@@ -368,238 +610,6 @@ body {
   color: #444;
 }
 
-/* Hero fills the container width */
-.event-hero {
-  position: relative;
-  width: 100vw; /* full viewport width */
-  margin-left: calc(50% - 50vw); /* break out of centered container */
-  margin-top: 0;
-  min-height: 420px;
-  background: url("/pictures/Cyclists1.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  overflow: hidden;
-  border-radius: 0; /* edge-to-edge looks better on mobile */
-}
-@media (min-width: 768px) {
-  .event-hero {
-    width: 100%; /* match .tourpage width */
-    margin-left: 0; /* stop breaking out */
-    border-radius: 6px 6px 0px 0px; /* optional: match card style */
-  }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Subtle dark gradient for readability */
-.event-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15));
-}
-
-/* Remove any curve */
-.event-hero::after {
-  display: none;
-}
-
-/* Keep text above overlay */
-.event-hero-content {
-  position: relative;
-  z-index: 1;
-  padding: 2rem 1rem;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-}
-
-.hero-content h1 {
-  font-size: 2.6rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-subtitle {
-  font-size: 1.15rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero-tagline {
-  font-style: italic;
-  opacity: 0.9;
-}
-.hero-description {
-  max-width: 750px;
-  margin: 1.2rem auto 0;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #ffffff;
-  opacity: 0.95;
-}
-
-/* Countdown */
-.countdown {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1.5rem 0 2rem;
-  flex-wrap: wrap;
-}
-
-.countdown-box {
-  padding: 0.9rem 1.3rem;
-  border-radius: 8px;
-  min-width: 90px;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.countdown-box span {
-  font-size: 1.8rem;
-  font-weight: bold;
-  display: block;
-}
-
-.countdown-box small {
-  font-size: 0.85rem;
-  opacity: 0.9;
-}
-
-/* Countdown colours */
-.countdown-box.green {
-  background: #4a8f4f;
-}
-.countdown-box.blue {
-  background: #2c4f7c;
-}
-.countdown-box.orange {
-  background: #d96a2b;
-}
-
-/* Stats */
-/* Stats section sits slightly over the hero */
-.hero-stats-section {
-  margin-top: -60px;
-  padding: 0 1rem 2rem;
-  position: relative;
-  z-index: 3;
-}
-
-/* Equal spacing */
-.hero-stats {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
-}
-
-/* Cards */
-.stat-card {
-  background: #ffffff;
-  text-align: center;
-  padding: 1.4rem 1rem;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-
-/* Icon */
-.icon {
-  width: 36px;
-  height: 36px;
-  color: #2c7a4b;
-  margin-bottom: 0.4rem;
-}
-
-.stat-value {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #2c7a4b;
-}
-
-.stat-label {
-  font-size: 0.85rem;
-  color: #666;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .hero-stats {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .hero-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-stats-section {
-    margin-top: -40px;
-  }
-}
-/* Mobile – keep all 4 stats in a row and countdown in a row*/
-@media (max-width: 600px) {
-  .hero-description {
-    font-size: 0.9rem;
-    padding: 0 0.5rem;
-  }
-  .hero-stats {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.4rem;
-  }
-
-  .stat-card {
-    padding: 0.6rem 0.4rem;
-    border-radius: 8px;
-  }
-
-  .icon {
-    width: 22px;
-    height: 22px;
-  }
-
-  .stat-value {
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
-
-  .stat-label {
-    font-size: 0.65rem;
-    line-height: 1.1;
-  }
-
-  .hero-stats-section {
-    margin-top: -40px;
-  }
-
-  .countdown {
-    flex-wrap: nowrap;
-    gap: 0.4rem;
-  }
-
-  .countdown-box {
-    padding: 0.5rem 0.6rem;
-    min-width: 60px;
-    border-radius: 6px;
-  }
-
-  .countdown-box span {
-    font-size: 1.1rem;
-  }
-
-  .countdown-box small {
-    font-size: 0.65rem;
-  }
-}
 /* Mobile nav inside hero */
 @media (min-width: 768px) {
   #nav-placeholder {
