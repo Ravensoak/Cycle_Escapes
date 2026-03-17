@@ -339,7 +339,7 @@ body {
   background: #005fa3;
 }
 
-.accordion-header::after {
+/*.accordion-header::after {
   content: "➕";
   font-size: 1.2rem;
   transition: transform 0.2s ease;
@@ -347,7 +347,7 @@ body {
 
 .accordion-header.active::after {
   content: "➖";
-}
+}*/
 
 /* Smooth expand/collapse animation */
 .accordion-content {
@@ -715,6 +715,7 @@ summary::-webkit-details-marker {
   align-items: center;
   list-style: none;
   user-select: none;
+  font-size: 15px;
 }
 
 /* remove default triangle */
