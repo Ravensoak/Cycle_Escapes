@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: #f5f7f6; /* page background behind the card */
+  background: #f5f7f6; /* page background */
 }
 /********/
 /* Hero */
@@ -22,7 +22,7 @@ body {
   margin-left: calc(50% - 50vw); /* break out of centered container */
   margin-top: 0;
   min-height: 420px;
-  background: url("/pictures/Cyclists1.jpg") center/cover no-repeat;
+  background: url("/pictures/Cyclists1.jpg") center/cover no-repeat; /* overriden in individual tour detail pages */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,14 +31,17 @@ body {
   overflow: hidden;
   border-radius: 0; /* edge-to-edge looks better on mobile */
 }
+
+/* event hero settings for larger screens */
 @media (min-width: 768px) {
   .event-hero {
     width: 100%; /* match .tourpage width */
     margin-left: 0; /* stop breaking out */
-    border-radius: 6px 6px 0px 0px; /* optional: match card style */
+    border-radius: 6px 6px 0px 0px; /* top radius only */
   }
 }
 
+/* * represents every element on the page */
 * {
   box-sizing: border-box;
 }
@@ -93,7 +96,7 @@ body {
 }
 
 /**************************/
-/* Countdown              */
+/* Countdown elements     */
 /**************************/
 .countdown {
   display: flex;
@@ -134,7 +137,7 @@ body {
 }
 
 /***********************/
-/* Stats               */
+/* Stats elements      */
 /***********************/
 
 /* Stats section sits slightly over the hero */
@@ -256,26 +259,6 @@ body {
   }
 }
 
-/*.tourpage {
-  width: 100%;
-  max-width: 900px;
-  margin: 0;
-  padding: 1rem;
-  box-sizing: border-box;
-  background: #fff;
-  z-index: index 1;
-}
-
-@media (min-width: 768px) {
-  .tourpage {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-}*/
-
 /* desktop (default) */
 .tourpage {
   width: 100%;
@@ -339,16 +322,6 @@ body {
   background: #005fa3;
 }
 
-/*.accordion-header::after {
-  content: "➕";
-  font-size: 1.2rem;
-  transition: transform 0.2s ease;
-}
-
-.accordion-header.active::after {
-  content: "➖";
-}*/
-
 /* Smooth expand/collapse animation */
 .accordion-content {
   max-height: 0;
@@ -378,30 +351,9 @@ body {
   color: #555;
 }
 
-.accordion {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-/* Card container */
-.info-table-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px 24px;
-  max-width: 520px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e6ecea;
-}
-
-/* Title */
-.info-table-title {
-  font-family: "Segoe UI", sans-serif;
-  font-weight: 600;
-  margin-bottom: 1em;
-  color: #0f2a21; /* deep forest */
-}
-
-/* Table */
+/*********************************************************************/
+/* Table                                                             */
+/********************************************************************/
 .table-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
@@ -441,44 +393,8 @@ body {
   white-space: nowrap;
 }
 
-/* Title outside the card */
-.info-cards-title {
-  font-family: "Segoe UI", sans-serif;
-  font-weight: 600;
-  margin-bottom: 0.8em;
-  color: #0f2a21; /* deep forest */
-}
-
-/* Unified card container */
-.info-card-single {
-  background: #ffffff; /* light cream */
-  border-radius: 12px;
-  padding: 24px;
-  max-width: 600px;
-  border: 1px solid #e6ecea;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-/* Each section inside the card */
-.info-card-section {
-  flex: 1;
-  min-width: 240px;
-}
-
-/* Section headers */
-.info-card-section h4 {
-  font-family: "Segoe UI", sans-serif;
-  font-weight: 600;
-  margin-bottom: 1em;
-  color: #1a4d3c; /* alpine green */
-}
-
 /* Buttons */
-.info-card-btn {
+.route-card-btn {
   display: inline-block;
   padding: 10px 16px;
   background-color: #1a4d3c; /* alpine green */
@@ -490,7 +406,7 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.info-card-btn:hover {
+.route-card-btn:hover {
   background-color: #0f2a21; /* deep forest */
 }
 
@@ -632,6 +548,9 @@ body {
   gap: 1rem;
 }
 
+/******************/
+/* Reserve button */
+/******************/
 .reserve-btn {
   position: relative;
   padding: 0.5rem 0.5rem;
@@ -649,24 +568,6 @@ body {
   background: #005fa3;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35); /* slightly stronger on hover */
 }
-
-/* Tooltip bubble 
-.reserve-btn::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 125%; /* places tooltip above the button */
-/*left: 50%;
-  transform: translateX(-50%);
-  background: #333;
-  color: #fff;
-  padding: 0.4rem 0.6rem;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
-}*/
 
 /* Tooltip arrow */
 .reserve-btn::before {
@@ -690,12 +591,6 @@ body {
 /* remove default triangle */
 summary::-webkit-details-marker {
   display: none;
-}
-
-/* make header clickable */
-.accordion-header {
-  cursor: pointer;
-  list-style: none;
 }
 
 /* ===============================
