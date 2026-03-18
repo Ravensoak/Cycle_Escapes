@@ -89,7 +89,7 @@ html {
 .hero-tagline {
   font-style: italic;
   font-weight: 700;
-  opacity: 0.8;
+  opacity: 1;
 }
 .hero-description {
   max-width: 750px;
