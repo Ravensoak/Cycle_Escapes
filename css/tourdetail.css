@@ -270,26 +270,34 @@ html {
   }
 }
 
-/* desktop (default) */
+/* mobile (default) */
 .tourpage {
   width: 100%;
   margin: 0;
-  padding-left: 0.5rem; /* no internal padding */
+  padding-left: 0.5rem;
   padding-right: 0.5rem;
   box-sizing: border-box;
   background: #fff;
 }
 
-/* Desktop*/
+/* allow footer to break out on mobile */
+@media (max-width: 767px) {
+  .tourpage {
+    padding: 0; /* remove mobile padding */
+    background: none; /* remove white box so footer can be full-width */
+  }
+}
+
+/* desktop */
 @media (min-width: 768px) {
   .tourpage {
     max-width: 900px;
-    margin: 0 auto; /* centers horizontally */
-    /*padding: 1.5rem; /* add breathing room on mobile */
-    padding-left: 0rem; /* no internal padding */
-    padding-right: 0rem;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
     border-radius: 6px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: #fff; /* keep boxed layout */
   }
 }
 
