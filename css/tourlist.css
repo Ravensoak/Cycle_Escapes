@@ -30,7 +30,7 @@ body {
 @media (max-width: 767px) {
   .tourpage {
     padding: 0; /* remove mobile padding */
-    background: none; /* remove white box so footer can be full-width */
+    /*background: none; /* remove white box so footer can be full-width */
   }
 }
 
