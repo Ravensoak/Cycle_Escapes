@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
   secure: false,
   auth: {
     user: "david.olney@outlook.com", // ← CHANGE THIS
-    pass: "YOUR_PASSWORD", // ← CHANGE THIS (or App Password)
+    pass: "Dao#69486948", // ← CHANGE THIS (or App Password)
   },
 });
 
