@@ -92,12 +92,12 @@ select {
 
 /* --- Form Layout --- */
 form[name="contact"] {
-  max-width: 550px;
+  max-width: 500px;
   width: 90%;
-  margin: 2.5rem auto;
-  padding: 2.5rem;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
   background: #fff;
-  border-radius: 14px;
+  border-radius: 8px;
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.07);
   font-family: system-ui, sans-serif;
 }
@@ -112,7 +112,7 @@ form[name="contact"] h2 {
 
 /* --- Form Groups (KEY ALIGNMENT WRAPPER) --- */
 .form-group {
-  width: 80%;
+  width: 100%;
   max-width: 420px;
   margin: 0 auto 1.5rem; /* centers the whole block */
 }
