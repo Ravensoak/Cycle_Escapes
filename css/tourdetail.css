@@ -65,6 +65,7 @@ html {
 .hero-icon {
   text-align: center;
   margin-top: -2rem;
+  opacity: 0.9; /* optional: softens the image */
   margin-bottom: 0rem; /* spacing between icon and title */
 }
 
