@@ -369,7 +369,7 @@ html {
   /*padding: 0 10px; /* adds space left + right */
   max-width: 1200px; /* or 1100, 1300, etc. */
   margin: 0 auto; /* centers the whole grid */
-  padding: 0 20px; /* small padding for mobile */
+  padding: 0 0px; /* small padding for mobile */
 }
 
 .route1-card {
