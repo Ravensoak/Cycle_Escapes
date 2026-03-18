@@ -83,10 +83,17 @@ select {
   animation-delay: 1s;
 }
 
+/* --- Global Fix (IMPORTANT) --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* --- Form Layout --- */
 form[name="contact"] {
-  max-width: 550px; /* Wider form */
-  width: 90%; /* Ensures it fits mobile */
+  max-width: 550px;
+  width: 90%;
   margin: 2.5rem auto;
   padding: 2.5rem;
   background: #fff;
@@ -103,9 +110,11 @@ form[name="contact"] h2 {
   text-align: center;
 }
 
-/* --- Form Groups --- */
+/* --- Form Groups (KEY ALIGNMENT WRAPPER) --- */
 .form-group {
-  margin-bottom: 1.5rem;
+  width: 80%;
+  max-width: 420px;
+  margin: 0 auto 1.5rem; /* centers the whole block */
 }
 
 /* --- Labels --- */
@@ -114,12 +123,14 @@ form[name="contact"] h2 {
   margin-bottom: 0.45rem;
   font-weight: 500;
   font-size: 1rem;
+  text-align: left; /* aligns with input edge */
 }
 
 /* --- Inputs & Textareas --- */
 .form-group input,
 .form-group textarea {
-  width: 100%;
+  display: block;
+  width: 100%; /* fills the wrapper exactly */
   padding: 0.85rem 1rem;
   border: 1px solid #cfcfcf;
   border-radius: 10px;
@@ -141,7 +152,10 @@ form[name="contact"] h2 {
 
 /* --- Button --- */
 form[name="contact"] button {
-  width: 100%;
+  display: block;
+  width: 80%;
+  max-width: 420px;
+  margin: 1.5rem auto 0;
   padding: 1rem 1.2rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -172,5 +186,11 @@ form[name="contact"] button:active {
 
   form[name="contact"] h2 {
     font-size: 1.5rem;
+  }
+
+  .form-group,
+  form[name="contact"] button {
+    width: 100%;
+    max-width: 100%;
   }
 }
