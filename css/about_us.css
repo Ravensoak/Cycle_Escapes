@@ -247,6 +247,7 @@ body {
 
 .heading-underline {
   position: relative;
+  margin-top: 0rem;
   padding-bottom: 0.6rem;
   margin-bottom: 1.4rem;
 }
