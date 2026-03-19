@@ -206,7 +206,7 @@ body {
 
 .tab-content {
   display: none;
-  margin-top: 25px;
+  margin-top: 0px;
   padding: 28px;
   background: #ffffff;
   border-radius: 12px;
