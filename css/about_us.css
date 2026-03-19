@@ -48,7 +48,7 @@ body {
   width: 100vw;
   margin-left: calc(50% - 50vw); /* break out of centered container */
   margin-top: 0;
-  min-height: 370px;
+  min-height: 350px;
   background: url("/pictures/Cyclists1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
