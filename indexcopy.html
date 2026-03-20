@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- =========================================================
+      BASIC META / PAGE INFO
+    ========================================================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cycle Escapes</title>
+
+    <!-- =========================================================
+      FAVICON
+    ========================================================== -->
+    <link rel="icon" href="graphics/favicon-32x32.png" type="image/png" />
+
+    <!-- =========================================================
+      STYLESHEETS
+    ========================================================== -->
+    <link rel="stylesheet" href="css/tourlist.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/common.css" />
+
+    <!-- =========================================================
+      PWA MANIFEST
+    ========================================================== -->
+    <link rel="manifest" href="data/manifest.json" />
+
+    <!-- =========================================================
+      THEME COLOUR (Android + iOS)
+    ========================================================== -->
+    <meta name="theme-color" content="#1f2a36" />
+
+    <!-- =========================================================
+      ANDROID PWA SUPPORT
+    ========================================================== -->
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- =========================================================
+      iOS PWA SUPPORT
+    ========================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Cycle Escapes" />
+    <link rel="apple-touch-icon" href="/graphics/favicon-512x512.png" />
+
+    <!-- iOS Splash Screen Image -->
+    <link
+      rel="apple-touch-startup-image"
+      href="/graphics/favicon-512x512.png"
+    />
+  </head>
+
+  <body data-theme="light">
+    <!-- =========================================================
+      SPLASH SCREEN (shows briefly on load)
+    ========================================================== -->
+    <div id="splash-screen">
+      <img
+        src="/graphics/Cycle_Escapes_Logo_White_-_ transparent.png"
+        alt="Cycle Escapes Logo"
+      />
+      <h1>Welcome to the Cycle Escapes Information Hub</h1>
+    </div>
+
+    <!-- =========================================================
+      HEADER (Logo + Title + Date)
+    ========================================================== -->
+    <header>
+      <div class="indexlogo-container">
+        <img
+          src="/graphics/Cycle_Escapes_Logo_White_on_Blue.png"
+          alt="Cycle Escapes Ride Logo"
+          class="indexlogo"
+        />
+      </div>
+      <!-- =========================================================
+        NAVIGATION FOR INDEX PAGE PLACEHOLDER (Loaded dynamically)
+      ========================================================== -->
+      <div id="navindex-placeholder"></div>
+    </header>
+
+    <h1>Cycle Escapes Information Hub</h1>
+    <p class="centered-header">Cycling adventures in UK and Europe</p>
+
+    <!-- =========================================================
+      INTRO TEXT
+    ========================================================== -->
+    <p class="centered-summary">
+      This is a hub for all the essential details about our upcoming cycling
+      tours. <br />Select the sections below to learn more.
+    </p>
+
+    <!-- =========================================================
+      MAIN BUTTON GRID
+    ========================================================== -->
+    <div class="button-grid">
+      <a href="about_us.html" class="btn">About Us</a>
+      <a href="TourList.html" class="btn">Explore our Tours</a>
+      <a href="contact.html" class="btn">Contact Us</a>
+
+      <!-- Dropdown Button Menu
+      <button class="btn" onclick="toggleMenu()">
+        Explore Our Road Tours ▾
+      </button>
+
+      <div id="menuList" class="menu-list">
+        <a href="2027_Wales-South_to_North.html">2027 Wales - South to North</a>
+        <a href="tours.html">2027 Scottish Lowlands</a>
+      </div> -->
+    </div>
+    <!-- =========================================================
+        LOAD TOUR CARDS
+      ========================================================== -->
+    <section class="tours-section">
+      <div class="tours-grid">
+        <!-- Wales -->
+        <a href="2027_Wales-South_to_North.html" class="tour-card">
+          <img
+            src="pictures/Wales-South_to_North/Dam.jpg"
+            alt="Elan Valley reservoir in Wales"
+          />
+
+          <div class="tour-content">
+            <h3>Wales - South to North Coast</h3>
+            <p>
+              A very scenic tour starting on the South Wales coast in Llanelli,
+              passing the Brecon Beacons and Elan Valley, through the heart of
+              Wales and Snowdonia to finish in Conwy.
+            </p>
+
+            <div class="tour-meta">
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path
+                    d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10z"
+                  />
+                </svg>
+                June 4, 2027
+              </span>
+
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path d="M3 17l6-6 4 4 7-7 1 1-8 8-4-4-5 5z" />
+                </svg>
+                227 Miles
+              </span>
+
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path d="M12 4l8 14H4L12 4z" />
+                </svg>
+                19,388 ft
+              </span>
+
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <!-- Road shape -->
+                  <path d="M6 22L10 2h4l4 20H6z" fill="currentColor" />
+                  <!-- Center dashed line -->
+                  <path
+                    d="M12 2v20"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-dasharray="3 3"
+                  />
+                </svg>
+                ROAD
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Scotland -->
+        <a href="2027_Scottish_Lowlands.html" class="tour-card">
+          <img
+            src="pictures/Scottish_Lowlands/Kelpies.png"
+            alt="The Kelpies sculpture in Scotland"
+          />
+
+          <div class="tour-content">
+            <h3>Scottish Lowlands</h3>
+            <p>
+              A scenic ride through the Scottish Lowlands including the Forth
+              Bridge, Stirling Castle, the Trossachs, Loch Lomond, Falkirk Wheel
+              and the Kelpies.
+            </p>
+
+            <div class="tour-meta">
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path
+                    d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10z"
+                  />
+                </svg>
+                Sept 17, 2027
+              </span>
+
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path d="M3 17l6-6 4 4 7-7 1 1-8 8-4-4-5 5z" />
+                </svg>
+                216 Miles
+              </span>
+
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path d="M12 4l8 14H4L12 4z" />
+                </svg>
+                9,541 ft
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <!-- Road shape -->
+                  <path d="M6 22L10 2h4l4 20H6z" fill="currentColor" />
+                  <!-- Center dashed line -->
+                  <path
+                    d="M12 2v20"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-dasharray="3 3"
+                  />
+                </svg>
+                ROAD
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Norway -->
+        <a href="Temp.html" class="tour-card">
+          <img
+            src="pictures/Norway/norwaycoast.jpg"
+            alt="Norwegian coastal islands landscape"
+          />
+
+          <div class="tour-content">
+            <h3>Norway - Bergen to Trondheim</h3>
+            <p>
+              Cycle along the stunning Norwegian coast, crossing fjords and
+              island chains.
+            </p>
+
+            <div class="tour-meta">
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path
+                    d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10z"
+                  />
+                </svg>
+                June 2, 2028
+              </span>
+
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path d="M3 17l6-6 4 4 7-7 1 1-8 8-4-4-5 5z" />
+                </svg>
+                505 Miles
+              </span>
+
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path d="M12 4l8 14H4L12 4z" />
+                </svg>
+                36,089 ft
+              </span>
+
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <!-- Road shape -->
+                  <path d="M6 22L10 2h4l4 20H6z" fill="currentColor" />
+                  <!-- Center dashed line -->
+                  <path
+                    d="M12 2v20"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-dasharray="3 3"
+                  />
+                </svg>
+                ROAD
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Ireland -->
+        <a href="Temp.html" class="tour-card">
+          <img
+            src="pictures/Ireland/ring-of-kerry.jpg"
+            alt="Ring of Kerry coastal scenery"
+          />
+
+          <div class="tour-content">
+            <h3>Southern Ireland</h3>
+            <p>
+              Cycle through the stunning Irish countryside taking gravel paths
+              and easy off-road sections
+            </p>
+
+            <div class="tour-meta">
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path
+                    d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10z"
+                  />
+                </svg>
+                Sept 4, 2028
+              </span>
+
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path d="M3 17l6-6 4 4 7-7 1 1-8 8-4-4-5 5z" />
+                </svg>
+                210 Miles
+              </span>
+
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path d="M12 4l8 14H4L12 4z" />
+                </svg>
+                15,324 ft
+              </span>
+
+              <span>
+                <svg viewBox="0 0 24 24" class="icon">
+                  <!-- Ground line -->
+                  <path
+                    d="M3 18h18"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <!-- Gravel stones -->
+                  <path
+                    d="M6 16.5c.6 0 1.1-.5 1.1-1.1S6.6 14.3 6 14.3s-1.1.5-1.1 1.1.5 1.1 1.1 1.1z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M10.5 17.2c.5 0 .9-.4.9-.9s-.4-.9-.9-.9-.9.4-.9.9.4.9.9.9z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M14.2 15.8c.55 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M18 17c.45 0 .8-.35.8-.8s-.35-.8-.8-.8-.8.35-.8.8.35.8.8.8z"
+                    fill="currentColor"
+                  />
+                </svg>
+                GRVL
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      FOOTER PLACEHOLDER (loaded dynamically)
+    ========================================================== -->
+    <div id="footer-placeholder"></div>
+
+    <!-- =========================================================
+      FLOATING REFRESH BUTTON (PWA only)
+    ========================================================== -->
+    <button id="refreshButton" title="Refresh">🔄</button>
+
+    <!-- =========================================================
+      SCRIPTS
+    ========================================================== -->
+    <script>
+      /* =========================================================
+        SPLASH SCREEN LOGIC
+        - Fade out after 1 second
+      ========================================================== */
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const splash = document.getElementById("splash-screen");
+          splash.style.opacity = "0";
+
+          // Wait for fade-out transition, then remove from layout
+          setTimeout(() => {
+            splash.style.display = "none";
+          }, 600);
+        }, 1000);
+      });
+
+      /* =========================================================
+        SERVICE WORKER (PWA)
+      ========================================================== */
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("js/service-worker.js")
+          .then(() => console.log("Service Worker registered"));
+      }
+
+      /* =========================================================
+        THEME TOGGLE FUNCTION
+        (Not currently used in this page, but kept for future)
+      ========================================================== */
+      function toggleTheme() {
+        const body = document.body;
+        const current = body.getAttribute("data-theme");
+        body.setAttribute("data-theme", current === "light" ? "dark" : "light");
+      }
+
+      /* =========================================================
+        MOBILE MENU TOGGLE
+      ========================================================== 
+      const toggleBtn = document.querySelector(".menu-toggle");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const overlay = document.querySelector(".menu-overlay");
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle("active");
+        overlay.classList.toggle("active");
+      }
+
+      // Open/close on hamburger click
+      toggleBtn.addEventListener("click", toggleMenu);
+
+      // Close when overlay is clicked
+      overlay.addEventListener("click", toggleMenu);*/
+    </script>
+
+    <!-- =========================================================
+      PAGE SCRIPTS
+      (defer = loads after HTML parsing, safer for DOM elements)
+    ========================================================== -->
+    <script src="js/site.js" defer></script>
+  </body>
+</html>
