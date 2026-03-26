@@ -680,3 +680,69 @@ details[open] .accordion-header {
 .accordion-item:last-of-type {
   padding-bottom: 30px; /* or whatever size you want */
 }
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+  margin-top: 2.5rem;
+}
+
+.gallery-title {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #1f2a36;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.gallery-grid figure {
+  position: relative; /* 🔥 THIS IS THE KEY FIX */
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+/* Caption overlay */
+.gallery-grid figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.9rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show on hover */
+.gallery-grid figure:hover figcaption {
+  opacity: 1;
+}
+
+/* =========================
+   MOBILE TWEAKS
+========================= */
+@media (max-width: 600px) {
+  .gallery-grid img {
+    height: 160px;
+  }
+}
