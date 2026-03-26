@@ -695,7 +695,7 @@ details[open] .accordion-header {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 12px;
 }
 
@@ -708,6 +708,8 @@ details[open] .accordion-header {
     transform 0.3s ease,
     box-shadow 0.3s ease;
   cursor: pointer;
+  aspect-ratio: 4 / 3;
+  height: auto;
 }
 .gallery-grid figure {
   position: relative; /* 🔥 THIS IS THE KEY FIX */
@@ -744,5 +746,8 @@ details[open] .accordion-header {
 @media (max-width: 600px) {
   .gallery-grid img {
     height: 160px;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
