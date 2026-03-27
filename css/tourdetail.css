@@ -111,34 +111,39 @@ html {
 /**************************/
 /* Countdown elements     */
 /**************************/
+
+/* Container for all countdown boxes */
 .countdown {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1.5rem 0 2rem;
-  flex-wrap: wrap;
+  display: flex; /* Align boxes in a row */
+  justify-content: center; /* Center them horizontally */
+  gap: 1rem; /* Space between boxes */
+  margin: 1.5rem 0 2rem; /* Top / horizontal / bottom spacing */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
+/* Individual countdown unit (e.g., Days, Hours) */
 .countdown-box {
-  padding: 0.9rem 1.3rem;
-  border-radius: 8px;
-  min-width: 90px;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 0.9rem 1.3rem; /* Inner spacing */
+  border-radius: 8px; /* Rounded corners */
+  min-width: 90px; /* Ensures consistent sizing */
+  color: #fff; /* White text for contrast */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 
+/* Large numeric value (e.g., “12”) */
 .countdown-box span {
-  font-size: 1.8rem;
+  font-size: 1.8rem; /* Big and bold */
   font-weight: bold;
-  display: block;
+  display: block; /* Forces it onto its own line */
 }
 
+/* Label text (e.g., “Days”) */
 .countdown-box small {
-  font-size: 0.85rem;
-  opacity: 0.9;
+  font-size: 0.85rem; /* Smaller supporting text */
+  opacity: 0.9; /* Slight fade for hierarchy */
 }
 
-/* Countdown colours */
+/* Countdown colour themes */
 .countdown-box.green {
   background: #4a8f4f;
 }
