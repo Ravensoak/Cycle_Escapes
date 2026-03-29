@@ -1,15 +1,4 @@
-const accordionItems = document.querySelectorAll(".accordion-item");
-
-accordionItems.forEach((item) => {
-  item.querySelector("summary").addEventListener("click", function () {
-    // Close all others BEFORE opening this one
-    accordionItems.forEach((other) => {
-      if (other !== item) {
-        other.removeAttribute("open");
-      }
-    });
-  });
-});
+const sections = document.querySelectorAll(".tour-section");
 
 sections.forEach((section) => {
   section.addEventListener("toggle", () => {
