@@ -233,11 +233,7 @@ html {
     gap: 0.4rem;
   }
   .hero-icon {
-    text-align: center;
     margin-top: -4rem;
-    opacity: 0.9; /* optional: softens the image */
-    margin-bottom: 0rem; /* spacing between icon and title */
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
   }
 
   .stat-card {
