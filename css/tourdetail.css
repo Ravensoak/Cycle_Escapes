@@ -319,6 +319,10 @@ html {
   -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
   position: relative;
 }
+.info-table-wrapper {
+  border-radius: 6px; /* adjust to taste */
+  overflow: hidden; /* required to clip the table corners */
+}
 
 .info-table {
   width: 100%;
@@ -331,7 +335,7 @@ html {
 }
 
 .info-table thead th {
-  background-color: #f2f5f4; /* mist-grey */
+  background-color: #d9dcdb;
   color: #1a4d3c; /* alpine green */
   text-align: left;
   padding: 10px;
@@ -342,6 +346,7 @@ html {
 .info-table tbody td {
   padding: 10px;
   border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff; /* mist-grey */
 }
 
 .info-table tbody tr:last-child td {
