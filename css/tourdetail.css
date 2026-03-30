@@ -580,19 +580,6 @@ summary::-webkit-details-marker {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.accordion-header {
-  background: #3498db;
-  color: #fff;
-  cursor: pointer;
-  padding: 0.2rem 0.4rem;
-  font-weight: 600;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background 0.2s ease;
-  border-radius: 4px 4px 4px 4px;
-}
-
 /* Smooth expand/collapse animation */
 .accordion-content {
   max-height: 0;
@@ -628,21 +615,38 @@ summary::-webkit-details-marker {
 }
 
 /* header */
-
 .accordion-header {
-  cursor: pointer;
+  /* layout */
   display: flex;
   align-items: center;
-  list-style: none;
+  justify-content: space-between;
+  cursor: pointer;
   user-select: none;
+  list-style: none;
+
+  /* typography */
   font-size: 12px;
+  font-weight: 600; /* keep or change to 400 if you want normal weight */
+
+  /* colours */
   background-color: lightblue;
   color: black;
-  transition:
-    color 0.2s ease,
-    background-color 0.2s ease;
-}
 
+  /* spacing */
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+
+  /* transitions */
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+.accordion-header h2 {
+  font-weight: 640;
+  font-size: 1.1rem;
+
+  margin: 0.6rem 0; /* optional but usually desired */
+}
 .accordion-header:hover {
   background-color: #005fa3;
   color: white;
