@@ -434,7 +434,7 @@ html {
 .logistics-intro {
   background: #ffffff;
   padding: 0.8rem 1rem;
-  border-left: 4px solid #2c7a4b; /* cycling green */
+  border-left: 4px solid #005fa3;
   border-radius: 6px;
   margin-bottom: 1rem;
   /* subtle depth + smoother edges */
