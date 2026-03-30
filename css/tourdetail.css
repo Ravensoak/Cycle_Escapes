@@ -25,7 +25,7 @@ html {
   width: 100vw; /* full viewport width */
   margin-left: calc(50% - 50vw); /* break out of centered container */
   margin-top: 0;
-  min-height: 420px;
+  min-height: 400px;
   background: url("/pictures/Cyclists1.jpg") center/cover no-repeat; /* overriden in individual tour detail pages */
   display: flex;
   align-items: center;
