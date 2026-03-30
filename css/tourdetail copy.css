@@ -25,7 +25,7 @@ html {
   width: 100vw; /* full viewport width */
   margin-left: calc(50% - 50vw); /* break out of centered container */
   margin-top: 0;
-  min-height: 420px;
+  min-height: 400px;
   background: url("/pictures/Cyclists1.jpg") center/cover no-repeat; /* overriden in individual tour detail pages */
   display: flex;
   align-items: center;
@@ -64,7 +64,7 @@ html {
 }
 .hero-icon {
   text-align: center;
-  margin-top: -2rem;
+  margin-top: -6rem;
   opacity: 0.9; /* optional: softens the image */
   margin-bottom: 0rem; /* spacing between icon and title */
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
@@ -111,34 +111,39 @@ html {
 /**************************/
 /* Countdown elements     */
 /**************************/
+
+/* Container for all countdown boxes */
 .countdown {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1.5rem 0 2rem;
-  flex-wrap: wrap;
+  display: flex; /* Align boxes in a row */
+  justify-content: center; /* Center them horizontally */
+  gap: 1rem; /* Space between boxes */
+  margin: 1.5rem 0 2rem; /* Top / horizontal / bottom spacing */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
+/* Individual countdown unit (e.g., Days, Hours) */
 .countdown-box {
-  padding: 0.9rem 1.3rem;
-  border-radius: 8px;
-  min-width: 90px;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 0.9rem 1.3rem; /* Inner spacing */
+  border-radius: 8px; /* Rounded corners */
+  min-width: 90px; /* Ensures consistent sizing */
+  color: #fff; /* White text for contrast */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 
+/* Large numeric value (e.g., “12”) */
 .countdown-box span {
-  font-size: 1.8rem;
+  font-size: 1.8rem; /* Big and bold */
   font-weight: bold;
-  display: block;
+  display: block; /* Forces it onto its own line */
 }
 
+/* Label text (e.g., “Days”) */
 .countdown-box small {
-  font-size: 0.85rem;
-  opacity: 0.9;
+  font-size: 0.85rem; /* Smaller supporting text */
+  opacity: 0.9; /* Slight fade for hierarchy */
 }
 
-/* Countdown colours */
+/* Countdown colour themes */
 .countdown-box.green {
   background: #4a8f4f;
 }
@@ -155,7 +160,7 @@ html {
 
 /* Stats section sits slightly over the hero */
 .hero-stats-section {
-  margin-top: -60px;
+  margin-top: -55px;
   padding: 0 1rem 2rem;
   position: relative;
   z-index: 3;
@@ -177,7 +182,7 @@ html {
 .stat-card {
   background: #ffffff;
   text-align: center;
-  padding: 1.4rem 1rem;
+  padding: 0.8rem 1rem;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
@@ -187,11 +192,11 @@ html {
   width: 36px;
   height: 36px;
   color: #2c7a4b;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0rem;
 }
 
 .stat-value {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: #2c7a4b;
 }
@@ -226,6 +231,9 @@ html {
   .hero-stats {
     grid-template-columns: repeat(4, 1fr);
     gap: 0.4rem;
+  }
+  .hero-icon {
+    margin-top: -4rem;
   }
 
   .stat-card {
@@ -311,6 +319,10 @@ html {
   -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
   position: relative;
 }
+.info-table-wrapper {
+  border-radius: 6px; /* adjust to taste */
+  overflow: hidden; /* required to clip the table corners */
+}
 
 .info-table {
   width: 100%;
@@ -323,7 +335,7 @@ html {
 }
 
 .info-table thead th {
-  background-color: #f2f5f4; /* mist-grey */
+  background-color: #d9dcdb;
   color: #1a4d3c; /* alpine green */
   text-align: left;
   padding: 10px;
@@ -334,6 +346,7 @@ html {
 .info-table tbody td {
   padding: 10px;
   border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff; /* mist-grey */
 }
 
 .info-table tbody tr:last-child td {
@@ -509,12 +522,12 @@ html {
 /******************/
 .reserve-btn {
   position: relative;
-  padding: 0.5rem 0.5rem;
+  padding: 0.6rem 1.2rem;
   background: #0077cc;
   color: #fff;
   text-decoration: none;
-  border-radius: 10px;
-  font-size: 0.95rem;
+  border-radius: 8px;
+  font-size: 1rem;
   white-space: nowrap;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); /* drop shadow */
 }
@@ -575,19 +588,6 @@ summary::-webkit-details-marker {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.accordion-header {
-  background: #3498db;
-  color: #fff;
-  cursor: pointer;
-  padding: 0.2rem 0.4rem;
-  font-weight: 600;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background 0.2s ease;
-  border-radius: 4px 4px 4px 4px;
-}
-
 /* Smooth expand/collapse animation */
 .accordion-content {
   max-height: 0;
@@ -623,21 +623,38 @@ summary::-webkit-details-marker {
 }
 
 /* header */
-
 .accordion-header {
-  cursor: pointer;
+  /* layout */
   display: flex;
   align-items: center;
-  list-style: none;
+  justify-content: space-between;
+  cursor: pointer;
   user-select: none;
+  list-style: none;
+
+  /* typography */
   font-size: 12px;
+  font-weight: 600; /* keep or change to 400 if you want normal weight */
+
+  /* colours */
   background-color: lightblue;
   color: black;
-  transition:
-    color 0.2s ease,
-    background-color 0.2s ease;
-}
 
+  /* spacing */
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+
+  /* transitions */
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+.accordion-header h2 {
+  font-weight: 640;
+  font-size: 1.1rem;
+
+  margin: 0.6rem 0; /* optional but usually desired */
+}
 .accordion-header:hover {
   background-color: #005fa3;
   color: white;
@@ -679,4 +696,75 @@ details[open] .accordion-header {
 
 .accordion-item:last-of-type {
   padding-bottom: 30px; /* or whatever size you want */
+}
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+  margin-top: 2.5rem;
+}
+
+.gallery-title {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #1f2a36;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  height: auto;
+}
+.gallery-grid figure {
+  position: relative; /* 🔥 THIS IS THE KEY FIX */
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+/* Caption overlay */
+.gallery-grid figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.9rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show on hover */
+.gallery-grid figure:hover figcaption {
+  opacity: 1;
+}
+
+/* =========================
+   MOBILE TWEAKS
+========================= */
+@media (max-width: 600px) {
+  .gallery-grid img {
+    height: 160px;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

@@ -637,7 +637,7 @@ summary::-webkit-details-marker {
   font-weight: 600; /* keep or change to 400 if you want normal weight */
 
   /* colours */
-  background-color: lightblue;
+  background-color: #f5f5f5;
   color: black;
 
   /* spacing */
