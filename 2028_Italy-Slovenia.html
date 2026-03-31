@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- =========================================================
+        BASIC META / PAGE INFO
+      ========================================================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cycle Escapes - Italy / Slovenia</title>
+
+    <!-- =========================================================
+      ICON + THEME COLOUR
+    ========================================================== -->
+    <link rel="icon" href="graphics/favicon-32x32.png" type="image/png" />
+    <meta name="theme-color" content="#1f2a36" />
+
+    <!-- =========================================================
+      STYLESHEETS
+    ========================================================== -->
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/tourdetail.css" />
+    <!-- =========================================================
+      FONT AWSOME
+    ========================================================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      .event-hero {
+        background: url("/pictures/Italy-Slovenia/Italy-Slovenia_Main.jpg")
+          center/cover no-repeat;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <!-- =========================================================
+      NAVIGATION PLACEHOLDER (Loaded dynamically)
+      ========================================================== -->
+      <div id="nav-placeholder"></div>
+    </header>
+
+    <div class="tourpage">
+      <!-- HERO IMAGE + COUNTDOWN -->
+      <section class="event-hero">
+        <div class="hero-content">
+          <div class="hero-icon">
+            <img src="graphics/favicon-64x64.png" alt="Hero Icon" />
+          </div>
+          <!--<div id="nav-placeholder"></div>-->
+          <h1>Italia / Slovenia</h1>
+
+          <p class="hero-subtitle">
+            A 4-day road tour through Italy and Slovenia<br />
+            <span class="hero-tagline">4th - 18th June 2028</span>
+          </p>
+
+          <!-- Countdown -->
+          <!--<div class="countdown" data-date="June 4, 2028 09:00:00">
+            <div class="countdown-box green">
+              <span id="days">0</span>
+              <small>Days</small>
+            </div>
+            <div class="countdown-box blue">
+              <span id="hours">0</span>
+              <small>Hours</small>
+            </div>
+            <div class="countdown-box orange">
+              <span id="minutes">0</span>
+              <small>Minutes</small>
+            </div>
+          </div>-->
+        </div>
+      </section>
+
+      <!-- STATS ROW (below hero, like the image) -->
+      <section class="hero-stats-section">
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <!-- Start pin -->
+              <svg viewBox="0 0 24 24" class="icon">
+                <path
+                  d="M12 21s-6-5.5-6-10a6 6 0 1112 0c0 4.5-6 10-6 10z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle cx="12" cy="11" r="2" fill="currentColor" />
+              </svg>
+            </div>
+            <div class="stat-value">Udine</div>
+            <div class="stat-label">Start</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <!-- Road icon -->
+              <svg viewBox="0 0 24 24" class="icon">
+                <path
+                  d="M6 2h12l2 20H4L6 2z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 6v10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-dasharray="2,2"
+                />
+              </svg>
+            </div>
+            <div class="stat-value">260 Miles</div>
+            <div class="stat-label">Total Distance</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <!-- Mountain -->
+              <svg viewBox="0 0 24 24" class="icon">
+                <path
+                  d="M2 18l6-8 4 5 4-7 6 10H2z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="stat-value">22,000 ft</div>
+            <div class="stat-label">Total Climbing</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <!-- Finish flag -->
+              <svg viewBox="0 0 24 24" class="icon">
+                <path d="M4 21V3" stroke="currentColor" stroke-width="2" />
+                <path
+                  d="M4 4h10l-2 3 2 3H4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="stat-value">Udine</div>
+            <div class="stat-label">Finish</div>
+          </div>
+        </div>
+      </section>
+
+      <!--Populate icon help message (desktop hover and mobile lightbox)
+      <h3 class="page-title">
+        Tour Dates
+        <span
+          class="help-icon"
+          data-title="Tour Dates"
+          data-help="The tour is a 3-day ride with 4 overnight stays."
+          >?</span
+        >
+      </h3>
+
+      <p>4th - 8th June 2027</p>
+
+      <h3 class="ride-stats-title">Tour Metrics</h3>
+      <div class="ride-stats-card">
+        <table class="ride-stats">
+          <thead>
+            <tr>
+              <th>Distance</th>
+              <th>Elevation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>210 miles (300 km)</td>
+              <td>17,000 ft (4,000 m)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>-->
+
+      <!--Populate icon help message (desktop hover and mobile lightbox)-->
+      <p class="centered-summary">
+        <font color="gray">
+          This tour is currently being planned. Please check back later for
+          updates.
+        </font>
+      </p>
+    </div>
+
+    <!--embebed route maps
+          <iframe
+            src="https://ridewithgps.com/embeds?type=route&id=53783848&sampleGraph=true&hideSurface=true"
+            style="width: 1px; min-width: 100%; height: 700px; border: none"
+            scrolling="no"
+          ></iframe>-->
+
+    <!-- =========================================================
+      Help Icons      (placed outside of accordion for better accessibility)
+    ========================================================== -->
+    <div id="helpModal" class="help-modal">
+      <div class="help-modal-content">
+        <span class="close-help">&times;</span>
+        <h3 id="helpModalTitle"></h3>
+        <p id="helpModalText"></p>
+      </div>
+    </div>
+
+    <!-- =========================================================
+      FOOTER PLACEHOLDER
+    ========================================================== -->
+    <div class="tourpage">
+      <div id="footer-placeholder"></div>
+    </div>
+
+    <!-- =========================================================
+    FLOATING REFRESH BUTTON (PWA only)
+    ========================================================== -->
+    <button id="refreshButton" title="Refresh">🔄</button>
+
+    <!-- =========================================================
+      PAGE SCRIPTS
+      (defer = loads after HTML parsing, safer for DOM elements)
+      ========================================================== -->
+    <script src="js/tourdetail.js" defer></script>
+    <script src="js/site.js" defer></script>
+  </body>
+</html>
