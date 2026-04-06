@@ -23,7 +23,7 @@ function renderHotels(hotels) {
           </a>
         </p>
       </div>
-    `
+    `,
     )
     .join("");
 }
@@ -48,4 +48,46 @@ if (hotelContainer) {
       showHotelError();
     });
 }
-;
+/* =========================================================
+  Process stat meta data
+========================================================== */
+class TourMeta extends HTMLElement {
+  connectedCallback() {
+    const tpl = document.getElementById("tour-meta-template");
+    const root = tpl.content.cloneNode(true);
+
+    // Map attributes → fields
+    const fields = {
+      date: this.getAttribute("date"),
+      distance: this.getAttribute("distance"),
+      elevation: this.getAttribute("elevation"),
+      surface: this.getAttribute("surface"),
+    };
+
+    Object.entries(fields).forEach(([key, value]) => {
+      const el = root.querySelector(`[data-field="${key}"] .value`);
+      if (el) el.textContent = value || "";
+    });
+
+    this.appendChild(root);
+  }
+}
+
+/* =========================================================
+  Process number of days meta data
+========================================================== */
+customElements.define("tour-meta", TourMeta);
+
+class TourBadge extends HTMLElement {
+  connectedCallback() {
+    const tpl = document.getElementById("tour-badge-template");
+    const root = tpl.content.cloneNode(true);
+
+    const value = this.getAttribute("value") || "";
+    root.querySelector(".value").textContent = value;
+
+    this.appendChild(root);
+  }
+}
+
+customElements.define("tour-badge", TourBadge);
