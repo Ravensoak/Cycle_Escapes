@@ -216,12 +216,14 @@ body {
   padding-top: 12px;
   font-size: 14px;
   color: #444;
+  flex-wrap: wrap;
 }
 
 .tour-meta span {
   display: flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap; /* 👈 keeps the text on one line */
 }
 
 /* =========================================================
@@ -245,6 +247,16 @@ body {
 
   .tour-card img {
     height: 200px;
+  }
+  .tour-meta {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+    font-size: 14px;
+    color: #444;
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
 }
 
