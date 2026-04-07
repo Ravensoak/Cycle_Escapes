@@ -246,6 +246,14 @@ body {
   .tour-card img {
     height: 200px;
   }
+  .tour-meta {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+    font-size: 12px;
+    color: #444;
+  }
 }
 
 .hero-icon {
