@@ -216,6 +216,7 @@ body {
   padding-top: 12px;
   font-size: 14px;
   color: #444;
+  flex-wrap: wrap;
 }
 
 .tour-meta span {
