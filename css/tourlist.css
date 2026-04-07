@@ -222,6 +222,7 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap; /* 👈 keeps the text on one line */
 }
 
 /* =========================================================
