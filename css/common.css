@@ -66,12 +66,12 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(
+  background: RGB(
     0,
     0,
     0,
-    0.3
-  ); /* dark overlay - controls bvackground colour*/
+    0
+  ); /* 0.3 dark overlay - controls bvackground colour*/
   z-index: -1;
 }
 
