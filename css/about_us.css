@@ -148,7 +148,7 @@ header {
    5. TABS SECTION (FULL-WIDTH BACKGROUND)
 ========================================================= */
 
-.tabs-container {
+.section {
   width: 100%;
   padding: 40px 20px;
   font-family: inherit;
@@ -159,7 +159,7 @@ header {
    - Keeps readability while section is full-width
 ========================================================= */
 
-.tabs,
+.section-inner,
 .tab-content {
   max-width: 900px;
   margin: 0 auto;
