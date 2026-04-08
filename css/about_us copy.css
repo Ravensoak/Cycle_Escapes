@@ -1,7 +1,9 @@
-/* Reset basic spacing */
-header {
-  margin: 0;
-  padding: 0;
+/* =========================================================
+   1. RESET / GLOBAL STYLES
+========================================================= */
+
+* {
+  box-sizing: border-box;
 }
 
 html,
@@ -9,76 +11,73 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: #f5f7f6; /* page background behind the card */
+  background: #f5f7f6;
 }
+
 html {
   overflow-y: scroll;
 }
 
-* {
-  box-sizing: border-box;
+header {
+  margin: 0;
+  padding: 0;
 }
 
-/* Page container */
+/* =========================================================
+   2. PAGE CONTAINER (.tourpage)
+========================================================= */
+
+/* Mobile (default) */
 .tourpage {
   width: 100%;
   margin: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  box-sizing: border-box;
+  padding: 0 0.5rem;
   background: #fff;
 }
-/* allow footer to break out on mobile */
+
+/* Mobile override */
 @media (max-width: 767px) {
   .tourpage {
-    padding: 0; /* remove mobile padding */
-    /*background: none; /* remove white box so footer can be full-width */
+    padding: 0;
   }
 }
 
-/* Desktop layout for tourpage */
+/* Desktop (centered card) */
 @media (min-width: 768px) {
   .tourpage {
     max-width: 900px;
-    margin: 0 auto; /* center horizontally */
-    padding-left: 0;
-    padding-right: 0;
+    margin: 0 auto;
+    padding: 0;
     border-radius: 6px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 }
 
-/* ===============================
-   HERO SECTION
-================================= */
+/* =========================================================
+   3. HERO SECTION (FULL-WIDTH BREAKOUT)
+========================================================= */
 
-/* Hero fills full viewport width */
 .event-hero {
   position: relative;
+
   width: 100vw;
-  margin-left: calc(50% - 50vw); /* break out of centered container */
-  margin-top: 0;
+  margin-left: calc(50% - 50vw);
+
   min-height: 350px;
-  background: url("/pictures/Cyclists1.jpg") center/cover no-repeat;
+
+  background: url("/pictures/Cyclists1.jpg") center / cover no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   text-align: center;
   color: #fff;
+
   overflow: hidden;
-  border-radius: 0;
 }
 
-/* On desktop, match container width */
-@media (min-width: 768px) {
-  .event-hero {
-    width: 100%;
-    margin-left: 0;
-    border-radius: 6px 6px 0px 0px; /* top radius only */
-  }
-}
-
-/* Dark gradient overlay */
+/* Overlay */
 .event-hero::before {
   content: "";
   position: absolute;
@@ -86,7 +85,7 @@ html {
   background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15));
 }
 
-/* Hero text container */
+/* Hero content */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -94,27 +93,33 @@ html {
   margin-top: -60px;
 }
 
-/* Hero title */
+/* Typography */
 .hero-content h1 {
   font-size: 2.6rem;
   margin-bottom: 0.5rem;
 }
 
-/* Subtitle text */
 .hero-subtitle {
   font-size: 1.15rem;
   margin-bottom: 1.5rem;
 }
 
-/* Tagline */
 .hero-tagline {
   font-style: italic;
   opacity: 0.9;
 }
 
-/* ===============================
-   NAV POSITIONING
-================================= */
+/* Icon */
+.hero-icon {
+  text-align: center;
+  margin-top: 2rem;
+  opacity: 0.9;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* =========================================================
+   4. NAV OVERLAY
+========================================================= */
 
 @media (min-width: 768px) {
   #nav-placeholder {
@@ -126,41 +131,51 @@ html {
   }
 
   .hero-content {
-    padding-top: 50px; /* prevent overlap with nav */
+    padding-top: 50px;
   }
 }
 
-/* CSS for Information sheet */
-
 /* =========================================================
-   TABS CONTAINER
+   5. TABS SECTION (FULL-WIDTH BACKGROUND)
 ========================================================= */
 
 .tabs-container {
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 40px 20px;
   font-family: inherit;
 }
 
 /* =========================================================
-   TAB BAR (Segmented Control Style)
+   6. CENTERED CONTENT (KEY PATTERN)
+   - Keeps readability while section is full-width
+========================================================= */
+
+.tabs,
+.tab-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   7. TAB BAR
 ========================================================= */
 
 .tabs {
   display: flex;
-  width: 100%;
+  gap: 4px;
+  padding: 4px;
+
   background: #f2f4f7;
   border-radius: 10px;
-  padding: 4px;
-  gap: 4px;
 }
 
 /* =========================================================
-   INDIVIDUAL TAB BUTTONS
+   8. TAB BUTTONS
 ========================================================= */
 
 .tab {
   flex: 1;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -168,13 +183,15 @@ html {
   gap: 4px;
 
   padding: 12px 10px;
+
   border: none;
-  background: transparent;
   border-radius: 8px;
+  background: transparent;
 
   cursor: pointer;
   font-weight: 500;
   color: #555;
+
   transition: all 0.25s ease;
 }
 
@@ -182,18 +199,14 @@ html {
   background: rgba(0, 0, 0, 0.04);
 }
 
-/* =========================================================
-   ACTIVE TAB STATE
-========================================================= */
-
 .tab.active {
   background: #005fa3;
-  color: #ffffff;
+  color: #fff;
   box-shadow: 0 4px 12px rgba(31, 111, 220, 0.25);
 }
 
 /* =========================================================
-   TAB ICONS
+   9. TAB ICONS + LABELS
 ========================================================= */
 
 .tab-icon svg {
@@ -202,23 +215,27 @@ html {
   fill: currentColor;
 }
 
-/* =========================================================
-   TAB LABEL
-========================================================= */
+.tab-icon i {
+  font-size: 1.25rem;
+  width: 1.5rem;
+  text-align: center;
+  display: inline-block;
+  color: #444;
+}
 
 .tab-label {
   font-size: 13px;
 }
 
 /* =========================================================
-   TAB CONTENT PANELS
+   10. TAB CONTENT
 ========================================================= */
 
 .tab-content {
   display: none;
-  margin-top: 0px;
   padding: 28px;
-  background: #ffffff;
+
+  background: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
 }
@@ -228,7 +245,29 @@ html {
 }
 
 /* =========================================================
-   MOBILE ADJUSTMENTS
+   11. TYPOGRAPHY UTILITIES
+========================================================= */
+
+.heading-underline {
+  position: relative;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+
+.heading-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: #d0d0d0;
+}
+
+/* =========================================================
+   12. MOBILE TWEAKS
 ========================================================= */
 
 @media (max-width: 600px) {
@@ -244,38 +283,4 @@ html {
     width: 18px;
     height: 18px;
   }
-}
-
-.tab-icon i {
-  font-size: 1.25rem;
-  width: 1.5rem;
-  line-height: 1;
-  text-align: center;
-  display: inline-block;
-  color: #444; /* or your brand grey */
-}
-
-.heading-underline {
-  position: relative;
-  margin-top: 0rem;
-  padding-bottom: 0.6rem;
-  margin-bottom: 1.4rem;
-}
-
-.heading-underline::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #d0d0d0; /* professional grey */
-}
-
-.hero-icon {
-  text-align: center;
-  margin-top: 2rem;
-  opacity: 0.9; /* optional: softens the image */
-  margin-bottom: 0rem; /* spacing between icon and title */
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }

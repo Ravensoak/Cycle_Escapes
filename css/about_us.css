@@ -77,15 +77,6 @@ header {
   overflow: hidden;
 }
 
-/* Desktop: align with container */
-@media (min-width: 768px) {
-  .event-hero {
-    width: 100%;
-    margin-left: 0;
-    border-radius: 6px 6px 0 0;
-  }
-}
-
 /* Overlay */
 .event-hero::before {
   content: "";
