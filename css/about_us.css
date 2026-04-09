@@ -13,6 +13,9 @@ body {
   overflow-x: hidden;
   background: #f5f7f6;
   align-items: stretch; /* instead of center */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 html {
@@ -35,6 +38,7 @@ header {
   padding: 0 0.5rem;
   background: #fff;
   max-width: none;
+  flex: 1; /* fills available vertical space */
 }
 
 /* Mobile override */
@@ -47,11 +51,13 @@ header {
 /* Desktop (centered card) */
 @media (min-width: 768px) {
   .tourpage {
-    max-width: 900px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: none; /* remove the 900px limit */
+    margin: 0; /* remove centering */
     padding: 0;
-    border-radius: 6px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0; /* optional: removes card look */
+    box-shadow: none; /* optional: removes floating effect */
+    flex: 1; /* fills available vertical space */
   }
 }
 

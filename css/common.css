@@ -493,6 +493,8 @@ footer {
   flex-direction: column;
 }*/
 
-/*main {*/
-/*flex: 1;*/ /* pushes footer to bottom */
-/*}*/
+main {
+  flex: 1; /* pushes footer to bottom */
+  display: flex;
+  flex-direction: column;
+}
