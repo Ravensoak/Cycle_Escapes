@@ -114,7 +114,7 @@ form[name="contact"] h2 {
 .form-group {
   width: 100%;
   max-width: 420px;
-  margin: 0 auto 1.5rem; /* centers the whole block */
+  margin: 0 auto 0.8rem; /* centers the whole block */
 }
 
 /* --- Labels --- */
@@ -133,8 +133,8 @@ form[name="contact"] h2 {
   width: 100%; /* fills the wrapper exactly */
   padding: 0.85rem 1rem;
   border: 1px solid #cfcfcf;
-  border-radius: 10px;
-  font-size: 1.05rem;
+  border-radius: 6px;
+  font-size: 1rem;
   background: #fafafa;
   transition:
     border-color 0.2s,
@@ -160,7 +160,7 @@ form[name="contact"] button {
   font-size: 1.1rem;
   font-weight: 600;
   border: none;
-  border-radius: 10px;
+  border-radius: 6px;
   background: #005fa3;
   color: #fff;
   cursor: pointer;
