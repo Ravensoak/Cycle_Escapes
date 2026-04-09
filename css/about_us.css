@@ -12,6 +12,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   background: #f5f7f6;
+  align-items: stretch; /* instead of center */
 }
 
 html {
@@ -33,6 +34,7 @@ header {
   margin: 0;
   padding: 0 0.5rem;
   background: #fff;
+  max-width: none;
 }
 
 /* Mobile override */
