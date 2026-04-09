@@ -166,7 +166,7 @@ header {
   padding: 4px;
 
   background: lightskyblue;
-  border-radius: 10px;
+  border-radius: 8px 8px 0 0;
 }
 
 /* =========================================================
@@ -236,7 +236,7 @@ header {
   padding: 28px;
 
   background: #fff;
-  border-radius: 12px;
+  border-radius: 0 0 12px 12px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
 }
 

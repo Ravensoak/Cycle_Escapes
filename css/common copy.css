@@ -47,7 +47,6 @@ body {
   background: url("../pictures/Cyclists1.jpg") no-repeat center center;
   background-size: cover;
   background-color: #1f2a36;
-
   color: var(--text);
   display: flex;
   flex-direction: column;
@@ -67,11 +66,11 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(
+  background: RGB(
     0,
     0,
     0,
-    0.4
+    0
   ); /* 0.3 dark overlay - controls bvackground colour*/
   z-index: -1;
 }
