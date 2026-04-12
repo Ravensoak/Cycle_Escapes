@@ -296,6 +296,13 @@ html {
     padding: 0; /* remove mobile padding */
     /*background: none;  remove white box so footer can be full-width */
   }
+  .accordion-item {
+    margin: 0;
+  }
+
+  .logistics {
+    padding: 0.6rem 0; /* keep vertical spacing only */
+  }
 }
 
 /* desktop */
