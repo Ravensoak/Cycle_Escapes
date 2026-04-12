@@ -655,6 +655,7 @@ summary::-webkit-details-marker {
   font-size: 1.1rem;
 
   margin: 0.6rem 0; /* optional but usually desired */
+  padding-left: 1rem; /* controls text alignment */
 }
 .accordion-header:hover {
   background-color: #005fa3;
