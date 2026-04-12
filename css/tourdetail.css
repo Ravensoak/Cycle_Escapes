@@ -732,6 +732,14 @@ details[open] .accordion-header {
   .accordion-header h2 {
     padding-left: 0.5rem;
   }
+  /* Kill first/last extra spacing */
+  .accordion-item:first-of-type {
+    padding-top: 0;
+  }
+
+  .accordion-item:last-of-type {
+    padding-bottom: 0;
+  }
 }
 /* =========================
    GALLERY
