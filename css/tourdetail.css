@@ -1,81 +1,36 @@
-/* =========================================================
-   1. RESET / GLOBAL LAYOUT
-========================================================= */
-
-* {
-  box-sizing: border-box;
+header {
+  margin: 0;
+  padding: 0;
 }
-
-html {
-  overflow-y: scroll; /* prevents layout shift */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
 }
-
 html,
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   background: #f5f7f6;
-
-  /* Full-height layout */
+  align-items: stretch; /* instead of center */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  align-items: stretch;
 }
 
-header {
-  margin: 0;
-  padding: 0;
+html {
+  overflow-y: scroll;
 }
-
-h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
 /* =========================================================
-   2. PAGE CONTAINER
-========================================================= */
-
-.tourpage {
-  width: 100%;
-  margin: 0;
-  padding: 0 0.5rem;
-  background: #fff;
-  flex: 1;
-}
-
-/* Mobile: remove side padding */
-@media (max-width: 767px) {
-  .tourpage {
-    padding: 0;
-  }
-
-  .accordion-item {
-    margin: 0;
-  }
-
-  .logistics {
-    padding: 0.6rem 0; /* vertical only */
-  }
-}
-
-/* Desktop */
-@media (min-width: 768px) {
-  .tourpage {
-    padding: 0;
-  }
-}
-
-/* =========================================================
-   3. HERO (FULL WIDTH BREAKOUT)
+   3. HERO SECTION (FULL-WIDTH BREAKOUT)
 ========================================================= */
 
 .event-hero {
   position: relative;
+
   width: 100vw;
   margin-left: calc(50% - 50vw);
+
   min-height: 420px;
 
   background: url("/pictures/Slovenia/Slovenia2.png") center / cover no-repeat;
@@ -86,10 +41,16 @@ h1 {
 
   text-align: center;
   color: #fff;
+
   overflow: hidden;
 }
 
-/* Overlay */
+/* * represents every element on the page */
+* {
+  box-sizing: border-box;
+}
+
+/* Subtle dark gradient for readability */
 .event-hero::before {
   content: "";
   position: absolute;
@@ -97,7 +58,25 @@ h1 {
   background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15));
 }
 
-/* Hero content */
+/* Remove any curve */
+.event-hero::after {
+  display: none;
+}
+.hero-icon {
+  text-align: center;
+  margin-top: -6rem;
+  opacity: 0.9; /* optional: softens the image */
+  margin-bottom: 0rem; /* spacing between icon and title */
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Keep text above overlay */
+.event-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem;
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -106,7 +85,8 @@ h1 {
 
 .hero-content h1 {
   font-size: 2.6rem;
-  margin: 0 0 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
@@ -117,52 +97,53 @@ h1 {
 .hero-tagline {
   font-style: italic;
   font-weight: 700;
+  opacity: 1;
 }
-
 .hero-description {
   max-width: 750px;
   margin: 1.2rem auto 0;
+  font-size: 1rem;
   line-height: 1.5;
+  color: #ffffff;
+  opacity: 0.95;
 }
 
-/* Hero icon */
-.hero-icon {
-  margin-top: -6rem;
-  opacity: 0.9;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-}
+/**************************/
+/* Countdown elements     */
+/**************************/
 
-/* =========================================================
-   4. COUNTDOWN
-========================================================= */
-
+/* Container for all countdown boxes */
 .countdown {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1.5rem 0 2rem;
-  flex-wrap: wrap;
+  display: flex; /* Align boxes in a row */
+  justify-content: center; /* Center them horizontally */
+  gap: 1rem; /* Space between boxes */
+  margin: 1.5rem 0 2rem; /* Top / horizontal / bottom spacing */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
+/* Individual countdown unit (e.g., Days, Hours) */
 .countdown-box {
-  padding: 0.9rem 1.3rem;
-  border-radius: 8px;
-  min-width: 90px;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 0.9rem 1.3rem; /* Inner spacing */
+  border-radius: 8px; /* Rounded corners */
+  min-width: 90px; /* Ensures consistent sizing */
+  color: #fff; /* White text for contrast */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 
+/* Large numeric value (e.g., “12”) */
 .countdown-box span {
-  font-size: 1.8rem;
+  font-size: 1.8rem; /* Big and bold */
   font-weight: bold;
-  display: block;
+  display: block; /* Forces it onto its own line */
 }
 
+/* Label text (e.g., “Days”) */
 .countdown-box small {
-  font-size: 0.85rem;
-  opacity: 0.9;
+  font-size: 0.85rem; /* Smaller supporting text */
+  opacity: 0.9; /* Slight fade for hierarchy */
 }
 
+/* Countdown colour themes */
 .countdown-box.green {
   background: #4a8f4f;
 }
@@ -173,10 +154,11 @@ h1 {
   background: #d96a2b;
 }
 
-/* =========================================================
-   5. HERO STATS (UNCHANGED LOGIC)
-========================================================= */
+/***********************/
+/* Stats elements      */
+/***********************/
 
+/* Stats section sits slightly over the hero */
 .hero-stats-section {
   margin-top: -55px;
   padding: 0 1rem 2rem;
@@ -184,6 +166,7 @@ h1 {
   z-index: 3;
 }
 
+/* Equal spacing */
 .hero-stats {
   max-width: 1100px;
   margin: auto;
@@ -192,18 +175,24 @@ h1 {
   gap: 1.2rem;
 }
 
+/***********************/
+/* Stat Cards         */
+/***********************/
+
 .stat-card {
-  background: #fff;
+  background: #ffffff;
   text-align: center;
   padding: 0.8rem 1rem;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
+/* Icon */
 .icon {
   width: 36px;
   height: 36px;
   color: #2c7a4b;
+  margin-bottom: 0rem;
 }
 
 .stat-value {
@@ -217,8 +206,7 @@ h1 {
   color: #666;
 }
 
-/* Responsive (KEEP THESE – critical behaviour) */
-
+/* Responsive */
 @media (max-width: 900px) {
   .hero-stats {
     grid-template-columns: repeat(4, 1fr);
@@ -234,19 +222,16 @@ h1 {
     margin-top: -40px;
   }
 }
-
-/* Mobile override */
+/* Mobile – keep all 4 stats in a row and countdown in a row*/
 @media (max-width: 600px) {
   .hero-description {
     font-size: 0.9rem;
     padding: 0 0.5rem;
   }
-
   .hero-stats {
     grid-template-columns: repeat(4, 1fr);
     gap: 0.4rem;
   }
-
   .hero-icon {
     margin-top: -4rem;
   }
@@ -263,10 +248,16 @@ h1 {
 
   .stat-value {
     font-size: 0.8rem;
+    font-weight: 600;
   }
 
   .stat-label {
     font-size: 0.65rem;
+    line-height: 1.1;
+  }
+
+  .hero-stats-section {
+    margin-top: -40px;
   }
 
   .countdown {
@@ -277,6 +268,7 @@ h1 {
   .countdown-box {
     padding: 0.5rem 0.6rem;
     min-width: 60px;
+    border-radius: 6px;
   }
 
   .countdown-box span {
@@ -288,17 +280,117 @@ h1 {
   }
 }
 
-/* =========================================================
-   6. ROUTE CARDS (UNCHANGED)
-========================================================= */
+/* Mobile (default) */
+.tourpage {
+  width: 100%;
+  margin: 0;
+  padding: 0 0.5rem;
+  background: #fff;
+  max-width: none;
+  flex: 1; /* fills available vertical space */
+}
+
+/* allow footer to break out on mobile */
+@media (max-width: 767px) {
+  .tourpage {
+    padding: 0; /* remove mobile padding */
+    /*background: none;  remove white box so footer can be full-width */
+  }
+  .accordion-item {
+    margin: 0;
+  }
+
+  .logistics {
+    padding: 0.6rem 0; /* keep vertical spacing only */
+  }
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  .tourpage {
+    width: 100%;
+    max-width: none; /* remove the 900px limit */
+    margin: 0; /* remove centering */
+    padding: 0;
+    border-radius: 0; /* optional: removes card look */
+    box-shadow: none; /* optional: removes floating effect */
+    flex: 1; /* fills available vertical space */
+  }
+}
+
+/*********************************************************************/
+/* Table                                                             */
+/********************************************************************/
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  position: relative;
+}
+.info-table-wrapper {
+  border-radius: 6px; /* adjust to taste */
+  overflow: hidden; /* required to clip the table corners */
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 15px;
+  -webkit-text-size-adjust: 100%;
+  color: #1a1a1a;
+  min-width: 700px; /* ensures scrolling instead of squishing */
+}
+
+.info-table thead th {
+  background-color: #d9dcdb;
+  color: #1a4d3c; /* alpine green */
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid #c9d3cf;
+  font-weight: 600;
+}
+
+.info-table tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff; /* mist-grey */
+}
+
+.info-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.info-table th,
+.info-table td {
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+/* Buttons */
+.route-card-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #005fa3;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.route-card-btn:hover {
+  background-color: #0f2a21; /* deep forest */
+}
 
 .route1-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 10px;
-  justify-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-items: center; /* centers cards when fewer per row */
+  /*padding: 0 10px; /* adds space left + right */
+  max-width: 1200px; /* or 1100, 1300, etc. */
+  margin: 0 auto; /* centers the whole grid */
+  padding: 0 0px; /* small padding for mobile */
 }
 
 .route1-card {
@@ -307,42 +399,185 @@ h1 {
   padding: 12px;
   background: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-
-  flex: 1 1 250px; /* important */
+  flex: 1 1 250px; /* responsive width */
   width: 100%;
-  max-width: 280px;
+  max-width: 280px; /* keeps nice card width */
   margin-bottom: 10px;
 }
-
 @media (max-width: 600px) {
   .route1-card {
-    max-width: 100%;
+    max-width: 100%; /* full width on mobile */
   }
 }
 
-/* =========================================================
-   7. LOGISTICS
-========================================================= */
+.route1-card img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 12px 0;
+}
 
+.route1-card h4 {
+  margin-top: 0;
+}
 .logistics {
   background: #eaeaea;
   padding: 0.6rem;
-  border-radius: 0 0 6px 6px;
-  margin: 0.9rem 0 0;
+  border-radius: 0px 0px 6px 6px;
+  margin: 0.9rem 0;
+  margin-top: 0rem;
 }
+/* Desktop
+@media (min-width: 768px) {
+  .logistics {
+    margin-left: 0.9rem;
+    margin-right: 0.9rem;
+    margin-top: 0rem;
+  }
+}*/
 
 .logistics-intro {
-  background: #fff;
+  background: #ffffff;
   padding: 0.8rem 1rem;
   border-left: 4px solid #005fa3;
   border-radius: 6px;
   margin-bottom: 1rem;
+  /* subtle depth + smoother edges */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  font-size: 0.95rem;
+  line-height: 1.2;
 }
 
-/* =========================================================
-   8. ACCORDION (UNCHANGED BEHAVIOUR)
-========================================================= */
+.logistics h3 {
+  margin-top: 1.2rem;
+  color: #2c3e50;
+}
 
+.logistics ul {
+  padding-left: 1.2rem;
+}
+
+.logistics li {
+  margin-bottom: 0.4rem;
+}
+.logistics h4 {
+  margin-top: 0.8rem;
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid #2c7a4b; /* cycling green */
+}
+
+.timeline-item {
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-left: 0.6rem; /* new gap between bullet and text */
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  background: #2c7a4b;
+  border-radius: 50%;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-content {
+  color: #444;
+}
+
+/* Mobile nav inside hero */
+@media (min-width: 768px) {
+  #nav-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .hero-content {
+    padding-top: 50px; /* space so title doesn't sit under nav */
+  }
+}
+
+.logistics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/******************/
+/* Reserve button */
+/******************/
+.reserve-btn {
+  position: relative;
+  padding: 0.6rem 1.2rem;
+  background: #005fa3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  white-space: nowrap;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); /* drop shadow */
+}
+
+/* Hover colour (your existing rule) */
+.reserve-btn:hover {
+  background: #005fa3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35); /* slightly stronger on hover */
+}
+
+/* Tooltip arrow */
+.reserve-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Show tooltip on hover */
+.reserve-btn:hover::after,
+.reserve-btn:hover::before {
+  opacity: 1;
+}
+/* remove default triangle */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.content-wrap {
+  max-width: 900px;
+  margin: 0 auto; /* THIS centers it */
+  padding: 0 1rem; /* nice spacing on mobile */
+}
+
+/* ===============================
+   ACCORDION STYLING
+================================ */
 .accordion {
   max-width: 900px;
   margin: 0 auto;
@@ -356,51 +591,133 @@ h1 {
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 0 8px 5px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
+.accordion-item.active {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth expand/collapse animation */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    padding 0.3s ease;
+  padding: 0 1.5rem;
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+}
+
+.accordion-content.open {
+  padding: 1rem 1.5rem;
+}
+
+.accordion-content h3 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+.accordion-content p {
+  margin: 0.5rem 0 1rem;
+  color: #555;
+}
+
+.accordion-item {
+  /*border-bottom: 1px solid #e3e6ea; */
+  padding: 0px 8px 5px 8px;
+}
+
+/* header */
 .accordion-header {
+  /* layout */
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   cursor: pointer;
+  user-select: none;
+  list-style: none;
 
+  /* typography */
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 600; /* keep or change to 400 if you want normal weight */
 
-  background: #f2f5f5;
+  /* colours */
+
+  background-color: #f2f5f5;
+  color: black;
+
+  /* spacing */
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
-}
 
+  /* transitions */
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
 .accordion-header h2 {
-  margin: 0.6rem 0;
-  padding-left: 1rem;
+  font-weight: 640;
   font-size: 1.1rem;
+
+  margin: 0.6rem 0; /* optional but usually desired */
+  padding-left: 1rem; /* controls text alignment */
+}
+.accordion-header:hover {
+  background-color: #005fa3;
+  color: white;
 }
 
-/* Arrow */
+/* remove default triangle */
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* arrow icon */
+
 .accordion-header::after {
   content: "›";
   font-size: 28px;
+  margin-left: auto;
   transition: transform 0.3s ease;
 }
+
+/* rotate arrow when open */
 
 details[open] .accordion-header::after {
   transform: rotate(90deg);
 }
 
 details[open] .accordion-header {
-  background: #005fa3;
-  color: #fff;
+  color: white;
+  background-color: #005fa3;
+  border-radius: 4px 4px 0px 0px;
 }
 
-/* Remove default marker */
-summary::-webkit-details-marker {
-  display: none;
+/* animation container */
+
+.accordion-item .logistics {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
-/* Remove mobile gaps */
+.accordion-item:first-of-type {
+  padding-top: 0.5rem; /* adjust to taste */
+}
+
+.accordion-item:last-of-type {
+  padding-bottom: 0.5rem; /* or whatever size you want */
+}
+
 @media (max-width: 767px) {
   .accordion {
     max-width: 100%;
@@ -415,17 +732,18 @@ summary::-webkit-details-marker {
   .accordion-header h2 {
     padding-left: 0.5rem;
   }
+  /* Kill first/last extra spacing */
+  .accordion-item:first-of-type {
+    padding-top: 0;
+  }
 
-  .accordion-item:first-of-type,
   .accordion-item:last-of-type {
-    padding: 0;
+    padding-bottom: 0;
   }
 }
-
-/* =========================================================
-   9. GALLERY
-========================================================= */
-
+/* =========================
+   GALLERY
+========================= */
 .gallery {
   margin-top: 2.5rem;
 }
@@ -433,6 +751,7 @@ summary::-webkit-details-marker {
 .gallery-title {
   margin-bottom: 1rem;
   font-size: 1.3rem;
+  color: #1f2a36;
 }
 
 .gallery-grid {
@@ -441,29 +760,35 @@ summary::-webkit-details-marker {
   gap: 12px;
 }
 
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  height: auto;
+}
 .gallery-grid figure {
-  position: relative;
+  position: relative; /* 🔥 THIS IS THE KEY FIX */
+  margin: 0;
   overflow: hidden;
   border-radius: 8px;
 }
 
-.gallery-grid img {
-  width: 100%;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
 .gallery-grid img:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
-
 /* Caption overlay */
 .gallery-grid figcaption {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.5rem 0.7rem;
   font-size: 0.9rem;
   color: #fff;
   background: rgba(0, 0, 0, 0.6);
@@ -471,12 +796,18 @@ summary::-webkit-details-marker {
   transition: opacity 0.3s ease;
 }
 
+/* Show on hover */
 .gallery-grid figure:hover figcaption {
   opacity: 1;
 }
 
-/* Mobile */
+/* =========================
+   MOBILE TWEAKS
+========================= */
 @media (max-width: 600px) {
+  .gallery-grid img {
+    height: 160px;
+  }
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
