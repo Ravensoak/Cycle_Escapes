@@ -717,6 +717,18 @@ details[open] .accordion-header {
 .accordion-item:last-of-type {
   padding-bottom: 0.5rem; /* or whatever size you want */
 }
+
+@media (max-width: 767px) {
+  .accordion {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .accordion-item {
+    max-width: 100%;
+    padding: 0; /* remove side gap */
+  }
+}
 /* =========================
    GALLERY
 ========================= */
@@ -787,7 +799,4 @@ details[open] .accordion-header {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-* {
-  outline: 1px solid blue;
 }
