@@ -562,6 +562,12 @@ summary::-webkit-details-marker {
   display: none;
 }
 
+.content-wrap {
+  max-width: 900px;
+  margin: 0 auto; /* THIS centers it */
+  padding: 0 1rem; /* nice spacing on mobile */
+}
+
 /* ===============================
    ACCORDION STYLING
 ================================ */
@@ -697,8 +703,12 @@ details[open] .accordion-header {
   transition: max-height 0.4s ease;
 }
 
+.accordion-item:first-of-type {
+  padding-top: 0.5rem; /* adjust to taste */
+}
+
 .accordion-item:last-of-type {
-  padding-bottom: 30px; /* or whatever size you want */
+  padding-bottom: 0.5rem; /* or whatever size you want */
 }
 /* =========================
    GALLERY
