@@ -726,7 +726,11 @@ details[open] .accordion-header {
 
   .accordion-item {
     max-width: 100%;
-    padding: 0; /* remove side gap */
+    padding: 0;
+  }
+
+  .accordion-header h2 {
+    padding-left: 0.5rem;
   }
 }
 /* =========================
