@@ -788,3 +788,6 @@ details[open] .accordion-header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+* {
+  outline: 1px solid blue;
+}
