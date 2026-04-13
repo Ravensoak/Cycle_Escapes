@@ -767,7 +767,7 @@ details[open] .accordion-header {
 }
 
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .hero-description {
     font-size: 0.9rem;
     padding: 0 0.5rem;
