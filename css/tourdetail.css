@@ -329,11 +329,6 @@ summary::-webkit-details-marker {
   max-width: 280px; /* keeps nice card width */
   margin-bottom: 10px;
 }
-@media (max-width: 600px) {
-  .route1-card {
-    max-width: 100%; /* full width on mobile */
-  }
-}
 
 .route1-card img {
   display: block;
@@ -751,19 +746,7 @@ details[open] .accordion-header {
   }
 }
 
-/* allow footer to break out on mobile */
-@media (max-width: 767px) {
-  .tourpage {
-    padding: 0; /* remove mobile padding */
-    /*background: none;  remove white box so footer can be full-width */
-  }
-  .accordion-item {
-    margin: 0;
-  }
-
-  .logistics {
-    padding: 0.6rem 0; /* keep vertical spacing only */
-  }
+@media (max-width: 600px) {
 }
 
 /* Mobile */
@@ -771,6 +754,9 @@ details[open] .accordion-header {
   .hero-description {
     font-size: 0.9rem;
     padding: 0 0.5rem;
+  }
+  .hero-stats-section {
+    margin-top: -40px;
   }
   .hero-stats {
     grid-template-columns: repeat(4, 1fr);
@@ -800,10 +786,6 @@ details[open] .accordion-header {
     line-height: 1.1;
   }
 
-  .hero-stats-section {
-    margin-top: -40px;
-  }
-
   .countdown {
     flex-wrap: nowrap;
     gap: 0.4rem;
@@ -822,6 +804,23 @@ details[open] .accordion-header {
   .countdown-box small {
     font-size: 0.65rem;
   }
+
+  .tourpage {
+    padding: 0; /* remove mobile padding */
+    /*background: none;  remove white box so footer can be full-width */
+  }
+  .accordion-item {
+    margin: 0;
+  }
+
+  .route1-card {
+    max-width: 100%; /* full width on mobile */
+  }
+
+  .logistics {
+    padding: 0.6rem 0; /* keep vertical spacing only */
+  }
+
   .gallery-grid img {
     height: 160px;
   }
