@@ -809,10 +809,6 @@ details[open] .accordion-header {
     max-width: 100%; /* full width on mobile */
   }
 
-  .logistics {
-    padding: 0.6rem 0; /* keep vertical spacing only */
-  }
-
   .gallery-grid img {
     height: 160px;
   }
