@@ -223,80 +223,6 @@ summary::-webkit-details-marker {
   color: #666;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .hero-stats {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .hero-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-stats-section {
-    margin-top: -40px;
-  }
-}
-/* Mobile – keep all 4 stats in a row and countdown in a row*/
-@media (max-width: 600px) {
-  .hero-description {
-    font-size: 0.9rem;
-    padding: 0 0.5rem;
-  }
-  .hero-stats {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.4rem;
-  }
-  .hero-icon {
-    margin-top: -4rem;
-  }
-
-  .stat-card {
-    padding: 0.6rem 0.4rem;
-    border-radius: 8px;
-  }
-
-  .icon {
-    width: 22px;
-    height: 22px;
-  }
-
-  .stat-value {
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
-
-  .stat-label {
-    font-size: 0.65rem;
-    line-height: 1.1;
-  }
-
-  .hero-stats-section {
-    margin-top: -40px;
-  }
-
-  .countdown {
-    flex-wrap: nowrap;
-    gap: 0.4rem;
-  }
-
-  .countdown-box {
-    padding: 0.5rem 0.6rem;
-    min-width: 60px;
-    border-radius: 6px;
-  }
-
-  .countdown-box span {
-    font-size: 1.1rem;
-  }
-
-  .countdown-box small {
-    font-size: 0.65rem;
-  }
-}
-
 /* =========================================================
    5. PAGE CONTAINER
 ========================================================= */
@@ -309,19 +235,11 @@ summary::-webkit-details-marker {
   flex: 1; /* fills available vertical space */
 }
 
-/* allow footer to break out on mobile */
-@media (max-width: 767px) {
-  .tourpage {
-    padding: 0; /* remove mobile padding */
-    /*background: none;  remove white box so footer can be full-width */
-  }
-  .accordion-item {
-    margin: 0;
-  }
-
-  .logistics {
-    padding: 0.6rem 0; /* keep vertical spacing only */
-  }
+/* centre positioning for accordion */
+.content-wrap {
+  max-width: 900px;
+  margin: 0 auto; /* THIS centers it */
+  padding: 0 1rem; /* nice spacing on mobile */
 }
 
 /* desktop */
@@ -749,9 +667,11 @@ details[open] .accordion-header {
     padding-bottom: 0;
   }
 }
-/* =========================
-   GALLERY
-========================= */
+
+/* =========================================================
+   11. GALLERY
+========================================================= */
+
 .gallery {
   margin-top: 2.5rem;
 }
@@ -809,19 +729,103 @@ details[open] .accordion-header {
   opacity: 1;
 }
 
-/* =========================
-   MOBILE TWEAKS
-========================= */
+/* =========================================================
+   12. RESPONSIVE
+========================================================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 500px) {
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats-section {
+    margin-top: -40px;
+  }
+}
+
+/* allow footer to break out on mobile */
+@media (max-width: 767px) {
+  .tourpage {
+    padding: 0; /* remove mobile padding */
+    /*background: none;  remove white box so footer can be full-width */
+  }
+  .accordion-item {
+    margin: 0;
+  }
+
+  .logistics {
+    padding: 0.6rem 0; /* keep vertical spacing only */
+  }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
+  .hero-description {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+  .hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.4rem;
+  }
+  .hero-icon {
+    margin-top: -4rem;
+  }
+
+  .stat-card {
+    padding: 0.6rem 0.4rem;
+    border-radius: 8px;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .stat-value {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    line-height: 1.1;
+  }
+
+  .hero-stats-section {
+    margin-top: -40px;
+  }
+
+  .countdown {
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+  }
+
+  .countdown-box {
+    padding: 0.5rem 0.6rem;
+    min-width: 60px;
+    border-radius: 6px;
+  }
+
+  .countdown-box span {
+    font-size: 1.1rem;
+  }
+
+  .countdown-box small {
+    font-size: 0.65rem;
+  }
   .gallery-grid img {
     height: 160px;
   }
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-.content-wrap {
-  max-width: 900px;
-  margin: 0 auto; /* THIS centers it */
-  padding: 0 1rem; /* nice spacing on mobile */
 }
