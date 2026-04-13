@@ -639,30 +639,6 @@ details[open] .accordion-header {
   padding-bottom: 0rem; /* or whatever size you want */
 }
 
-@media (max-width: 767px) {
-  .accordion {
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .accordion-item {
-    max-width: 100%;
-    padding: 0;
-  }
-
-  .accordion-header h2 {
-    padding-left: 0.5rem;
-  }
-  /* Kill first/last extra spacing */
-  .accordion-item:first-of-type {
-    padding-top: 0;
-  }
-
-  .accordion-item:last-of-type {
-    padding-bottom: 0;
-  }
-}
-
 /* =========================================================
    11. GALLERY
 ========================================================= */
@@ -746,9 +722,6 @@ details[open] .accordion-header {
   }
 }
 
-@media (max-width: 600px) {
-}
-
 /* Mobile */
 @media (max-width: 767px) {
   .hero-description {
@@ -809,8 +782,27 @@ details[open] .accordion-header {
     padding: 0; /* remove mobile padding */
     /*background: none;  remove white box so footer can be full-width */
   }
-  .accordion-item {
+
+  .accordion {
+    max-width: 100%;
     margin: 0;
+  }
+
+  .accordion-item {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .accordion-header h2 {
+    padding-left: 0.5rem;
+  }
+  /* Kill first/last extra spacing */
+  .accordion-item:first-of-type {
+    padding-top: 0;
+  }
+
+  .accordion-item:last-of-type {
+    padding-bottom: 0;
   }
 
   .route1-card {
