@@ -649,6 +649,11 @@ details[open] .accordion-header {
   padding-bottom: 0rem; /* or whatever size you want */
 }
 
+details[open] .logistics {
+  background: #e5e5e5; /* Accordion background */
+  padding: 1rem 1.5rem; /* match your intended open padding */
+  border-radius: 0 0 4px 4px;
+}
 /* =========================================================
    11. GALLERY
 ========================================================= */
