@@ -106,8 +106,8 @@ header p {
   position: fixed;
   inset: 0; /* shorthand for top/right/bottom/left: 0 */
   z-index: 9999;
+  background: var(--accent);
 
-  background-color: #0d47a1; /* C2C blue */
   color: #fff;
 
   display: flex;

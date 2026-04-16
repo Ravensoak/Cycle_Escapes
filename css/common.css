@@ -32,11 +32,11 @@
 }
 
 :root {
-  --primary: #2c3e50;
-  --accent: #005fa3;
-  --bg: #ecf0f1;
-  --text: #171a1d;
-  --hover: #2980b9;
+  --primary: #2c3e50; /* A dark bluish color for main elements */
+  --accent: #3b5ba9; /* A blue accent color (also used for background here) */
+  --bg: #3b5ba9; /* Background color — same as accent */
+  --text: #171a1d; /* Dark gray for text */
+  --hover: #2980b9; /* Lighter blue for hover effects */
 }
 
 body {
@@ -67,12 +67,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.4
-  ); /* 0.3 dark overlay - controls bvackground colour*/
+  background: rgba(0, 0, 0, 0.4); /* 0.3 dark overlay - controls bvackground colour*/
   z-index: -1;
 }
 
