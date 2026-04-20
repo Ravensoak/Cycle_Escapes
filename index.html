@@ -43,10 +43,7 @@
     <link rel="apple-touch-icon" href="/graphics/favicon-512x512.png" />
 
     <!-- iOS Splash Screen Image -->
-    <link
-      rel="apple-touch-startup-image"
-      href="/graphics/favicon-512x512.png"
-    />
+    <link rel="apple-touch-startup-image" href="/graphics/favicon-512x512.png" />
   </head>
 
   <body data-theme="light">
@@ -54,10 +51,7 @@
       SPLASH SCREEN (shows briefly on load)
     ========================================================== -->
     <div id="splash-screen">
-      <img
-        src="/graphics/Cycle_Escapes_Logo_White_-_ transparent.png"
-        alt="Cycle Escapes Logo"
-      />
+      <img src="/graphics/Cycle_Escapes_Logo_White_-_ transparent.png" alt="Cycle Escapes Logo" />
       <h1>Welcome to the Cycle Escapes Information Hub</h1>
     </div>
 
@@ -66,11 +60,7 @@
     ========================================================== -->
     <header>
       <div class="indexlogo-container">
-        <img
-          src="/graphics/Cycle_Escapes_Logo_White_on_Blue.png"
-          alt="Cycle Escapes Ride Logo"
-          class="indexlogo"
-        />
+        <img src="/graphics/Cycle_Escapes_Logo_White_on_Blue.png" alt="Cycle Escapes Ride Logo" class="indexlogo" />
       </div>
       <!-- =========================================================
         NAVIGATION FOR INDEX PAGE PLACEHOLDER (Loaded dynamically)
@@ -84,9 +74,7 @@
     <!-- =========================================================
       INTRO TEXT
     ========================================================== -->
-    <p class="centered-summary">
-      Your central hub for all the key details on our upcoming cycling tours
-    </p>
+    <p class="centered-summary">Your central hub for all the key details on our upcoming cycling tours</p>
 
     <!-- =========================================================
       MAIN BUTTON GRID
@@ -141,9 +129,7 @@
         SERVICE WORKER (PWA)
       ========================================================== */
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("js/service-worker.js")
-          .then(() => console.log("Service Worker registered"));
+        navigator.serviceWorker.register("js/service-worker.js").then(() => console.log("Service Worker registered"));
       }
 
       /* =========================================================
