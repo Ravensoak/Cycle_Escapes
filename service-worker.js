@@ -2,24 +2,20 @@
 const CACHE_VERSION = "v2";
 
 // Install event
-self.addEventListener("install", event => {
+self.addEventListener("install", (event) => {
   console.log("Service Worker installing…");
   self.skipWaiting(); // Activate immediately
 });
 
 // Activate event
-self.addEventListener("activate", event => {
+self.addEventListener("activate", (event) => {
   console.log("Service Worker activating…");
 
   // Clean up old caches
   event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(
-        keys
-          .filter(key => key !== CACHE_VERSION)
-          .map(key => caches.delete(key))
-      )
-    )
+    caches
+      .keys()
+      .then((keys) => Promise.all(keys.filter((key) => key !== CACHE_VERSION).map((key) => caches.delete(key)))),
   );
 
   // Take control of all pages immediately
@@ -27,6 +23,6 @@ self.addEventListener("activate", event => {
 });
 
 // Fetch event (pass-through for now)
-self.addEventListener("fetch", event => {
-  // No caching logic yet — everything goes to the network
+self.addEventListener("fetch", (event) => {
+  event.respondWith(fetch(event.request).catch(() => caches.match("/index.html")));
 });
