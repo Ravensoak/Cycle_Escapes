@@ -259,73 +259,44 @@ summary::-webkit-details-marker {
    6. TABLE
 ========================================================= */
 
-/* =========================================================
-   TABLE SCROLL CONTAINER
-   - Enables horizontal scroll on smaller screens
-========================================================= */
 .table-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
   position: relative;
 }
-
-/* =========================================================
-   TABLE WRAPPER
-   - Clips rounded corners cleanly
-========================================================= */
 .info-table-wrapper {
-  border-radius: 6px;
-  overflow: hidden;
+  border-radius: 6px; /* adjust to taste */
+  overflow: hidden; /* required to clip the table corners */
 }
 
-/* =========================================================
-   TABLE BASE
-   - Columns size based on widest content
-   - Expands naturally, but won't shrink below container width
-========================================================= */
 .info-table {
+  width: 100%;
   border-collapse: collapse;
   font-family: "Segoe UI", sans-serif;
   font-size: 15px;
-  color: #1a1a1a;
-
-  table-layout: auto; /* content-driven column sizing */
-  width: max-content; /* grow to fit widest content */
-  min-width: 100%; /* but still fill container if content is small */
-
   -webkit-text-size-adjust: 100%;
+  color: #1a1a1a;
+  min-width: 700px; /* ensures scrolling instead of squishing */
 }
 
-/* =========================================================
-   TABLE HEADER
-========================================================= */
 .info-table thead th {
   background-color: #d9dcdb;
-  color: #1a4d3c;
+  color: #1a4d3c; /* alpine green */
   text-align: left;
   padding: 10px;
   border-bottom: 2px solid #c9d3cf;
   font-weight: 600;
 }
 
-/* =========================================================
-   TABLE BODY
-========================================================= */
 .info-table tbody td {
   padding: 10px;
   border-bottom: 1px solid #e0e0e0;
-  background-color: #ffffff;
+  background-color: #ffffff; /* mist-grey */
 }
 
-/* Remove border on last row */
 .info-table tbody tr:last-child td {
   border-bottom: none;
 }
-
-/* =========================================================
-   CELL BEHAVIOUR
-   - Prevent wrapping so columns size to widest content
-========================================================= */
 .info-table th,
 .info-table td {
   padding: 8px 12px;
