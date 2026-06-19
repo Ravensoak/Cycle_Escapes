@@ -107,11 +107,19 @@ loadComponent(
 `,
   function () {
     const placeholder = document.querySelector("#footer-placeholder");
-    const customLink = placeholder?.dataset?.whatsapp;
 
+    // Custom link
+    const customLink = placeholder?.dataset?.whatsapp;
     if (customLink) {
       const link = placeholder.querySelector(".whatsapp-link");
       if (link) link.href = customLink;
+    }
+
+    // Custom label
+    const customLabel = placeholder?.dataset?.whatsappLabel;
+    if (customLabel) {
+      const label = placeholder.querySelector(".whatsapp-label");
+      if (label) label.textContent = customLabel;
     }
   },
 );
