@@ -21,7 +21,9 @@ if (refreshBtn && window.matchMedia("(display-mode: standalone)").matches) {
     hideTimer = setTimeout(() => refreshBtn.classList.remove("visible"), 5000);
   }
 
-  ["mousemove", "scroll", "touchstart"].forEach((evt) => document.addEventListener(evt, resetHideTimer));
+  ["mousemove", "scroll", "touchstart"].forEach((evt) =>
+    document.addEventListener(evt, resetHideTimer),
+  );
 
   resetHideTimer();
 }
@@ -105,15 +107,6 @@ loadComponent(
     </div>
   </footer>
 `,
-  function () {
-    const placeholder = document.querySelector("#footer-placeholder");
-    const customLink = placeholder?.dataset?.whatsapp;
-
-    if (customLink) {
-      const link = placeholder.querySelector(".whatsapp-link");
-      if (link) link.href = customLink;
-    }
-  },
 );
 
 loadComponent(
