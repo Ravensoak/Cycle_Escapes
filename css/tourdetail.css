@@ -230,9 +230,12 @@ summary::-webkit-details-marker {
   width: 100%;
   margin: 0;
   padding: 0 0.5rem;
-  background: #fff;
   max-width: none;
-  flex: 1; /* fills available vertical space */
+  flex: 1;
+
+  background: url("/pictures/contour.png") center top / cover no-repeat;
+
+  background-attachment: fixed; /* optional */
 }
 
 /* centre positioning for accordion */
