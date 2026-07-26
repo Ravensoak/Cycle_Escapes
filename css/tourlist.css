@@ -31,7 +31,7 @@ header {
 .tourpage {
   width: 100%;
   margin: 0;
-  padding: 0 0.2rem; /* small side padding */
+  padding: 0 0.5rem; /* small side padding */
   background: #fff;
 }
 
@@ -169,7 +169,7 @@ header {
 .tours-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 10px;
 }
 
 /* Mobile: single column */
