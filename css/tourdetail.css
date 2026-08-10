@@ -961,15 +961,16 @@ details[open] .logistics {
 .not-included-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 -10px;
 }
 .included-list li,
 .not-included-list li {
   position: relative;
-  padding-left: 32px;
-  margin-bottom: 12px;
-  line-height: 1.5;
-} /* Green tick */
+  padding-left: 28px;
+  margin-bottom: 7px;
+  line-height: 1.3;
+}
+/* Green tick */
 .included-list li::before {
   content: "✓";
   position: absolute;
@@ -978,7 +979,8 @@ details[open] .logistics {
   font-size: 14px;
   font-weight: 700;
   color: #2e9d59;
-} /* Red cross */
+}
+/* Red cross */
 .not-included-list li::before {
   content: "✕";
   position: absolute;
@@ -987,4 +989,26 @@ details[open] .logistics {
   font-size: 14px;
   font-weight: 700;
   color: #d9534f;
+}
+
+.starred-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 -10px;
+}
+.starred-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 7px;
+  line-height: 1.3;
+}
+/* Gold Star */
+.starred-list li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 17px;
+  line-height: 1;
+  color: #f2b01e;
 }
