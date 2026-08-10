@@ -1029,11 +1029,12 @@ details[open] .logistics {
 }
 
 .cost-list li::before {
-  content: "→";
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
   position: absolute;
   left: 0;
   top: 0;
-  font-weight: 700;
+  font-weight: 600;
   color: #1f2a36;
 }
 
@@ -1065,7 +1066,7 @@ details[open] .logistics {
 .logistics-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 -10px;
 }
 
 .logistics-list li {
@@ -1149,7 +1150,7 @@ details[open] .logistics {
 .bring-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 -10px;
 }
 
 .bring-list li {
@@ -1198,11 +1199,21 @@ details[open] .logistics {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
+.bring-list li.passport::before {
+  content: "\f5ab";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.bring-list li.lights::before {
+  content: "\f0eb";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
 
 .accommodation-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 -10px;
 }
 
 .accommodation-list li {
@@ -1232,3 +1243,9 @@ details[open] .logistics {
   content: "\f2e7";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
+}
+.accommodation-list li.storage::before {
+  content: "\f023";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
