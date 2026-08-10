@@ -1,0 +1,22 @@
+Route 1 - Bohinj.Bled
+
+Cafe:
+Name: Snack Bar - Pod Brezo
+Distance: 39 mile
+Location: Bohinj
+Google Link: https://maps.app.goo.gl/8fJwzLs8m23W7eJq5
+
+Cafe:
+Name: Kavarna Midva
+Distance: 56.5mile
+Location: Bled
+Google Link: https://maps.app.goo.gl/8iXgDWR6kDdh7pDc6
+
+
+Route 2 - Vrsic.Predil.Tarvisio
+
+Cafe:
+Kavarna 1920
+Distance: 28 mile
+Location: Bovec
+Google Link: https://maps.app.goo.gl/MEvMWtcsrkNxfP2C6
