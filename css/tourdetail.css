@@ -457,6 +457,7 @@ summary::-webkit-details-marker {
   border-radius: 50%;
   content: "\f133";
   font-family: "Font Awesome 6 Free";
+  color: #2c3e50;
 }
 
 .timeline-date {
