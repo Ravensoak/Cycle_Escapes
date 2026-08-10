@@ -1173,7 +1173,7 @@ details[open] .logistics {
 }
 
 .bring-list li.helmet::before {
-  content: "\f5fc";
+  content: "\f807";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
