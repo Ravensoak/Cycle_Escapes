@@ -483,6 +483,95 @@ summary::-webkit-details-marker {
 }
 
 /* =========================================================
+   8a. Timeline
+========================================================= */
+.timeline-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 10px 0;
+}
+
+.tblock {
+  background: #dcdcdc;
+  height: 60px;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* Labelled blocks */
+.labelled {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 1px;
+  height: 80px;
+}
+
+.travel {
+  background-color: #2e8b57;
+}
+
+.ride {
+  background-color: #ff8c00;
+}
+
+.return {
+  background-color: #1e90ff;
+}
+
+.t-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.t-date {
+  font-size: 1em;
+  margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .timeline-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .t-title {
+    font-size: 0.9em;
+  }
+  .t-date {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .tblock {
+    height: 40px;
+  }
+  .labelled {
+    height: 60px;
+    justify-content: center; /* vertical centring */
+    align-items: center; /* horizontal centring */
+    text-align: center; /* ensure text lines centre */
+  }
+  .t-title {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  .t-date {
+    font-size: 0.7em;
+    text-align: center;
+  }
+}
+
+/* =========================================================
    9. BUTTONS
 ========================================================= */
 

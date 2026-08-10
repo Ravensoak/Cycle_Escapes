@@ -952,3 +952,39 @@ details[open] .logistics {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* =========================================================
+   13. Lists
+========================================================= */
+
+.included-list,
+.not-included-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.included-list li,
+.not-included-list li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+} /* Green tick */
+.included-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2e9d59;
+} /* Red cross */
+.not-included-list li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #d9534f;
+}
