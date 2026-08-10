@@ -1197,3 +1197,37 @@ details[open] .logistics {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
+
+.accommodation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accommodation-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.accommodation-list li::before {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 20px;
+  text-align: center;
+
+  color: #1f2a36; /* monochrome colour */
+  font-size: 14px;
+}
+.accommodation-list li.bed::before {
+  content: "\f236";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.accommodation-list li.meals::before {
+  content: "\f2e7";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
