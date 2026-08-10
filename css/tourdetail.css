@@ -450,11 +450,13 @@ summary::-webkit-details-marker {
   content: "";
   position: absolute;
   left: -9px;
-  top: 4px;
+  top: 1px;
   width: 10px;
   height: 10px;
-  background: #2c7a4b;
+
   border-radius: 50%;
+  content: "\f133";
+  font-family: "Font Awesome 6 Free";
 }
 
 .timeline-date {
