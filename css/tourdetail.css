@@ -1256,14 +1256,29 @@ details[open] .logistics {
   border-radius: 8px;
   margin-top: 8px;
   background: #fafafa;
+  padding-left: 8px; /* indent text + button */
 }
 
 .cafe-card h5 {
-  margin: 0 0 8px 0; /* remove top margin, keep small bottom margin */
-  font-size: 1rem;
+  margin: 0 0 6px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-left: 4px; /* subtle indent */
 }
+
 .cafe-card p {
   font-size: 0.85rem; /* smaller text */
   line-height: 1.2; /* tighter spacing */
   margin: 4px 0; /* reduce vertical gaps */
+  padding-left: 8px; /* indent text + button */
+}
+
+.cafe-card .cafe-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 2px 0 6px 0;
+  padding-left: 12px; /* matches your indentation */
+  color: #0b3d2e; /* subtle Racing Green accent */
 }
