@@ -1249,3 +1249,21 @@ details[open] .logistics {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
+
+.cafe-card {
+  border: 1px solid #ddd;
+  padding: 6px 10px 10px; /* smaller top padding */
+  border-radius: 8px;
+  margin-top: 8px;
+  background: #fafafa;
+}
+
+.cafe-card h5 {
+  margin: 0 0 8px 0; /* remove top margin, keep small bottom margin */
+  font-size: 1rem;
+}
+.cafe-card p {
+  font-size: 0.85rem; /* smaller text */
+  line-height: 1.2; /* tighter spacing */
+  margin: 4px 0; /* reduce vertical gaps */
+}
