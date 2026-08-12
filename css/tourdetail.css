@@ -1549,3 +1549,12 @@ details[open] .logistics {
 .route-lightbox-close:hover {
   background: #ddd;
 }
+@media (max-width: 600px) {
+  .route-thumbnail::after {
+    opacity: 1;
+  }
+
+  .route-thumbnail-text {
+    opacity: 1;
+  }
+}
