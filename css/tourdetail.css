@@ -1430,12 +1430,10 @@ details[open] .logistics {
 }
 
 /* =========================================================
-   MOBILE
+   TOUCH DEVICES
    ========================================================= */
 
-@media (max-width: 1024px) {
-  /* Always show overlay and text on touch screens */
-
+@media (hover: none) and (pointer: coarse) {
   .route-thumbnail::after {
     opacity: 1;
   }
