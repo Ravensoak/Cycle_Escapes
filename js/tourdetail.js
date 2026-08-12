@@ -30,8 +30,11 @@ function updateCountdown() {
 
   if (!countdown) return;
 
-  const eventDateString = countdown.dataset.date;
-  const eventDate = new Date(eventDateString).getTime();
+  const eventDate = new Date(countdown.dataset.date).getTime();
+
+  console.log("Countdown date:", countdown.dataset.date);
+  console.log("Event timestamp:", eventDate);
+
   const now = Date.now();
   const diff = eventDate - now;
 
@@ -46,13 +49,9 @@ function updateCountdown() {
 
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
 
-  const daysElement = document.getElementById("days");
-  const hoursElement = document.getElementById("hours");
-  const minutesElement = document.getElementById("minutes");
-
-  if (daysElement) daysElement.textContent = days;
-  if (hoursElement) hoursElement.textContent = hours;
-  if (minutesElement) minutesElement.textContent = minutes;
+  countdown.querySelector("#days").textContent = days;
+  countdown.querySelector("#hours").textContent = hours;
+  countdown.querySelector("#minutes").textContent = minutes;
 }
 
 updateCountdown();
