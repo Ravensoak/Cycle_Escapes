@@ -137,13 +137,13 @@ summary::-webkit-details-marker {
   display: flex;
   justify-content: center;
   gap: 0.6rem;
-  margin: 1rem 0 1.5rem;
+  margin: 1rem 0 -0.8rem;
   flex-wrap: wrap;
 }
 
 /* Individual countdown unit */
 .countdown-box {
-  padding: 0.55rem 0.8rem;
+  padding: 0.55rem 1rem;
   border-radius: 6px;
   min-width: 65px;
   color: #fff;
