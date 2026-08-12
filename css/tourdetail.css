@@ -1418,3 +1418,134 @@ details[open] .logistics {
 .route-lightbox-close:hover {
   background: #fff;
 }
+
+/* =========================================================
+   ROUTE THUMBNAIL
+   ========================================================= */
+
+.route-thumbnail {
+  position: relative;
+  display: block;
+  width: 220px;
+  height: 130px;
+  margin: 15px 0 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.route-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.route-thumbnail::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.route-thumbnail-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.route-thumbnail:hover::after,
+.route-thumbnail:hover .route-thumbnail-text {
+  opacity: 1;
+}
+
+.route-thumbnail:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   ROUTE IMAGE MODAL
+   ========================================================= */
+
+.route-lightbox {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.92);
+
+  z-index: 99999;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.route-lightbox.active {
+  display: flex;
+}
+
+.route-lightbox img {
+  display: block;
+
+  max-width: 95vw;
+  max-height: 90vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 4px;
+}
+
+/* CLOSE BUTTON */
+
+.route-lightbox-close {
+  position: absolute;
+
+  top: 15px;
+  right: 20px;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: white;
+  color: #1f2a36;
+
+  font-size: 32px;
+  line-height: 40px;
+
+  cursor: pointer;
+
+  z-index: 100000;
+}
+
+.route-lightbox-close:hover {
+  background: #ddd;
+}

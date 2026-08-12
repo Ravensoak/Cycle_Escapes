@@ -332,11 +332,7 @@
               <br />
 
               <!-- Clickable image thumbnail -->
-              <a
-                href="pictures/Slovenia/SloveniaRouteMap.png"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="route-thumbnail">
+              <a href="pictures/Slovenia/SloveniaRouteMap.png" class="route-thumbnail" id="routeMapThumb">
                 <img src="pictures/Slovenia/SloveniaRouteMap.png" alt="Route map" />
 
                 <span class="route-thumbnail-text">
@@ -1005,8 +1001,8 @@
     <script src="js/tourdetail.js" defer></script>
     <script src="js/site.js" defer></script>
 
-    <div class="route-lightbox" id="routeLightbox">
-      <button class="route-lightbox-close" id="routeLightboxClose" aria-label="Close">&times;</button>
+    <div id="routeLightbox" class="route-lightbox">
+      <button id="routeLightboxClose" class="route-lightbox-close" aria-label="Close image">&times;</button>
 
       <img id="routeLightboxImage" src="" alt="Route map" />
     </div>
