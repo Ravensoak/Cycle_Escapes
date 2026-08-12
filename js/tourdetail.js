@@ -48,3 +48,37 @@ function updateCountdown() {
 updateCountdown();
 
 setInterval(updateCountdown, 60000);
+
+const routeMapThumb = document.getElementById("routeMapThumb");
+const routeLightbox = document.getElementById("routeLightbox");
+const routeLightboxImage = document.getElementById("routeLightboxImage");
+const routeLightboxClose = document.getElementById("routeLightboxClose");
+
+routeMapThumb.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  routeLightboxImage.src = this.href;
+  routeLightbox.classList.add("active");
+
+  document.body.style.overflow = "hidden";
+});
+
+function closeRouteLightbox() {
+  routeLightbox.classList.remove("active");
+  routeLightboxImage.src = "";
+  document.body.style.overflow = "";
+}
+
+routeLightboxClose.addEventListener("click", closeRouteLightbox);
+
+routeLightbox.addEventListener("click", function (e) {
+  if (e.target === routeLightbox) {
+    closeRouteLightbox();
+  }
+});
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeRouteLightbox();
+  }
+});

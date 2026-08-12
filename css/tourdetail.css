@@ -1363,3 +1363,58 @@ details[open] .logistics {
     opacity: 1;
   }
 }
+/* =========================================================
+   ROUTE MAP LIGHTBOX
+   ========================================================= */
+
+.route-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  background: rgba(0, 0, 0, 0.92);
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+.route-lightbox.active {
+  display: flex;
+}
+
+.route-lightbox img {
+  display: block;
+  max-width: 95vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.route-lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: #1f2a36;
+
+  font-size: 30px;
+  line-height: 1;
+
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.route-lightbox-close:hover {
+  background: #fff;
+}
