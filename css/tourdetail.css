@@ -734,7 +734,7 @@ summary::-webkit-details-marker {
     color 0.2s ease;
 }
 .accordion-header h2 {
-  font-weight: 640;
+  font-weight: 700;
   font-size: 1.1rem;
 
   margin: 0.6rem 0; /* optional but usually desired */
@@ -758,6 +758,21 @@ summary::-webkit-details-marker {
   font-size: 28px;
   margin-left: auto;
   transition: transform 0.3s ease;
+}
+
+.accordion-header h2 i {
+  color: #005fa3;
+  margin-right: 8px;
+}
+
+/* icon turns white on hover */
+.accordion-header:hover h2 i {
+  color: #fff;
+}
+
+/* Icon changes to white when accordion is open */
+details[open] .accordion-header h2 i {
+  color: #fff;
 }
 
 /* rotate arrow when open */
