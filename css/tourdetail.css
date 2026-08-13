@@ -1578,3 +1578,25 @@ details[open] .logistics {
   transform: scale(1.08);
   background: rgba(31, 42, 54, 0.75);
 }
+.route-zoom::after {
+  content: "View Route";
+  position: absolute;
+  top: 38px;
+  right: 0;
+
+  background: #1f2a36;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 4px;
+
+  font-size: 12px;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.route-zoom:hover::after {
+  opacity: 1;
+}
