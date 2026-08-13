@@ -97,18 +97,30 @@ summary::-webkit-details-marker {
 .hero-content h1 {
   font-size: 2.6rem;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: -0.5rem;
 }
 
 .hero-subtitle {
   font-size: 1.15rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .hero-tagline {
+  display: inline-block;
   font-style: italic;
-  font-weight: 700;
-  opacity: 1;
+  font-weight: 600;
+  color: #fff;
+  font-size: 16px;
+
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
 }
 .hero-description {
   max-width: 750px;
@@ -130,46 +142,50 @@ summary::-webkit-details-marker {
 
 /* =========================================================
    3. COUNTDOWN
-========================================================= */
+   ========================================================= */
 
 /* Container for all countdown boxes */
 .countdown {
-  display: flex; /* Align boxes in a row */
-  justify-content: center; /* Center them horizontally */
-  gap: 1rem; /* Space between boxes */
-  margin: 1.5rem 0 2rem; /* Top / horizontal / bottom spacing */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 1rem 0 -0.8rem;
+  flex-wrap: wrap;
 }
 
-/* Individual countdown unit (e.g., Days, Hours) */
+/* Individual countdown unit */
 .countdown-box {
-  padding: 0.9rem 1.3rem; /* Inner spacing */
-  border-radius: 8px; /* Rounded corners */
-  min-width: 90px; /* Ensures consistent sizing */
-  color: #fff; /* White text for contrast */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  min-width: 65px;
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+  text-align: center;
 }
 
-/* Large numeric value (e.g., “12”) */
+/* Large numeric value */
 .countdown-box span {
-  font-size: 1.8rem; /* Big and bold */
+  font-size: 1.4rem;
   font-weight: bold;
-  display: block; /* Forces it onto its own line */
+  display: block;
+  line-height: 1.1;
 }
 
-/* Label text (e.g., “Days”) */
+/* Label text */
 .countdown-box small {
-  font-size: 0.85rem; /* Smaller supporting text */
-  opacity: 0.9; /* Slight fade for hierarchy */
+  font-size: 0.7rem;
+  opacity: 0.9;
 }
 
 /* Countdown colour themes */
 .countdown-box.green {
   background: #4a8f4f;
 }
+
 .countdown-box.blue {
   background: #2c4f7c;
 }
+
 .countdown-box.orange {
   background: #d96a2b;
 }
@@ -450,11 +466,24 @@ summary::-webkit-details-marker {
   content: "";
   position: absolute;
   left: -9px;
-  top: 4px;
+  top: 1px;
   width: 10px;
   height: 10px;
-  background: #2c7a4b;
+
   border-radius: 50%;
+  content: "\f133";
+  font-family: "Font Awesome 6 Free";
+  color: #2c3e50;
+}
+/* Subtle line between timeline items */
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: rgba(31, 42, 54, 0.12);
 }
 
 .timeline-date {
@@ -585,10 +614,40 @@ summary::-webkit-details-marker {
   font-size: 14px;
   border-radius: 6px;
   transition: background-color 0.2s ease;
+  margin: 0px 0px 0px 0px;
 }
 
 .route-card-btn:hover {
   background-color: #0f2a21; /* deep forest */
+}
+
+.reserve-btn {
+  position: relative;
+  padding: 0.6rem 1.2rem;
+  background: #005fa3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  white-space: nowrap;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); /* drop shadow */
+}
+.google-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #7ec6fa;
+  color: #000000;
+  text-decoration: none;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  margin: 0px 0px 0px 0px;
+}
+
+.google-btn:hover {
+  background-color: #0f2a21; /* deep forest */
+  color: #ffffff;
 }
 
 .reserve-btn {
@@ -717,7 +776,7 @@ summary::-webkit-details-marker {
     color 0.2s ease;
 }
 .accordion-header h2 {
-  font-weight: 640;
+  font-weight: 700;
   font-size: 1.1rem;
 
   margin: 0.6rem 0; /* optional but usually desired */
@@ -741,6 +800,21 @@ summary::-webkit-details-marker {
   font-size: 28px;
   margin-left: auto;
   transition: transform 0.3s ease;
+}
+
+.accordion-header h2 i {
+  color: #005fa3;
+  margin-right: 8px;
+}
+
+/* icon turns white on hover */
+.accordion-header:hover h2 i {
+  color: #fff;
+}
+
+/* Icon changes to white when accordion is open */
+details[open] .accordion-header h2 i {
+  color: #fff;
 }
 
 /* rotate arrow when open */
@@ -1026,10 +1100,447 @@ details[open] .logistics {
 }
 
 .cost-list li::before {
-  content: "→";
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
   position: absolute;
   left: 0;
   top: 0;
-  font-weight: 700;
+  font-weight: 600;
   color: #1f2a36;
+}
+
+.ride-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 -10px;
+}
+
+.ride-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.ride-list li::before {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 20px;
+  text-align: center;
+
+  color: #1f2a36; /* monochrome colour */
+  font-size: 14px;
+}
+.ride-list li.mountain::before {
+  content: "\f6fc";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.ride-list li.calendar::before {
+  content: "\f133";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.ride-list li.passport::before {
+  content: "\f5ab";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.ride-list li.lights::before {
+  content: "\f0eb";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+/* Clock */
+.time-list {
+  list-style: none;
+  padding: 10px;
+  margin: 0 0 0 -20px;
+}
+
+.time-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 7px;
+  line-height: 1.3;
+}
+.time-list li::before {
+  content: "\f017";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+  position: absolute;
+  left: 0;
+  top: 1px;
+
+  width: 20px;
+  text-align: center;
+}
+
+.logistics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 -10px;
+}
+
+.logistics-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+/* Accommodation */
+.logistics-list li.accommodation::before {
+  content: "\f236";
+  font-weight: 600;
+  color: #1f2a36;
+}
+
+/* Meals */
+.logistics-list li.meals::before {
+  content: "\f2e7";
+  font-weight: 600;
+  color: #1f2a36;
+}
+
+/* Cycling */
+.logistics-list li.cycling::before {
+  content: "\f206";
+  font-weight: 600;
+  color: #1f2a36;
+}
+
+/* Luggage */
+.logistics-list li.luggage::before {
+  content: "\f5c2";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  color: #1f2a36;
+}
+
+/* Support / Van */
+.logistics-list li.support::before {
+  content: "\f0d1";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  color: #1f2a36;
+}
+
+/* Flight */
+.logistics-list li.flight::before {
+  content: "\f072";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  color: #1f2a36;
+}
+
+/* Bike Rental */
+.logistics-list li.bike-rental::before {
+  content: "\f206";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  color: #1f2a36;
+}
+
+/* Transport */
+.logistics-list li.transport::before {
+  content: "\f0d1";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  color: #1f2a36;
+}
+
+.logistics-list li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  text-align: center;
+  font-size: 16px;
+  color: #1f2a36; /* monochrome colour */
+}
+
+.bring-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 -10px;
+}
+
+.bring-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.bring-list li::before {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 20px;
+  text-align: center;
+
+  color: #1f2a36; /* monochrome colour */
+  font-size: 14px;
+}
+.bring-list li.bike::before {
+  content: "\f206";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.bring-list li.helmet::before {
+  content: "\f807";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.bring-list li.clothing::before {
+  content: "\f553";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.bring-list li.tools::before {
+  content: "\f7d9";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.bring-list li.medication::before {
+  content: "\f484";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.bring-list li.passport::before {
+  content: "\f5ab";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.bring-list li.lights::before {
+  content: "\f0eb";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.accommodation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 -10px;
+}
+
+.accommodation-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.accommodation-list li::before {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 20px;
+  text-align: center;
+
+  color: #1f2a36; /* monochrome colour */
+  font-size: 14px;
+}
+.accommodation-list li.bed::before {
+  content: "\f236";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.accommodation-list li.meals::before {
+  content: "\f2e7";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.accommodation-list li.storage::before {
+  content: "\f023";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.cafe-card {
+  border: 1px solid #ddd;
+  padding: 6px 10px 10px; /* smaller top padding */
+  border-radius: 8px;
+  margin-top: 8px;
+  background: #fafafa;
+  padding-left: 8px; /* indent text + button */
+}
+
+.cafe-card h5 {
+  margin: 0 0 6px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-left: 4px; /* subtle indent */
+}
+
+.cafe-card p {
+  font-size: 0.85rem; /* smaller text */
+  line-height: 1.2; /* tighter spacing */
+  margin: 4px 0; /* reduce vertical gaps */
+  padding-left: 8px; /* indent text + button */
+}
+
+.cafe-card .cafe-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 2px 0 6px 0;
+  padding-left: 12px; /* matches your indentation */
+  color: #0b3d2e; /* subtle Racing Green accent */
+}
+
+/* =========================================================
+   ROUTE THUMBNAIL
+   ========================================================= */
+
+.route-thumbnail {
+  position: relative;
+  display: block;
+  width: 220px;
+  height: 130px;
+  margin: 15px 0px 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.route-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Dark overlay */
+
+.route-thumbnail::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover text */
+
+.route-thumbnail-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Desktop hover */
+
+.route-thumbnail:hover::after,
+.route-thumbnail:hover .route-thumbnail-text {
+  opacity: 1;
+}
+
+.route-thumbnail:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   ROUTE IMAGE MODAL
+   ========================================================= */
+
+.route-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.92);
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 99999;
+}
+
+.route-lightbox.active {
+  display: flex;
+}
+
+.route-lightbox img {
+  display: block;
+  max-width: 95vw;
+  max-height: 90vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+.route-lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+
+  width: 44px;
+  height: 44px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #1f2a36;
+
+  font-size: 32px;
+  line-height: 40px;
+
+  cursor: pointer;
+
+  z-index: 100000;
+}
+
+.route-lightbox-close:hover {
+  background: #ddd;
+}
+
+/* =========================================================
+   TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  .route-thumbnail::after {
+    opacity: 1;
+  }
+
+  .route-thumbnail-text {
+    opacity: 1;
+  }
 }

@@ -26,7 +26,7 @@
 
     <style>
       .event-hero {
-        background: url("/pictures/Slovenia/Slovenia3.png") center/cover no-repeat;
+        background: url("/pictures/Slovenia/Slovenia3.webp") center/cover no-repeat;
       }
       .tourpage {
         background: url("/pictures/Mountains2.webp") center top / cover no-repeat;
@@ -54,7 +54,7 @@
 
           <p class="hero-subtitle">
             A Kranjska Gora–based tour that makes the most of the spectacular Julian Alps<br /><br />
-            <span class="hero-tagline">Date: 14 May 2027 - 6 days/7 nights</span>
+            <span class="hero-tagline">Dates: 14-21 May 2027</span>
           </p>
 
           <!-- Countdown -->
@@ -309,7 +309,7 @@
           <summary class="accordion-header">
             <h2 class="page-title">
               <i class="fa-solid fa-route" style="margin-right: 0.6em"></i>
-              Stages / Routes
+              Routes
               <span
                 class="help-icon"
                 data-title="Stages / Routes"
@@ -322,16 +322,43 @@
           <section class="logistics">
             <div class="logistics-intro">
               <h3>Where do we ride?</h3>
-              The routes are designed to take you through the most scenic parts of the Julian Alps and cross the border
-              into Italy and Austria.
-              <br />
-              Routes may include options to switch to a shorter alternative with less elevation, or extensions if more
-              miles are desired.
-              <br /><br />
-              Each day, specific routes will be proposed, but may change to take account of weather conditions.
-              <br /><br />
+              <ul class="ride-list">
+                <li class="mountain">
+                  The routes are designed to take you through the most scenic parts of the Julian Alps and cross the
+                  border into Italy and Austria. Routes may include options to switch to a shorter alternative with less
+                  elevation, or extensions if more miles are desired.
+                </li>
 
-              <a href="https://ridewithgps.com/collections/9471364" target="_blank" class="route-card-btn">
+                <li class="calendar">
+                  Each day, we’ll propose specific routes, but these may be adjusted to reflect weather conditions or
+                  riders’ overall fatigue levels.
+                </li>
+                <li class="passport">
+                  Crossing borders within the Schengen area is generally seamless, with no routine checks. However,
+                  temporary controls can be introduced at short notice, so always carry your passport when travelling on
+                  routes that cross national borders.
+                </li>
+                <li class="lights">
+                  Many of the route sections go through tunnels, so it is important that your bike is fitted with front
+                  and rear lights.
+                </li>
+              </ul>
+              <!-- Clickable image thumbnail -->
+              <a href="pictures/Slovenia/SloveniaRouteMap.png" class="route-thumbnail" id="routeMapThumb">
+                <img src="pictures/Slovenia/SloveniaRouteMap.png" alt="Route map" />
+
+                <span class="route-thumbnail-text">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  Click to view map
+                </span>
+              </a>
+
+              <!-- Existing button -->
+              <a
+                href="https://ridewithgps.com/collections/9471364"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="route-card-btn">
                 View All Routes
               </a>
             </div>
@@ -363,7 +390,7 @@
                   <p>📍 Bohinj</p>
                   <p>🚴 Distance: 39 miles</p>
                   <p>
-                    <a href="https://maps.app.goo.gl/8fJwzLs8m23W7eJq5" target="_blank" class="route-card-btn">
+                    <a href="https://maps.app.goo.gl/8fJwzLs8m23W7eJq5" target="_blank" class="google-btn">
                       View on Google Maps
                     </a>
                   </p>
@@ -397,7 +424,7 @@
                   <p>📍 Bovec</p>
                   <p>🚴 Distance: 28 miles</p>
                   <p>
-                    <a href="https://maps.app.goo.gl/MU32Ddrpv64vFuSV7" target="_blank" class="route-card-btn">
+                    <a href="https://maps.app.goo.gl/MU32Ddrpv64vFuSV7" target="_blank" class="google-btn">
                       View on Google Maps
                     </a>
                   </p>
@@ -449,7 +476,7 @@
                   <p>📍 Arnoldstein</p>
                   <p>🚴 Distance: 15.5 mile</p>
                   <p>
-                    <a href="https://maps.app.goo.gl/XfpVRtSECo4AJ8UD7" target="_blank" class="route-card-btn">
+                    <a href="https://maps.app.goo.gl/XfpVRtSECo4AJ8UD7" target="_blank" class="google-btn">
                       View on Google Maps
                     </a>
                   </p>
@@ -535,7 +562,7 @@
                   <p>📍 Tržič</p>
                   <p>🚴 Distance: 29.5 miles</p>
                   <p>
-                    <a href="https://maps.app.goo.gl/RsG4sKn92dNFkAVu9" target="_blank" class="route-card-btn">
+                    <a href="https://maps.app.goo.gl/RsG4sKn92dNFkAVu9" target="_blank" class="google-btn">
                       View on Google Maps
                     </a>
                   </p>
@@ -563,7 +590,7 @@
                   <p>📍 Tržič</p>
                   <p>🚴 Distance: 29.5 miles</p>
                   <p>
-                    <a href="https://maps.app.goo.gl/RsG4sKn92dNFkAVu9" target="_blank" class="route-card-btn">
+                    <a href="https://maps.app.goo.gl/RsG4sKn92dNFkAVu9" target="_blank" class="google-btn">
                       View on Google Maps
                     </a>
                   </p>
@@ -801,7 +828,7 @@
 
               <div class="timeline">
                 <div class="timeline-item">
-                  <div class="timeline-date">14.05.2027 - Travel Day</div>
+                  <div class="timeline-date">Friday 14.05.2027 - Travel Day</div>
                   <div class="timeline-content">
                     <ul class="time-list">
                       <li><strong>8:00am to 11:00am:</strong> Travel to Manchester airport.</li>
@@ -816,7 +843,7 @@
                 </div>
 
                 <div class="timeline-item">
-                  <div class="timeline-date">15.05.2027 - Ride Day 1</div>
+                  <div class="timeline-date">Saturday 15.05.2027 - Ride Day 1</div>
                   <div class="timeline-content">
                     <ul class="time-list">
                       <li><strong>9:30am:</strong> Bike check and rental collection.</li>
@@ -827,7 +854,7 @@
                 </div>
 
                 <div class="timeline-item">
-                  <div class="timeline-date">16.05.2027 – Ride Day 2</div>
+                  <div class="timeline-date">Sunday 16.05.2027 – Ride Day 2</div>
                   <div class="timeline-content">
                     <ul class="time-list">
                       <li><strong>8:45am:</strong> Ride briefing and group photo.</li>
@@ -837,7 +864,7 @@
                 </div>
 
                 <div class="timeline-item">
-                  <div class="timeline-date">17.05.2027 – Ride Day 3</div>
+                  <div class="timeline-date">Monday 17.05.2027 – Ride Day 3</div>
                   <div class="timeline-content">
                     <ul class="time-list">
                       <li><strong>8:45am:</strong> Ride briefing and group photo.</li>
@@ -846,7 +873,7 @@
                   </div>
                 </div>
                 <div class="timeline-item">
-                  <div class="timeline-date">18.05.2027 – Ride Day 4</div>
+                  <div class="timeline-date">Tuesday 18.05.2027 – Ride Day 4</div>
                   <div class="timeline-content">
                     <ul class="time-list">
                       <li><strong>8:45am:</strong> Ride briefing and group photo.</li>
@@ -855,7 +882,7 @@
                   </div>
                 </div>
                 <div class="timeline-item">
-                  <div class="timeline-date">19.05.2027 – Ride Day 5</div>
+                  <div class="timeline-date">Wednesday 19.05.2027 – Ride Day 5</div>
                   <div class="timeline-content">
                     <ul class="time-list">
                       <li><strong>8:45am:</strong> Ride briefing and group photo.</li>
@@ -864,7 +891,7 @@
                   </div>
                 </div>
                 <div class="timeline-item">
-                  <div class="timeline-date">20.05.2027 – Ride Day 6</div>
+                  <div class="timeline-date">Thursday 20.05.2027 – Ride Day 6</div>
                   <div class="timeline-content">
                     <ul class="time-list">
                       <li><strong>8:45am:</strong> Ride briefing and group photo.</li>
@@ -874,7 +901,7 @@
                 </div>
 
                 <div class="timeline-item">
-                  <div class="timeline-date">21.05.2027 - Travel Day</div>
+                  <div class="timeline-date">Friday 21.05.2027 - Travel Day</div>
                   <div class="timeline-content">
                     <ul class="time-list">
                       <li>
@@ -983,5 +1010,11 @@
       ========================================================== -->
     <script src="js/tourdetail.js" defer></script>
     <script src="js/site.js" defer></script>
+
+    <div id="routeLightbox" class="route-lightbox">
+      <button id="routeLightboxClose" class="route-lightbox-close" aria-label="Close image">&times;</button>
+
+      <img id="routeLightboxImage" src="" alt="Route map" />
+    </div>
   </body>
 </html>
