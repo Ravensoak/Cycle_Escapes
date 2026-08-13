@@ -1107,6 +1107,11 @@ details[open] .logistics {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
+.ride-list li.lights::before {
+  content: "\f0eb";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
 
 /* Clock */
 .time-list {
