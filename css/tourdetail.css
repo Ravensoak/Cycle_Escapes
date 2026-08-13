@@ -473,6 +473,16 @@ summary::-webkit-details-marker {
   font-family: "Font Awesome 6 Free";
   color: #2c3e50;
 }
+/* Subtle line between timeline items */
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: rgba(31, 42, 54, 0.12);
+}
 
 .timeline-date {
   font-weight: bold;
