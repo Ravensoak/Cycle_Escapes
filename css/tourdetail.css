@@ -614,11 +614,40 @@ summary::-webkit-details-marker {
   font-size: 14px;
   border-radius: 6px;
   transition: background-color 0.2s ease;
-  margin: 0px 0px 0px 12px;
+  margin: 0px 0px 0px 0px;
 }
 
 .route-card-btn:hover {
   background-color: #0f2a21; /* deep forest */
+}
+
+.reserve-btn {
+  position: relative;
+  padding: 0.6rem 1.2rem;
+  background: #005fa3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  white-space: nowrap;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); /* drop shadow */
+}
+.google-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #7ec6fa;
+  color: #000000;
+  text-decoration: none;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  margin: 0px 0px 0px 0px;
+}
+
+.google-btn:hover {
+  background-color: #0f2a21; /* deep forest */
+  color: #ffffff;
 }
 
 .reserve-btn {
