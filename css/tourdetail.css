@@ -602,7 +602,7 @@ summary::-webkit-details-marker {
   font-size: 14px;
   border-radius: 6px;
   transition: background-color 0.2s ease;
-  margin: 0px 0px 0px 35px;
+  margin: 0px 0px 0px 12px;
 }
 
 .route-card-btn:hover {
@@ -1362,7 +1362,7 @@ details[open] .logistics {
   display: block;
   width: 220px;
   height: 130px;
-  margin: 15px 35px 10px;
+  margin: 15px 12px 10px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
