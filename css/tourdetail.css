@@ -1398,6 +1398,15 @@ details[open] .logistics {
   padding-left: 12px; /* matches your indentation */
   color: #0b3d2e; /* subtle Racing Green accent */
 }
+.cafe-card p:has(.google-btn) {
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cafe-card p:has(.google-btn):last-of-type {
+  border-bottom: none;
+}
 
 /* =========================================================
    ROUTE THUMBNAIL
