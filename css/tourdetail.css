@@ -1396,35 +1396,37 @@ details[open] .logistics {
   padding-left: 8px; /* indent text + button */
 }
 
+/* =========================================================
+   CAFÉ CARD
+========================================================= */
+
+/* =========================================================
+   CAFÉ CARD
+========================================================= */
+
 .cafe-card .cafe-name {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin: 2px 0 6px 0;
-  padding-left: 12px; /* matches your indentation */
-  color: #0b3d2e; /* subtle Racing Green accent */
-}
-.cafe-card p:has(.google-btn) {
-  padding-bottom: 8px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.cafe-card p:has(.google-btn):last-of-type {
-  border-bottom: none;
-}
-
-.cafe-name {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  margin: 2px 0 6px 0;
+  padding-left: 12px;
+
+  color: #0b3d2e;
 }
 
-.cafe-name span {
+.cafe-card .cafe-name span {
   font-weight: 700;
 }
 
-.cafe-link {
+/* =========================================================
+   CAFÉ MAP LINK
+========================================================= */
+
+.cafe-card .cafe-link {
   font-size: 0.7rem;
   font-weight: 600;
   color: #005fa3;
@@ -1432,14 +1434,32 @@ details[open] .logistics {
   white-space: nowrap;
 }
 
-.cafe-link:hover {
-  text-decoration: underline;
+.cafe-card .cafe-link:hover {
   color: #004b82;
+  text-decoration: underline;
 }
 
-.cafe-link i {
+.cafe-card .cafe-link i {
   font-size: 0.65rem;
   margin-left: 2px;
+}
+
+/* =========================================================
+   CAFÉ ENTRY SEPARATOR
+========================================================= */
+
+/* Separator underneath each café */
+.cafe-card .cafe-entry {
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Remove separator from the final café */
+.cafe-card .cafe-entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* =========================================================
