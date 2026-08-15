@@ -388,7 +388,13 @@ summary::-webkit-details-marker {
 }
 
 .route1-card h4 {
-  margin-top: 0;
+  margin: 0 0 10px 0;
+  padding: 2px 4px 8px;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #0b3d2e;
+  border-bottom: 2px solid #7ec6fa;
 }
 
 /* =========================================================
@@ -520,7 +526,7 @@ summary::-webkit-details-marker {
   gap: 5px;
   width: 100%;
   max-width: 1100px;
-  margin: 20px auto;
+  margin: 20px auto 5px;
   padding: 10px 0;
 }
 
@@ -705,7 +711,6 @@ summary::-webkit-details-marker {
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 5px 8px 5px 8px;
   padding: 0px 0px 0px 0px;
 
   transition:
@@ -725,13 +730,13 @@ summary::-webkit-details-marker {
   transition:
     max-height 0.4s ease,
     padding 0.3s ease;
-  padding: 0 1.5rem;
+  padding: 0;
   background: #fff;
   border-radius: 0 0 4px 4px;
 }
 
 .accordion-content.open {
-  padding: 1rem 1.5rem;
+  padding: 1rem 0;
 }
 
 .accordion-content h3 {
@@ -990,7 +995,7 @@ details[open] .logistics {
 
   .tourpage {
     padding: 0; /* remove mobile padding */
-    /*background: none;  remove white box so footer can be full-width */
+    /*background: none;  redcvmove white box so footer can be full-width */
   }
 
   .accordion {
@@ -1398,6 +1403,15 @@ details[open] .logistics {
   padding-left: 12px; /* matches your indentation */
   color: #0b3d2e; /* subtle Racing Green accent */
 }
+.cafe-card p:has(.google-btn) {
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cafe-card p:has(.google-btn):last-of-type {
+  border-bottom: none;
+}
 
 /* =========================================================
    ROUTE THUMBNAIL
@@ -1543,4 +1557,60 @@ details[open] .logistics {
   .route-thumbnail-text {
     opacity: 1;
   }
+}
+
+.route-image {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.route-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.route-zoom {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 12px;
+  background: #005fa3;
+}
+
+.route-zoom:hover {
+  transform: scale(1.08);
+  background: rgba(31, 42, 54, 0.75);
+}
+.route-zoom::after {
+  content: "View Route";
+  position: absolute;
+  top: 38px;
+  right: 0;
+
+  background: #1f2a36;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 4px;
+
+  font-size: 12px;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.route-zoom:hover::after {
+  opacity: 1;
 }

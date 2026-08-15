@@ -1413,6 +1413,35 @@ details[open] .logistics {
   border-bottom: none;
 }
 
+.cafe-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.cafe-name span {
+  font-weight: 700;
+}
+
+.cafe-link {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #005fa3;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cafe-link:hover {
+  text-decoration: underline;
+  color: #004b82;
+}
+
+.cafe-link i {
+  font-size: 0.65rem;
+  margin-left: 2px;
+}
+
 /* =========================================================
    ROUTE THUMBNAIL
    ========================================================= */
