@@ -1489,6 +1489,16 @@ details[open] .logistics {
   object-fit: cover;
   transition: transform 0.3s ease;
 }
+.route-map-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.route-map-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 /* Dark overlay */
 
@@ -1568,6 +1578,34 @@ details[open] .logistics {
   object-fit: contain;
 }
 
+/* =========================================================
+   MAP / ROUTE LIBRARY LINK
+========================================================= */
+
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+
+  color: #005fa3;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.map-link:hover {
+  color: #004b82;
+  text-decoration: underline;
+}
+
+.map-link i {
+  font-size: 0.65rem;
+  margin-left: 2px;
+}
 /* =========================================================
    CLOSE BUTTON
    ========================================================= */
