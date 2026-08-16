@@ -851,7 +851,7 @@ details[open] .accordion-header {
 
 details[open] .logistics {
   background: #e5e5e5; /* Accordion background */
-  padding: 0.5rem 0.5rem; /* match your intended open padding */
+  padding: 0.3rem 0.3rem; /* Padding for accordion content */
   border-radius: 0 0 4px 4px;
 }
 /* =========================================================
