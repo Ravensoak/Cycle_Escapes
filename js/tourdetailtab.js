@@ -114,5 +114,14 @@ tourTabs.forEach((tab) => {
     if (targetContent) {
       targetContent.classList.add("active");
     }
+
+    /* Centre selected tab on mobile */
+    if (window.innerWidth <= 700) {
+      tab.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
+    }
   });
 });
