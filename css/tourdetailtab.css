@@ -358,24 +358,24 @@ summary::-webkit-details-marker {
 .route1-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 10px;
+  gap: 1px;
   justify-items: center; /* centers cards when fewer per row */
   /*padding: 0 10px; /* adds space left + right */
   max-width: 1200px; /* or 1100, 1300, etc. */
   margin: 0 auto; /* centers the whole grid */
-  padding: 0 0px; /* small padding for mobile */
+  padding: 0 5px; /* small padding for mobile */
 }
 
 .route1-card {
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 12px;
   background: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   flex: 1 1 250px; /* responsive width */
   width: 100%;
   max-width: 280px; /* keeps nice card width */
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .route1-card img {
@@ -402,19 +402,21 @@ summary::-webkit-details-marker {
 ========================================================= */
 
 .logistics {
-  background: #eaeaea;
-  padding: 0.5rem;
+  background: #ffffff;
+  padding: 0.1rem;
   border-radius: 0px 0px 6px 6px;
-  margin: 0.9rem 0;
-  margin-top: 0rem;
+  margin: 0;
+
+  border-color: #eaeaea;
+  border: 2px solid #eaeaea;
 }
 
 .logistics-intro {
   background: #ffffff;
   padding: 0.8rem 0.8rem;
-  border-left: 4px solid #005fa3;
-  border-radius: 6px;
-  margin-bottom: 0.15rem;
+
+  border-radius: 0px;
+  margin-bottom: 0rem;
   /* subtle depth + smoother edges */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
   font-size: 0.95rem;
@@ -428,7 +430,7 @@ summary::-webkit-details-marker {
 }
 
 .logistics h3 {
-  margin-top: 1.2rem;
+  margin-top: 1rem;
   color: #2c3e50;
   display: flex;
   align-items: center;
@@ -526,8 +528,8 @@ summary::-webkit-details-marker {
   gap: 5px;
   width: 100%;
   max-width: 1100px;
-  margin: 20px auto 5px;
-  padding: 10px 0;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .tblock {
@@ -1705,4 +1707,149 @@ details[open] .logistics {
 
 .route-zoom:hover::after {
   opacity: 1;
+}
+/* =========================================================
+   HORIZONTAL TOUR TABS
+========================================================= */
+
+.tour-tabs {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 0.25rem;
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #dfe4e7;
+  border-radius: 6px 6px 0 0;
+  overflow-x: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  scrollbar-width: thin;
+  scrollbar-color: #b8c0c5 #f1f3f4;
+}
+.tour-tabs::-webkit-scrollbar {
+  height: 8px;
+}
+
+.tour-tabs::-webkit-scrollbar-track {
+  background: #f1f3f4;
+  border-radius: 4px;
+}
+
+.tour-tabs::-webkit-scrollbar-thumb {
+  background: #b8c0c5;
+  border-radius: 4px;
+}
+
+.tour-tabs::-webkit-scrollbar-thumb:hover {
+  background: #8f9aa1;
+}
+
+/* =========================================================
+   TAB BUTTONS
+========================================================= */
+
+.tour-tab {
+  flex: 1 0 auto;
+  min-width: 120px;
+
+  padding: 0.75rem 0.2rem;
+
+  border: 0;
+  border-bottom: 3px solid transparent;
+
+  background: #ffffff;
+  color: #1f2a36;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Tab icons */
+
+.tour-tab i {
+  font-size: 0.95rem;
+}
+
+/* Hover */
+
+.tour-tab:hover {
+  background: #f5f7f6;
+  color: #005fa3;
+}
+
+/* Active tab */
+
+.tour-tab.active {
+  background: #1f2a36;
+  color: #ffffff;
+  border-bottom-color: #005fa3;
+}
+
+/* =========================================================
+   TAB CONTENT
+========================================================= */
+
+.tour-tab-content {
+  display: none;
+
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  animation: tabFade 0.2s ease;
+}
+
+/* Show active tab */
+
+.tour-tab-content.active {
+  display: block;
+}
+
+/* =========================================================
+   TAB ANIMATION
+========================================================= */
+
+@keyframes tabFade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   MOBILE TABS
+========================================================= */
+
+@media (max-width: 700px) {
+  .tour-tabs {
+    border-radius: 0.3rem 0.3rem 0rem 0rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .tour-tab {
+    min-width: 105px;
+    padding: 0.75rem 0.65rem;
+    font-size: 0.8rem;
+  }
+
+  .tour-tab i {
+    font-size: 0.85rem;
+  }
 }
