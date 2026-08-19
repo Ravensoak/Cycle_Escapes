@@ -1755,7 +1755,7 @@ details[open] .logistics {
   border: 0;
   border-right: 1px solid #edf0f2;
   border-bottom: 3px solid transparent;
-  background: #ffffff;
+  background: lightgrey;
   color: #1f2a36;
   font-family: inherit;
   font-size: 0.9rem;
@@ -1790,9 +1790,9 @@ details[open] .logistics {
 /* Active tab */
 
 .tour-tab.active {
-  background: #1f2a36;
+  background: #005fa3;
   color: #ffffff;
-  border-bottom-color: #005fa3;
+  border-bottom-color: black;
 }
 
 /* =========================================================
