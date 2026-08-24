@@ -416,17 +416,46 @@ summary::-webkit-details-marker {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
 }
 
+/* =========================================================
+   LOGISTICS INTRO
+========================================================= */
+
 .logistics-intro {
   background: #ffffff;
   padding: 0.8rem 0.8rem;
+  border-radius: 0;
+  margin-bottom: 0;
 
-  border-radius: 0px;
-  margin-bottom: 0rem;
-  /* subtle depth + smoother edges */
+  /* Subtle depth + smoother edges */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+
   font-size: 0.95rem;
   line-height: 1.2;
 }
+
+/* =========================================================
+   DIVIDER BETWEEN LOGISTICS ITEMS
+   No divider before the first item
+========================================================= */
+
+.logistics-intro + .logistics-intro {
+  position: relative;
+  padding-top: 1rem;
+}
+
+.logistics-intro + .logistics-intro::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  margin: 0 0 1rem 0;
+}
+
+/* =========================================================
+   LOGISTICS HEADER
+========================================================= */
+
 .logistics-header {
   display: flex;
   justify-content: space-between;
@@ -434,18 +463,28 @@ summary::-webkit-details-marker {
   gap: 1rem;
 }
 
+/* =========================================================
+   LOGISTICS H3
+========================================================= */
+
 .logistics h3 {
   margin-top: 1rem;
   color: #2c3e50;
+
   display: flex;
   align-items: center;
   gap: 8px;
 }
+
+/* =========================================================
+   LOGISTICS INTRO H3
+========================================================= */
+
 .logistics-intro h3 {
   margin-top: 0.4rem;
   color: #2c3e50;
   font-size: 1.2rem;
-  font-style: bold;
+  font-weight: 700;
 }
 
 .logistics ul {
