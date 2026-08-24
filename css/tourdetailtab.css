@@ -413,7 +413,7 @@ summary::-webkit-details-marker {
   border: 2px solid #eaeaea;
   /*border-left: 3.5px solid #005fa3;*/
 
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
 }
 
 .logistics-intro {
