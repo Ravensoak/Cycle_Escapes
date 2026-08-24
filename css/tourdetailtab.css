@@ -1292,7 +1292,13 @@ details[open] .logistics {
   font-weight: 600;
   color: #1f2a36;
 }
-
+/* Bus */
+.logistics-list li.bus::before {
+  content: "\f207";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  color: #1f2a36;
+}
 /* Bike Rental */
 .logistics-list li.bike-rental::before {
   content: "\f206";
