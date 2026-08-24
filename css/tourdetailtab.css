@@ -258,7 +258,7 @@ summary::-webkit-details-marker {
 .content-wrap {
   max-width: 900px;
   margin: 0 auto; /* THIS centers it */
-  padding: 0 0.25rem; /* nice spacing on mobile */
+  padding: 0 0.5rem; /* nice spacing on mobile */
 }
 
 /* desktop */
