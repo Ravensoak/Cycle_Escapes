@@ -410,11 +410,8 @@ summary::-webkit-details-marker {
   padding: 0.1rem;
   border-radius: 6px;
   margin: 0;
-
   border: 2px solid #eaeaea;
-  /*border-left: 3.5px solid #005fa3;*/
-
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+  /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);*/
 }
 
 /* =========================================================
@@ -437,7 +434,7 @@ summary::-webkit-details-marker {
 /* =========================================================
    DIVIDER BETWEEN LOGISTICS ITEMS
    No divider before the first item
-========================================================= */
+========================================================= 
 
 .logistics-intro + .logistics-intro {
   position: relative;
@@ -451,7 +448,7 @@ summary::-webkit-details-marker {
   height: 1px;
   background: #e5e5e5;
   margin: 0 0 1rem 0;
-}
+}*/
 
 /* =========================================================
    LOGISTICS HEADER
