@@ -539,9 +539,13 @@ summary::-webkit-details-marker {
 }
 
 .timeline-date {
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 0.2rem;
+  display: inline-block;
+  font-weight: 600;
+  color: #ffffff;
+  background: #3b5ba9;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
 }
 
 .timeline-content {
