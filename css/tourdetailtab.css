@@ -379,6 +379,7 @@ summary::-webkit-details-marker {
   width: 100%;
   max-width: 280px; /* keeps nice card width */
   margin-bottom: 6px;
+  margin-top: 6px;
 }
 
 .route1-card img {
