@@ -1435,6 +1435,11 @@ details[open] .logistics {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
+.accommodation-list li.walking::before {
+  content: "\f554";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
 
 .cafe-card {
   border: 1px solid #ddd;
