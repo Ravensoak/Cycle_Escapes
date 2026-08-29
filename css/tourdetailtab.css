@@ -286,8 +286,11 @@ summary::-webkit-details-marker {
    - Enables horizontal scroll on smaller screens
 ========================================================= */
 .table-scroll {
+  width: 100%;
+  max-width: 100%;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   position: relative;
 }
 
@@ -296,6 +299,8 @@ summary::-webkit-details-marker {
    - Clips rounded corners cleanly
 ========================================================= */
 .info-table-wrapper {
+  width: 100%;
+  max-width: 100%;
   border-radius: 6px;
   overflow: hidden;
 }
@@ -1917,5 +1922,17 @@ details[open] .logistics {
 
   .tour-tab i {
     font-size: 0.85rem;
+  }
+  .tour-tab-content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .logistics,
+  .logistics-intro,
+  .info-table-wrapper {
+    width: 100%;
+    max-width: 100%;
   }
 }
