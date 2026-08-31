@@ -1368,6 +1368,12 @@ details[open] .logistics {
   font-weight: 900;
 }
 
+.bring-list li.bag::before {
+  content: "\f5c1";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
 .bring-list li.clothing::before {
   content: "\f553";
   font-family: "Font Awesome 6 Free";
