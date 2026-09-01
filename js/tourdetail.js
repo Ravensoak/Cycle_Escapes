@@ -82,3 +82,46 @@ document.addEventListener("keydown", function (e) {
     closeRouteLightbox();
   }
 });
+/* =========================================================
+   HORIZONTAL TOUR TABS
+========================================================= */
+
+const tourTabs = document.querySelectorAll(".tour-tab");
+const tourTabContents = document.querySelectorAll(".tour-tab-content");
+
+tourTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.tab;
+
+    /* Remove active state from all tabs */
+    tourTabs.forEach((item) => {
+      item.classList.remove("active");
+      item.setAttribute("aria-selected", "false");
+    });
+
+    /* Hide all tab content */
+    tourTabContents.forEach((content) => {
+      content.classList.remove("active");
+    });
+
+    /* Activate selected tab */
+    tab.classList.add("active");
+    tab.setAttribute("aria-selected", "true");
+
+    /* Show selected content */
+    const targetContent = document.getElementById(target);
+
+    if (targetContent) {
+      targetContent.classList.add("active");
+    }
+
+    /* Centre selected tab on mobile */
+    if (window.innerWidth <= 700) {
+      tab.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
+    }
+  });
+});

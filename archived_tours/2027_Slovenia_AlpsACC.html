@@ -18,10 +18,9 @@
       STYLESHEETS
     ========================================================== -->
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/tourdetailtab.css" />
-
+    <link rel="stylesheet" href="css/tourdetail.css" />
     <!-- =========================================================
-      FONT AWESOME
+      FONT AWSOME
     ========================================================== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
@@ -29,7 +28,6 @@
       .event-hero {
         background: url("/pictures/Slovenia/Slovenia3.webp") center/cover no-repeat;
       }
-
       .tourpage {
         background: url("/pictures/Mountains2.webp") center top / cover no-repeat;
       }
@@ -39,26 +37,23 @@
   <body>
     <header>
       <!-- =========================================================
-        NAVIGATION PLACEHOLDER (Loaded dynamically)
+      NAVIGATION PLACEHOLDER (Loaded dynamically)
       ========================================================== -->
       <div id="nav-placeholder"></div>
     </header>
 
     <div class="tourpage">
-      <!-- =========================================================
-        HERO IMAGE + COUNTDOWN
-      ========================================================== -->
+      <!-- HERO IMAGE + COUNTDOWN -->
       <section class="event-hero">
         <div class="hero-content">
           <div class="hero-icon">
             <img src="graphics/favicon-64x64.png" alt="Hero Icon" />
           </div>
-
+          <!--<div id="nav-placeholder"></div>-->
           <h1>Slovenia - Alps</h1>
 
           <p class="hero-subtitle">
-            A Kranjska Gora–based tour that makes the most of the spectacular Julian Alps
-            <br /><br />
+            A Kranjska Gora–based tour that makes the most of the spectacular Julian Alps<br /><br />
             <span class="hero-tagline">Dates: 14-21 May 2027</span>
           </p>
 
@@ -68,33 +63,30 @@
               <span id="days">0</span>
               <small>Days</small>
             </div>
-
             <div class="countdown-box blue">
               <span id="hours">0</span>
               <small>Hours</small>
             </div>
-
             <div class="countdown-box orange">
               <span id="minutes">0</span>
               <small>Minutes</small>
             </div>
           </div>
 
-          <!-- Reserve a Place Button
+          <!-- Reserve a Place Button 
           <a
             href="https://buytickets.at/cycleescapes/2196480"
             class="reserve-btn"
             title="Click to go to the ticket site to reserve your place on this tour. After you have reserved your ticket, the tour organiser will contact you."
             target="_blank">
             Reserve a place
+          
           </a>
-          -->
+           -->
         </div>
       </section>
 
-      <!-- =========================================================
-        STATS ROW
-      ========================================================== -->
+      <!-- STATS ROW (below hero, like the image) -->
       <section class="hero-stats-section">
         <div class="hero-stats">
           <div class="stat-card">
@@ -109,11 +101,9 @@
                 <circle cx="12" cy="11" r="2" fill="currentColor" />
               </svg>
             </div>
-
             <div class="stat-value">Kranjska Gora</div>
             <div class="stat-label">Start</div>
           </div>
-
           <div class="stat-card">
             <div class="stat-icon">
               <!-- Road icon -->
@@ -122,7 +112,6 @@
                 <path d="M12 6v10" stroke="currentColor" stroke-width="2" stroke-dasharray="2,2" />
               </svg>
             </div>
-
             <div class="stat-value">33-80 miles</div>
             <div class="stat-label">Daily Distance</div>
           </div>
@@ -134,7 +123,6 @@
                 <path d="M2 18l6-8 4 5 4-7 6 10H2z" fill="none" stroke="currentColor" stroke-width="2" />
               </svg>
             </div>
-
             <div class="stat-value">3,000-7,000 ft</div>
             <div class="stat-label">Daily Climbing</div>
           </div>
@@ -147,95 +135,23 @@
                 <path d="M4 4h10l-2 3 2 3H4" fill="none" stroke="currentColor" stroke-width="2" />
               </svg>
             </div>
-
             <div class="stat-value">Kranjska Gora</div>
             <div class="stat-label">Finish</div>
           </div>
         </div>
       </section>
-
-      <!-- =========================================================
-        CONTENT + HORIZONTAL TAB BAR
-      ========================================================== -->
       <div class="content-wrap">
-        <!-- =======================================================
-          HORIZONTAL TAB BAR
-        ======================================================== -->
-        <div class="tour-tabs" role="tablist" aria-label="Tour information">
-          <button
-            class="tour-tab active"
-            type="button"
-            role="tab"
-            aria-selected="true"
-            aria-controls="overview"
-            data-tab="overview">
-            <i class="fa-solid fa-bicycle"></i>
-            <span>Overview</span>
-          </button>
+        <details class="accordion-item">
+          <summary class="accordion-header">
+            <h2>
+              <i class="fa-solid fa-bicycle" style="margin-right: 0.5em"></i>
+              Tour Overview
+            </h2>
+          </summary>
 
-          <button
-            class="tour-tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="routes"
-            data-tab="routes">
-            <i class="fa-solid fa-route"></i>
-            <span>Routes</span>
-          </button>
-
-          <button
-            class="tour-tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="accommodation"
-            data-tab="accommodation">
-            <i class="fa-solid fa-bed"></i>
-            <span>Accommodation</span>
-          </button>
-
-          <button
-            class="tour-tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="travel"
-            data-tab="travel">
-            <i class="fa-solid fa-truck"></i>
-            <span>Travel</span>
-          </button>
-
-          <button
-            class="tour-tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="itinerary"
-            data-tab="itinerary">
-            <i class="fa-solid fa-clock"></i>
-            <span>Itinerary</span>
-          </button>
-
-          <button
-            class="tour-tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="gallery"
-            data-tab="gallery">
-            <i class="fa-solid fa-images"></i>
-            <span>Gallery</span>
-          </button>
-        </div>
-
-        <!-- =======================================================
-          TAB 1 - TOUR OVERVIEW
-        ======================================================== -->
-        <section id="overview" class="tour-tab-content active" role="tabpanel" aria-labelledby="overview-tab">
           <section class="logistics">
             <div class="logistics-intro">
-              <h3>Tour Dates & Schedules</h3>
+              <h3>When is it?</h3>
 
               <div class="timeline-3">
                 <!-- Section 1 -->
@@ -256,9 +172,8 @@
                   <span class="t-date">Return from Slovenia</span>
                 </div>
               </div>
-
-              <!-- Countdown
-              <div class="countdown" data-date="May 14, 2027 09:00:00">
+              <!-- Countdown -->
+              <!--<div class="countdown" data-date="May 14, 2027 09:00:00">
                 <div class="countdown-box green">
                   <span id="days">0</span>
                   <small>Days</small>
@@ -271,26 +186,20 @@
                   <span id="minutes">0</span>
                   <small>Minutes</small>
                 </div>
-              </div>
-              -->
+              </div>-->
             </div>
-          </section>
-          <section class="logistics">
             <div class="logistics-intro">
-              <h3>About the Tour</h3>
-
+              <h3>What is it?</h3>
               <ul class="starred-list">
                 <li>
                   From our base in Kranjska Gora, we take daily rides through the spectacularly varied landscapes and
                   terrain of the Julian Alps and it's surrounding areas, including the Alpe Adria cycle path and the
-                  emerald-coloured Soča Valley, crossing the border into Italy and Austria.
+                  emerald‑coloured Soča Valley, crossing the border into Italy and Austria.
                 </li>
-
                 <li>
                   The tour is primarily a road tour but does use well paved cycle paths that are suitable for road
                   bikes.
                 </li>
-
                 <li>
                   Our overnight accommodation is based in Kranjska Gora and we have rides organised over a
                   <strong>6-day period</strong>, on road routes through the Julian Alps, crossing the border into Italy
@@ -305,36 +214,27 @@
                 <li>The tour is limited to a maximum of 14 riders.</li>
               </ul>
             </div>
-          </section>
-          <section class="logistics">
             <div class="logistics-intro">
-              <h3>Estimated Cost & Pricing</h3>
-
+              <h3>How much will it cost?</h3>
               <ul class="cost-list">
                 <li>
                   For seven nights accommodation and transport of rider, bikes and luggage to and from Ljubljana aiport,
                   the estimated cost is around
                   <strong>£450 per person</strong>.<sup>&dagger;</sup>
                 </li>
-
                 <li>
                   This estimate is based on a maximum group size of 12 riders and assumes shared twin-room
                   accommodation.
                 </li>
-
                 <li>Single-room accommodation can be arranged, depending on availability, for an additional charge.</li>
-
                 <br />
-
-                <sup>&dagger;</sup>
-                All our tours are designed to make no profit and any surplus funds are distibuted back to each rider.
+                <sup>&dagger;</sup
+                >All our tours are designed to make no profit and any surplus funds are distibuted back to each rider.
               </ul>
             </div>
-          </section>
-          <section class="logistics">
-            <div class="logistics-intro">
-              <h3>What's Included in the Tour</h3>
 
+            <div class="logistics-intro">
+              <h3>What is included?</h3>
               <ul class="included-list">
                 <li>7 nights' hotel accommodation in Kranjska Gora with breakfast included.</li>
 
@@ -344,54 +244,84 @@
                 </li>
               </ul>
             </div>
-          </section>
-          <section class="logistics">
             <div class="logistics-intro">
-              <h3>What's Not Covered</h3>
-
+              <h3>What is not included?</h3>
               <ul class="not-included-list">
                 <li>
                   Personal travel and transport of bikes and luggage to/from Manchester airport and flights to/from
                   Ljubljana airport.<sup>&dagger;</sup>
                 </li>
-
                 <li>Cost of bike hire (if required).<sup>&dagger;</sup><sup>&dagger;</sup></li>
-
                 <li>Meals.</li>
-
                 <li>Local / Country Taxes.</li>
-
                 <li>Insurance.</li>
-
                 <br />
-
                 <sup>&dagger;</sup>
                 We’ll offer guidance on travel options and group travel arrangements.
-
                 <br />
-
                 <sup>&dagger;</sup
                 ><sup>&dagger;</sup>
+
                 We’ll offer guidance on bike hire options.
               </ul>
             </div>
           </section>
-        </section>
+        </details>
+        <!--Populate icon help message (desktop hover and mobile lightbox)
+        <h3 class="page-title">
+        Tour Dates
+        <span
+          class="help-icon"
+          data-title="Tour Dates"
+          data-help="The tour is a 3-day ride with 4 overnight stays."
+          >?</span
+        >
+        </h3>
 
-        <!-- =======================================================
-          TAB 2 - ROUTES
-        ======================================================== -->
-        <section id="routes" class="tour-tab-content" role="tabpanel" aria-labelledby="routes-tab">
+        <p>4th - 8th June 2027</p>
+
+        <h3 class="ride-stats-title">Tour Metrics</h3>
+        <div class="ride-stats-card">
+        <table class="ride-stats">
+          <thead>
+            <tr>
+              <th>Distance</th>
+              <th>Elevation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>210 miles (300 km)</td>
+              <td>17,000 ft (4,000 m)</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>-->
+
+        <!--<p class="centered-summary">
+        <font color="gray">
+          This tour is currently being planned. Please check back later for
+          updates.
+        </font>
+        </p>-->
+        <!--Populate icon help message (desktop hover and mobile lightbox)-->
+        <details class="accordion-item">
+          <summary class="accordion-header">
+            <h2 class="page-title">
+              <i class="fa-solid fa-route" style="margin-right: 0.6em"></i>
+              Routes
+              <span
+                class="help-icon"
+                data-title="Stages / Routes"
+                data-help="All routes have been carefully planned to avoid busy roads and provide the most scenic cycling experience possible."
+                >?</span
+              >
+            </h2>
+          </summary>
+
           <section class="logistics">
             <div class="logistics-intro">
-              <h3>
-                Route Overview<span
-                  class="help-icon"
-                  data-title="Stages / Routes"
-                  data-help="All routes have been carefully planned to avoid busy roads and provide the most scenic cycling experience possible."
-                  >?</span
-                >
-              </h3>
+              <h3>Where do we ride?</h3>
 
               <ul class="ride-list">
                 <li class="mountain">
@@ -404,23 +334,20 @@
                   Each day, we’ll propose specific routes, but these may be adjusted to reflect weather conditions or
                   riders’ overall fatigue levels.
                 </li>
-
                 <li class="passport">
                   Crossing borders within the Schengen area is generally seamless, with no routine checks. However,
                   temporary controls can be introduced at short notice, so always carry your passport when travelling on
                   routes that cross national borders.
                 </li>
-
                 <li class="lights">
                   Many of the route sections go through tunnels, so it is important that your bike is fitted with front
                   and rear lights.
                 </li>
-
                 <li class="cafe">
                   Some cafés do not take cards, so ensure you bring cash (Euros) with you on the ride.
                 </li>
               </ul>
-
+              <!-- Route map thumbnail -->
               <!-- Route map thumbnail + Route Library link -->
               <div class="route-map-container">
                 <a href="pictures/Slovenia/SloveniaRouteMap.png" class="route-thumbnail" id="routeMapThumb">
@@ -442,13 +369,8 @@
                 </a>
               </div>
             </div>
-          </section>
-          <section class="logistics">
-            <!-- =====================================================
-              ROUTE CARDS
-            ====================================================== -->
+
             <div class="route1-container">
-              <!-- ROUTE 1 -->
               <div class="route1-card">
                 <h4>Route 1: The Lakes</h4>
 
@@ -476,36 +398,30 @@
 
                 <div class="cafe-card">
                   <h5>Cafés En-Route:</h5>
-
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Snack Bar – Pod Brezo</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Snack+bar+-+Pod+Brezo/@46.2775027,13.8862623,17z/data=!3m1!4b1!4m6!3m5!1s0x477af37cb9975579:0x4276d7d198d6d9ae!8m2!3d46.2775027!4d13.8862623!16s%2Fg%2F11grv49x1k"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
                     <p>📍 Bohinj</p>
                     <p>🚴 Distance: 39 miles</p>
                   </div>
-
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Café Belvedere - Vila Bled</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Caf%C3%A9+Belvedere+-+Vila+Bled/@46.3588461,14.0917806,17z/data=!3m1!4b1!4m6!3m5!1s0x477a91483718286d:0xa7570b1c5383f2ff!8m2!3d46.3588461!4d14.0917806!16s%2Fg%2F11b_30jj4j"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
@@ -515,7 +431,6 @@
                 </div>
               </div>
 
-              <!-- ROUTE 2 -->
               <div class="route1-card">
                 <h4>Route 2: Vršič Pass</h4>
 
@@ -544,36 +459,30 @@
 
                 <div class="cafe-card">
                   <h5>Cafés En-Route:</h5>
-
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Kavarna 1920</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Kavarna+1920/@46.3379644,13.5528472,17z/data=!3m1!4b1!4m6!3m5!1s0x477a681a71dd28e5:0x6d1bb8194da6a845!8m2!3d46.3379644!4d13.5528472!16s%2Fg%2F11d_yrm303"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
                     <p>📍 Bovec</p>
                     <p>🚴 Distance: 28 miles</p>
                   </div>
-
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Panificio Pasticceria Svetina</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Panificio+Pasticceria+Svetina/@46.5053312,13.5744719,17z/data=!3m1!4b1!4m6!3m5!1s0x477a71be59fb6a99:0xb7fe1d2a6da674a2!8m2!3d46.5053312!4d13.5744719!16s%2Fg%2F1vnrpfxw"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
@@ -583,7 +492,6 @@
                 </div>
               </div>
 
-              <!-- ROUTE 3 -->
               <div class="route1-card">
                 <h4>Route 3: Alpe Adria</h4>
 
@@ -601,7 +509,7 @@
                 </div>
 
                 <p>
-                  Alpe Adria is one of Europe’s most spectacular long-distance cycling routes, and on this route you’ll
+                  Alpe Adria is one of Europe’s most spectacular long‑distance cycling routes, and on this route you’ll
                   experience one of its standout Alpine stages. Starting in Kranjska Gora, the ride carries you across
                   the border into Italy, where the old railway line through the Kanal Valley offers a beautifully smooth
                   and scenic stretch. You’ll roll past the quiet village of Dogna before climbing steadily toward the
@@ -609,21 +517,18 @@
                   back into Slovenia and loops back toward Kranjska Gora, completing a long but surprisingly manageable
                   day in the saddle.
                 </p>
-
                 <div class="cafe-card">
                   <h5>Cafés En-Route:</h5>
 
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Caffe' Alla Posta</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Caffe'+Alla+Posta/@46.5058898,13.3050076,17z/data=!3m1!4b1!4m6!3m5!1s0x477a11db5c6795d1:0x5c697fda2895f8ef!8m2!3d46.5058898!4d13.3050076!16s%2Fg%2F1tgx5fhm"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
@@ -634,14 +539,12 @@
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Stazione di Chiusaforte</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Stazione+di+Chiusaforte/@46.4094075,13.3107722,17z/data=!3m1!4b1!4m6!3m5!1s0x477a15245c7c7593:0xeef06a10f834d2d8!8m2!3d46.4094075!4d13.3107722!16s%2Fg%2F1jkvc79tv"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
@@ -652,14 +555,12 @@
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Chalet Al Lago</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Chalet+Al+Lago/@46.4269936,13.5671741,17z/data=!3m1!4b1!4m6!3m5!1s0x477a6f1f2ba2d315:0x39931587576bb852!8m2!3d46.4269936!4d13.5671741!16s%2Fg%2F11byzgwm7j"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
@@ -668,8 +569,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- ROUTE 4 -->
               <div class="route1-card">
                 <h4>Route 4: Arnoldstein Loop</h4>
 
@@ -699,14 +598,12 @@
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Café Central</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Caf%C3%A9+Central/@46.5497327,13.7091674,17z/data=!3m1!4b1!4m6!3m5!1s0x477a798f2b8881ed:0x67188924cb13d2b4!8m2!3d46.5497327!4d13.7091674!16s%2Fg%2F11c5_lbnqr"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
@@ -715,8 +612,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- ROUTE 5 -->
               <div class="route1-card">
                 <h4>Route 5: Mangart Saddle</h4>
 
@@ -742,21 +637,18 @@
                   road closed in places. Remember to pack appropriate gear for the weather and bike lights for the
                   tunnel sections.
                 </p>
-
                 <div class="cafe-card">
                   <h5>Cafés En-Route:</h5>
 
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Chalet Al Lago</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Chalet+Al+Lago/@46.4269936,13.5671741,17z/data=!3m1!4b1!4m6!3m5!1s0x477a6f1f2ba2d315:0x39931587576bb852!8m2!3d46.4269936!4d13.5671741!16s%2Fg%2F11byzgwm7j"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
@@ -765,8 +657,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- ROUTE 6 -->
               <div class="route1-card">
                 <h4>Route 6: Vorderberg Valley</h4>
 
@@ -791,8 +681,6 @@
                   Slovenian border and continuing back to Kranjska Gora.
                 </p>
               </div>
-
-              <!-- ROUTE 7 -->
               <div class="route1-card">
                 <h4>Route 7: Lake Bled</h4>
 
@@ -814,21 +702,18 @@
                   Valley before heading towards the picturesque town of Bled for our first cafe stop. A loop arond the
                   lake provides stunning views and a chance to rest and recharge before looping back to Kranjska Gora.
                 </p>
-
                 <div class="cafe-card">
                   <h5>Cafés En-Route:</h5>
 
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Café Belvedere - Vila Bled</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Caf%C3%A9+Belvedere+-+Vila+Bled/@46.3588461,14.0917806,17z/data=!3m1!4b1!4m6!3m5!1s0x477a91483718286d:0xa7570b1c5383f2ff!8m2!3d46.3588461!4d14.0917806!16s%2Fg%2F11b_30jj4j"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
@@ -839,14 +724,12 @@
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Kavarna Park</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Kavarna+Park/@46.3674069,14.1060427,17z/data=!3m1!4b1!4m6!3m5!1s0x477a96cd5e9b3461:0x8c1ee1f07f480e48!8m2!3d46.3674069!4d14.1086176!16s%2Fg%2F11cn8tdr_t"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
@@ -855,8 +738,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- ROUTE 8 -->
               <div class="route1-card">
                 <h4>Route 8: Tržič Out and Back</h4>
 
@@ -875,7 +756,7 @@
 
                 <p>
                   This out and back route down the Krma Valley is mostly on quiet roads and cycleways, with gentle to
-                  moderate climbing, passing through forests, meadows, and small villages. It’s a beautiful, low-traffic
+                  moderate climbing, passing through forests, meadows, and small villages. It’s a beautiful, low‑traffic
                   route ideal for a steady endurance ride rather than a summit challenge. After our cafe stop in Tržič
                   we retrace our steps back up the Krma Valley to Kranjska Gora.
                 </p>
@@ -886,14 +767,12 @@
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Firbc okn</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Firbc+okn/@46.3553829,14.2956267,17z/data=!3m1!4b1!4m6!3m5!1s0x477abc884bd4cfa5:0x3d54ed9663a94b16!8m2!3d46.3553829!4d14.2956267!16s%2Fg%2F11c52s2qs3"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
@@ -902,8 +781,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- ROUTE 9 -->
               <div class="route1-card">
                 <h4>Route 9: Tržič Bled Loop</h4>
 
@@ -932,32 +809,27 @@
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Firbc okn</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Firbc+okn/@46.3553829,14.2956267,17z/data=!3m1!4b1!4m6!3m5!1s0x477abc884bd4cfa5:0x3d54ed9663a94b16!8m2!3d46.3553829!4d14.2956267!16s%2Fg%2F11c52s2qs3"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
                     <p>📍 Tržič</p>
                     <p>🚴 Distance: 29.5 miles</p>
                   </div>
-
                   <div class="cafe-entry">
                     <p class="cafe-name">
                       <span>Café Belvedere - Vila Bled</span>
-
                       <a
                         href="https://www.google.co.uk/maps/place/Caf%C3%A9+Belvedere+-+Vila+Bled/@46.3588461,14.0917806,17z/data=!3m1!4b1!4m6!3m5!1s0x477a91483718286d:0xa7570b1c5383f2ff!8m2!3d46.3588461!4d14.0917806!16s%2Fg%2F11b_30jj4j"
                         target="_blank"
                         rel="noopener"
                         class="cafe-link">
-                        View Map
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        View Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </p>
 
@@ -968,23 +840,25 @@
               </div>
             </div>
           </section>
-        </section>
+        </details>
 
-        <!-- =======================================================
-          TAB 3 - ACCOMMODATION
-        ======================================================== -->
-        <section id="accommodation" class="tour-tab-content" role="tabpanel" aria-labelledby="accommodation-tab">
+        <details class="accordion-item">
+          <summary class="accordion-header">
+            <h2 class="page-title">
+              <i class="fa-solid fa-bed" style="margin-right: 0.4em"></i>
+              Accommodation
+              <span
+                class="help-icon"
+                data-title="Accommodation"
+                data-help="We’ve chosen the accommodation based on what works best in terms of location, nearby facilities, and availability."
+                >?</span
+              >
+            </h2>
+          </summary>
+
           <section class="logistics">
             <div class="logistics-intro">
-              <h3>
-                Accommodation Overview<span
-                  class="help-icon"
-                  data-title="Accommodation"
-                  data-help="We’ve chosen the accommodation based on what works best in terms of location, nearby facilities, and availability."
-                  >?</span
-                >
-              </h3>
-
+              <h3>Where do we stay?</h3>
               <ul class="accommodation-list">
                 <li class="bed">
                   Your home for the tour is Berghi Hotel and Apartments, Kranjska Gora, where all riders share relaxed
@@ -994,17 +868,12 @@
                 <li class="meals">
                   Breakfast is provided and venues for evening meals will be designated nearer the time.
                 </li>
-                <li class="walking">A short walk gets you to the centre of Kranjska Gora.</li>
-
                 <li class="storage">
                   Secure storage for bikes and bike boxes is provided with PIN access and CCTV monitoring.
                 </li>
               </ul>
-              <a href="https://www.berghi.si/" target="_blank" rel="noopener" class="map-link">
-                View Accommodation
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
 
+              <a href="https://www.berghi.si/" target="_blank" class="route-card-btn">View Accommodation</a>
               <br /><br />
 
               <div class="info-table-wrapper">
@@ -1016,38 +885,31 @@
                         <th>Location</th>
                       </tr>
                     </thead>
-
                     <tbody>
                       <tr>
                         <td>14.05.2027</td>
                         <td>Berghi Hotel and Apartments - Kranjska Gora</td>
                       </tr>
-
                       <tr>
                         <td>15.05.2027</td>
                         <td>Berghi Hotel and Apartments - Kranjska Gora</td>
                       </tr>
-
                       <tr>
                         <td>16.05.2027</td>
                         <td>Berghi Hotel and Apartments - Kranjska Gora</td>
                       </tr>
-
                       <tr>
                         <td>17.05.2027</td>
                         <td>Berghi Hotel and Apartments - Kranjska Gora</td>
                       </tr>
-
                       <tr>
                         <td>18.05.2027</td>
                         <td>Berghi Hotel and Apartments - Kranjska Gora</td>
                       </tr>
-
                       <tr>
                         <td>19.05.2027</td>
                         <td>Berghi Hotel and Apartments - Kranjska Gora</td>
                       </tr>
-
                       <tr>
                         <td>20.05.2027</td>
                         <td>Berghi Hotel and Apartments - Kranjska Gora</td>
@@ -1058,20 +920,24 @@
               </div>
             </div>
           </section>
-        </section>
+        </details>
 
-        <!-- =======================================================
-          TAB 4 - TRAVEL & LOGISTICS
-        ======================================================== -->
-        <section id="travel" class="tour-tab-content active" role="tabpanel" aria-labelledby="travel-tab">
+        <details class="accordion-item">
+          <summary class="accordion-header">
+            <h2 class="page-title">
+              <i class="fa-solid fa-truck" style="margin-right: 0.4em"></i>
+              Travel & Logistics
+            </h2>
+          </summary>
+
           <section class="logistics">
-            <!-- =========================
-              TRAVEL INFORMATION
-            ========================== -->
             <div class="logistics-intro">
-              <h3>
-                Travel Guidance
+              <!-- =========================
+            TRAVEL INFORMATION
+             ========================== -->
 
+              <h3>
+                How should I travel?
                 <span
                   class="help-icon"
                   data-title="Travel Information"
@@ -1082,29 +948,22 @@
 
               <ul class="logistics-list">
                 <li class="flight">
-                  We fly from Manchester Airport and provide clear travel information so riders can coordinate their
+                  We fly from Manchester airport and provide clear travel information so riders can coordinate their
                   journeys and connect smoothly with the scheduled airport transfers.
                 </li>
-
-                <li class="bus">
-                  We will aim to organise and coordinate group travel arrangements for travel to and from Manchester
-                  Airport including bikes and luggage.
+                <li class="flight">
+                  Riders will organise and pay for their own flight travel arrangements from and to UK airports. This
+                  includes bikes and luggage.
                 </li>
 
                 <li class="bike-rental">
-                  Bike rental is available for those riders not taking their own bikes.
-                  <a href="https://alp-adventures.com/project/krnica/" target="_blank" rel="noopener" class="map-link">
-                    View Bike Rental
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> </a
-                  ><br />
+                  Bike rental is available for those riders not taking their own bikes.<br /><br />
+                  <a href="https://alp-adventures.com/project/krnica/" target="_blank" class="route-card-btn">
+                    See Bike Rental Kranska Gora
+                  </a>
                 </li>
               </ul>
-            </div>
-          </section>
-          <section class="logistics">
-            <div class="logistics-intro">
-              <h3>Recomended Flights:</h3>
-
+              <h3>Recomended flights:</h3>
               <div class="info-table-wrapper">
                 <div class="table-scroll">
                   <table class="info-table">
@@ -1120,7 +979,6 @@
                         <th>Comments</th>
                       </tr>
                     </thead>
-
                     <tbody>
                       <tr>
                         <td>14.05.2027</td>
@@ -1132,7 +990,6 @@
                         <td>Ljubljana Airport</td>
                         <td>Direct</td>
                       </tr>
-
                       <tr>
                         <td>21.05.2027</td>
                         <td>17:10pm</td>
@@ -1151,13 +1008,10 @@
 
             <!-- =========================
               TRANSPORT & SUPPORT
-            ========================== -->
-          </section>
-          <section class="logistics">
+             ========================== -->
             <div class="logistics-intro">
               <h3>
-                Support & Assistance Provided
-
+                What support is provided?
                 <span
                   class="help-icon"
                   data-title="Transport & Rider Support"
@@ -1171,9 +1025,7 @@
                   Transportation of riders, bikes and luggage to/from Ljubljana airport to the accommodation in Kranjska
                   Gora. <sup>&dagger;</sup>
                 </li>
-
                 <br />
-
                 <sup>&dagger;</sup>
                 This is subject to everyone being on the same flight. If you are not on the same flight, you will need
                 to arrange your own transportation to and from the airport/accommodation.
@@ -1181,14 +1033,11 @@
             </div>
 
             <!-- =========================
-              WHAT TO BRING
-            ========================== -->
-          </section>
-          <section class="logistics">
+            WHAT TO BRING
+             ========================== -->
             <div class="logistics-intro">
               <h3>
-                What To Bring
-
+                What should I bring?
                 <span
                   class="help-icon"
                   data-title="What to Bring"
@@ -1199,58 +1048,37 @@
 
               <ul class="bring-list">
                 <li class="bike">A well-serviced bike in good working order or organise a rental bike.</li>
-
                 <li class="helmet">Helmet (mandatory).</li>
-
                 <li class="clothing">Weather-appropriate cycling clothing.</li>
-
                 <li class="tools">Daily ride essentials (water, nutrition, tools).</li>
-
                 <li class="medication">Any personal medication you may need.</li>
-
                 <li class="passport">Waterproof passport holder for border crossings.</li>
-
                 <li class="lights">Front and rear lights for tunnel safety and navigation.</li>
               </ul>
             </div>
           </section>
-        </section>
+        </details>
 
-        <!-- =======================================================
-          TAB 5 - ITINERARY
-        ======================================================== -->
-        <section id="itinerary" class="tour-tab-content" role="tabpanel" aria-labelledby="itinerary-tab">
+        <details class="accordion-item">
+          <summary class="accordion-header">
+            <h2 class="page-title"><i class="fa-solid fa-clock" style="margin-right: 0.6em"></i>Itinerary</h2>
+          </summary>
+
           <section class="logistics">
             <div class="logistics-intro">
-              <h3>Key Dates & Times:</h3>
+              <h3>Important dates and times:</h3>
 
               <div class="timeline">
                 <div class="timeline-item">
                   <div class="timeline-date">Friday 14.05.2027 - Travel Day</div>
-
                   <div class="timeline-content">
                     <ul class="time-list">
-                      <li>
-                        <strong>8:30am to 9:00am:</strong>
-                        Load bikes/luggage onto transport @ Belper Market Place.
-                      </li>
-                      <li>
-                        <strong>9:00am to 11:00am:</strong>
-                        Travel from Belper Market Place to Manchester Airport.
-                      </li>
+                      <li><strong>8:00am to 11:00am:</strong> Travel to Manchester airport.</li>
 
+                      <li><strong>1:10pm to 4:35pm:</strong> Fly to Ljubljana airport.</li>
                       <li>
-                        <strong>1:10pm to 4:35pm:</strong>
-                        Fly to Ljubljana airport.
-                      </li>
-
-                      <li>
-                        <strong>5:30pm to 6:00pm:</strong>
-                        Load bikes/luggage onto transport @ Ljubljana Airport.
-                      </li>
-                      <li>
-                        <strong>6:00pm to 7:30pm:</strong>
-                        Transportation of riders, bikes and luggage to our accommodation in Kranjska Gora.
+                        <strong>5:30pm to 7:00pm:</strong> Transportation of riders, bikes and luggage to our
+                        accommodation in Kranjska Gora.
                       </li>
                     </ul>
                   </div>
@@ -1258,161 +1086,88 @@
 
                 <div class="timeline-item">
                   <div class="timeline-date">Saturday 15.05.2027 - Ride Day 1</div>
-
                   <div class="timeline-content">
                     <ul class="time-list">
-                      <li>
-                        <strong>9:30am:</strong>
-                        Bike check and rental collection.
-                      </li>
-
-                      <li>
-                        <strong>9:45am:</strong>
-                        Ride briefing and group photo.
-                      </li>
-
-                      <li>
-                        <strong>10:00am:</strong>
-                        Start of Ride.
-                      </li>
+                      <li><strong>9:30am:</strong> Bike check and rental collection.</li>
+                      <li><strong>9:45am:</strong> Ride briefing and group photo.</li>
+                      <li><strong>10:00am:</strong> Start of Ride.</li>
                     </ul>
                   </div>
                 </div>
 
                 <div class="timeline-item">
                   <div class="timeline-date">Sunday 16.05.2027 – Ride Day 2</div>
-
                   <div class="timeline-content">
                     <ul class="time-list">
-                      <li>
-                        <strong>8:45am:</strong>
-                        Ride briefing and group photo.
-                      </li>
-
-                      <li>
-                        <strong>9:00am:</strong>
-                        Start of Ride.
-                      </li>
+                      <li><strong>8:45am:</strong> Ride briefing and group photo.</li>
+                      <li><strong>9:00am:</strong> Start of Ride.</li>
                     </ul>
                   </div>
                 </div>
 
                 <div class="timeline-item">
                   <div class="timeline-date">Monday 17.05.2027 – Ride Day 3</div>
-
                   <div class="timeline-content">
                     <ul class="time-list">
-                      <li>
-                        <strong>8:45am:</strong>
-                        Ride briefing and group photo.
-                      </li>
-
-                      <li>
-                        <strong>9:00am:</strong>
-                        Start of Ride.
-                      </li>
+                      <li><strong>8:45am:</strong> Ride briefing and group photo.</li>
+                      <li><strong>9:00am:</strong> Start of Ride.</li>
                     </ul>
                   </div>
                 </div>
-
                 <div class="timeline-item">
                   <div class="timeline-date">Tuesday 18.05.2027 – Ride Day 4</div>
-
                   <div class="timeline-content">
                     <ul class="time-list">
-                      <li>
-                        <strong>8:45am:</strong>
-                        Ride briefing and group photo.
-                      </li>
-
-                      <li>
-                        <strong>9:00am:</strong>
-                        Start of Ride.
-                      </li>
+                      <li><strong>8:45am:</strong> Ride briefing and group photo.</li>
+                      <li><strong>9:00am:</strong> Start of Ride.</li>
                     </ul>
                   </div>
                 </div>
-
                 <div class="timeline-item">
                   <div class="timeline-date">Wednesday 19.05.2027 – Ride Day 5</div>
-
                   <div class="timeline-content">
                     <ul class="time-list">
-                      <li>
-                        <strong>8:45am:</strong>
-                        Ride briefing and group photo.
-                      </li>
-
-                      <li>
-                        <strong>9:00am:</strong>
-                        Start of Ride.
-                      </li>
+                      <li><strong>8:45am:</strong> Ride briefing and group photo.</li>
+                      <li><strong>9:00am:</strong> Start of Ride.</li>
                     </ul>
                   </div>
                 </div>
-
                 <div class="timeline-item">
                   <div class="timeline-date">Thursday 20.05.2027 – Ride Day 6</div>
-
                   <div class="timeline-content">
                     <ul class="time-list">
-                      <li>
-                        <strong>8:45am:</strong>
-                        Ride briefing and group photo.
-                      </li>
-
-                      <li>
-                        <strong>9:00am:</strong>
-                        Start of Ride.
-                      </li>
+                      <li><strong>8:45am:</strong> Ride briefing and group photo.</li>
+                      <li><strong>9:00am:</strong> Start of Ride.</li>
                     </ul>
                   </div>
                 </div>
 
                 <div class="timeline-item">
                   <div class="timeline-date">Friday 21.05.2027 - Travel Day</div>
-
                   <div class="timeline-content">
                     <ul class="time-list">
                       <li>
-                        <strong>1:00pm to 1:30pm</strong>
-                        Load bikes/luggage onto transport @ Berghi Hotel.
+                        <strong>1:00pm to 3:00pm</strong> Transportation of riders, bikes and luggage from our
+                        accommodation in Kranska Gora to Ljubljana airport.
                       </li>
-                      <li>
-                        <strong>1:30pm to 3:00pm</strong>
-                        Transportation of riders, bikes and luggage from our accommodation in Kranska Gora to Ljubljana
-                        Airport.
-                      </li>
-
-                      <li>
-                        <strong>5:10pm to 6:45pm:</strong>
-                        Fly back home to Manchester Airport.
-                      </li>
-
-                      <li>
-                        <strong>7:30pm to 8:00pm:</strong>
-                        Load bikes/luggage onto transport @ Manchester Airport.
-                      </li>
-                      <li>
-                        <strong>8:00pm to 10:00pm:</strong>
-                        Travel back to Belper Market Place from Manchester Airport.
-                      </li>
+                      <li><strong>5:10pm to 6:45pm:</strong> Fly back home to Manchester airport.</li>
+                      <li><strong>7:30pm to 9:00pm:</strong> Travel back home from Manchester airport.</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-        </section>
+        </details>
+        <details class="accordion-item">
+          <summary class="accordion-header">
+            <h2 class="page-title"><i class="fa-solid fa-images" style="margin-right: 0.4em"></i>Gallery</h2>
+          </summary>
 
-        <!-- =======================================================
-          TAB 6 - GALLERY
-        ======================================================== -->
-        <section id="gallery" class="tour-tab-content" role="tabpanel" aria-labelledby="gallery-tab">
           <section class="logistics">
+            <!-- ✅ PHOTO GALLERY -->
             <div class="logistics-intro">
-              <h3>Scenic Highlights</h3>
-
+              <h3>What will I see?</h3>
               The tour has been designed to ride through the spectacular Julian Alps and pass by many scenic locations.
 
               <div class="gallery">
@@ -1421,17 +1176,14 @@
                     <img src="/pictures/Slovenia/Slovenia2.png" alt="Slovenia" />
                     <figcaption>Lake Bohinj</figcaption>
                   </figure>
-
                   <figure>
                     <img src="/pictures/Slovenia/Slovenia3.png" alt="Slovenia" />
                     <figcaption>Vršič Pass</figcaption>
                   </figure>
-
                   <figure>
                     <img src="/pictures/Slovenia/Slovenia4.png" alt="Slovenia" />
                     <figcaption>Alpe Adria Cycle Path</figcaption>
                   </figure>
-
                   <figure>
                     <img src="/pictures/Slovenia/Slovenia5.png" alt="Slovenia" />
                     <figcaption>Triglav National Park</figcaption>
@@ -1446,53 +1198,36 @@
                     <img src="/pictures/Slovenia/Slovenia10.png" alt="Slovenia" />
                     <figcaption>Lake Bled</figcaption>
                   </figure>
-
                   <figure>
                     <img src="/pictures/Slovenia/Slovenia11.png" alt="Slovenia" />
                     <figcaption>Kranjska Gora</figcaption>
                   </figure>
-
                   <figure>
                     <img src="/pictures/Slovenia/Mangart.jpeg" alt="Slovenia" />
                     <figcaption>Mangart Saddle Climb</figcaption>
-                  </figure>
-                  <figure>
-                    <img src="/pictures/Slovenia/Slovenia12.JPG" alt="Slovenia" />
-                    <figcaption>Kranjska Gora</figcaption>
-                  </figure>
-                  <figure>
-                    <img src="/pictures/Slovenia/Slovenia13.png" alt="Slovenia" />
-                    <figcaption>Lake Predil</figcaption>
                   </figure>
                 </div>
               </div>
             </div>
           </section>
-        </section>
+        </details>
       </div>
     </div>
 
-    <!-- =========================================================
-      EMBEDDED ROUTE MAPS
-    ========================================================== -->
-    <!--
-    <iframe
-      src="https://ridewithgps.com/embeds?type=route&id=53783848&sampleGraph=true&hideSurface=true"
-      style="width: 1px; min-width: 100%; height: 700px; border: none"
-      scrolling="no">
-    </iframe>
-    -->
+    <!--embebed route maps
+          <iframe
+            src="https://ridewithgps.com/embeds?type=route&id=53783848&sampleGraph=true&hideSurface=true"
+            style="width: 1px; min-width: 100%; height: 700px; border: none"
+            scrolling="no"
+          ></iframe>-->
 
     <!-- =========================================================
-      HELP ICONS
-      (placed outside of tabs for better accessibility)
+      Help Icons      (placed outside of accordion for better accessibility)
     ========================================================== -->
     <div id="helpModal" class="help-modal">
       <div class="help-modal-content">
         <span class="close-help">&times;</span>
-
         <h3 id="helpModalTitle"></h3>
-
         <p id="helpModalText"></p>
       </div>
     </div>
@@ -1500,26 +1235,24 @@
     <!-- =========================================================
       FOOTER PLACEHOLDER
     ========================================================== -->
+
     <div
       id="footer-placeholder"
       data-whatsapp="https://chat.whatsapp.com/BRBZlCAZGj3GteJdXZEINV?s=sh&p=i&ilr=2"
       data-whatsapp-label="WhatsApp - Slovenia Alps Chat"></div>
 
     <!-- =========================================================
-      FLOATING REFRESH BUTTON (PWA only)
+    FLOATING REFRESH BUTTON (PWA only)
     ========================================================== -->
     <button id="refreshButton" title="Refresh">🔄</button>
 
     <!-- =========================================================
       PAGE SCRIPTS
       (defer = loads after HTML parsing, safer for DOM elements)
-    ========================================================== -->
-    <script src="js/tourdetailtab.js" defer></script>
+      ========================================================== -->
+    <script src="js/tourdetail.js" defer></script>
     <script src="js/site.js" defer></script>
 
-    <!-- =========================================================
-      ROUTE LIGHTBOX
-    ========================================================== -->
     <div id="routeLightbox" class="route-lightbox">
       <button id="routeLightboxClose" class="route-lightbox-close" aria-label="Close image">&times;</button>
 
