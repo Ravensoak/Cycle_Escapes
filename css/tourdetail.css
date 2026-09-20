@@ -2073,3 +2073,10 @@ details[open] .logistics {
     transform: translateY(-3px);
   }
 }
+
+@media (max-width: 600px) {
+  .ride-bike {
+    font-size: 1rem;
+    top: 10px;
+  }
+}
