@@ -1950,6 +1950,7 @@ details[open] .logistics {
 /* =========================================================
    ANIMATED BICYCLE – 6 RIDE DAYS
    ========================================================= */
+
 .ride {
   position: relative;
   overflow: hidden;
@@ -1961,8 +1962,8 @@ details[open] .logistics {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 12px;
-  height: 2px;
+  bottom: 8px;
+  height: 1px;
   background: #d9d9d9;
 }
 
@@ -1970,25 +1971,14 @@ details[open] .logistics {
 .ride-bike {
   position: absolute;
   z-index: 2;
-  bottom: 14px;
+  bottom: 10px;
   left: -25px;
-
   font-size: 1.2rem;
   color: #005fa3;
-
-  animation: rideAcross 6s linear infinite;
+  animation: rideAcross 7s ease-in-out infinite;
 }
 
-@keyframes rideAcross {
-  0% {
-    left: -25px;
-  }
-
-  100% {
-    left: calc(100% + 25px);
-  }
-}
-
+/* Bicycle movement */
 @keyframes rideAcross {
   0% {
     left: -25px;
@@ -2003,10 +1993,7 @@ details[open] .logistics {
   }
 }
 
-.ride-bike {
-  animation: rideAcross 7s ease-in-out infinite;
-}
-
+/* Smaller bicycle on mobile */
 @media (max-width: 600px) {
   .ride-bike {
     font-size: 1rem;
