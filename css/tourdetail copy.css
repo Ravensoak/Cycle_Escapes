@@ -1947,3 +1947,55 @@ details[open] .logistics {
     max-width: 100%;
   }
 }
+/* =========================================================
+   ANIMATED BICYCLE – 6 RIDE DAYS
+   ========================================================= */
+
+.ride {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle road */
+.ride::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  height: 1px;
+  background: #d9d9d9;
+}
+
+/* Bicycle */
+.ride-bike {
+  position: absolute;
+  z-index: 2;
+  bottom: 10px;
+  left: -25px;
+  font-size: 1.2rem;
+  color: #005fa3;
+  animation: rideAcross 7s ease-in-out infinite;
+}
+
+/* Bicycle movement */
+@keyframes rideAcross {
+  0% {
+    left: -25px;
+  }
+
+  70% {
+    left: calc(100% - 5px);
+  }
+
+  100% {
+    left: calc(100% + 25px);
+  }
+}
+
+/* Smaller bicycle on mobile */
+@media (max-width: 600px) {
+  .ride-bike {
+    font-size: 1rem;
+  }
+}
